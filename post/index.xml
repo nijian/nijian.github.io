@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ananke: a Hugo Theme on My blog</title>
-    <link>https://nijian.github.io/</link>
-    <description>Recent content in Ananke: a Hugo Theme on My blog</description>
+    <title>发布的文章 on My blog</title>
+    <link>https://nijian.github.io/post/</link>
+    <description>Recent content in 发布的文章 on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 14 Apr 2017 11:25:05 -0400</lastBuildDate><atom:link href="https://nijian.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="https://nijian.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Chapter VI: Esmeralda</title>
       <link>https://nijian.github.io/post/chapter-6/</link>
@@ -61,16 +61,6 @@
       <guid>https://nijian.github.io/post/chapter-1/</guid>
       <description>Three hundred and forty-eight years, six months, and nineteen days ago to-day, the Parisians awoke to the sound of all the bells in the triple circuit of the city, the university, and the town ringing a full peal.
 The sixth of January, 1482, is not, however, a day of which history has preserved the memory. There was nothing notable in the event which thus set the bells and the bourgeois of Paris in a ferment from early morning.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://nijian.github.io/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nijian.github.io/contact/</guid>
-      <description>This is an example of a custom shortcode that you can put right into your content. You will need to add a form action to the the shortcode to make it work. Check out Formspree for a simple, free form service.
-你的名字 电邮地址 需要电子邮件地址。  信息   </description>
     </item>
     
   </channel>
