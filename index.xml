@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ananke: a Hugo Theme on My blog</title>
+    <title>Ananke: a Hugo Theme on 一缕书香一缕魂</title>
     <link>https://nijian.github.io/</link>
-    <description>Recent content in Ananke: a Hugo Theme on My blog</description>
+    <description>Recent content in Ananke: a Hugo Theme on 一缕书香一缕魂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 14 Apr 2017 11:25:05 -0400</lastBuildDate><atom:link href="https://nijian.github.io/index.xml" rel="self" type="application/rss+xml" />
