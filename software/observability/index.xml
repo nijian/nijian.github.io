@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件的可观测性 on 一缕书香一缕魂</title>
+    <link>https://nijian.github.io/software/observability/</link>
+    <description>Recent content in 软件的可观测性 on 一缕书香一缕魂</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 30 Jan 2021 12:00:00 -0500</lastBuildDate><atom:link href="https://nijian.github.io/software/observability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>软件遥测</title>
+      <link>https://nijian.github.io/software/observability/telemetry/</link>
+      <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://nijian.github.io/software/observability/telemetry/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

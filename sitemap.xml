@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://nijian.github.io/post/</loc>
+    <loc>https://nijian.github.io/software/</loc>
     <lastmod>2021-01-30T12:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -17,7 +17,42 @@
   </url>
   
   <url>
+    <loc>https://nijian.github.io/software/platform/kubernetes/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/tags/platform/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://nijian.github.io/tags/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/software/software/</loc>
     <lastmod>2021-01-01T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -31,7 +66,14 @@
   </url>
   
   <url>
-    <loc>https://nijian.github.io/post/resources/</loc>
+    <loc>https://nijian.github.io/software/tool/tool/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/software/observability/telemetry/</loc>
     <lastmod>2021-01-01T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
