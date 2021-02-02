@@ -8,20 +8,56 @@
     <language>zh-cn</language>
     <lastBuildDate>Fri, 01 Jan 2021 10:58:08 -0400</lastBuildDate><atom:link href="https://nijian.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>platform</title>
-      <link>https://nijian.github.io/tags/platform/</link>
+      <title>AWS</title>
+      <link>https://nijian.github.io/tags/aws/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/tags/platform/</guid>
+      <guid>https://nijian.github.io/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>软件可观测性</title>
-      <link>https://nijian.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/</link>
+      <title>Hugo</title>
+      <link>https://nijian.github.io/tags/hugo/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/</guid>
+      <guid>https://nijian.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>云平台</title>
+      <link>https://nijian.github.io/tags/%E4%BA%91%E5%B9%B3%E5%8F%B0/</link>
+      <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://nijian.github.io/tags/%E4%BA%91%E5%B9%B3%E5%8F%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>可观测性</title>
+      <link>https://nijian.github.io/tags/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/</link>
+      <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://nijian.github.io/tags/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>工具</title>
+      <link>https://nijian.github.io/tags/%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://nijian.github.io/tags/%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>平台</title>
+      <link>https://nijian.github.io/tags/%E5%B9%B3%E5%8F%B0/</link>
+      <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://nijian.github.io/tags/%E5%B9%B3%E5%8F%B0/</guid>
       <description></description>
     </item>
     
@@ -31,15 +67,6 @@
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
       <guid>https://nijian.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>软件工具</title>
-      <link>https://nijian.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/</link>
-      <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
-      
-      <guid>https://nijian.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     

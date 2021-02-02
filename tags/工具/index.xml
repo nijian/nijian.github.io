@@ -1,42 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>技术文章 on 一缕书香一缕魂</title>
-    <link>https://nijian.github.io/software/</link>
-    <description>Recent content in 技术文章 on 一缕书香一缕魂</description>
+    <title>工具 on 一缕书香一缕魂</title>
+    <link>https://nijian.github.io/tags/%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 工具 on 一缕书香一缕魂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 30 Jan 2021 12:00:00 -0500</lastBuildDate><atom:link href="https://nijian.github.io/software/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Blog</title>
-      <link>https://nijian.github.io/software/blog/</link>
-      <pubDate>Tue, 02 Feb 2021 18:33:59 +0800</pubDate>
-      
-      <guid>https://nijian.github.io/software/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS</title>
-      <link>https://nijian.github.io/software/cloud/aws/</link>
-      <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
-      
-      <guid>https://nijian.github.io/software/cloud/aws/</guid>
-      <description>Amazon Web Services(AWS) 是一个云平台，拥有全球化的云基础设施，目前在全球24个地理区域运营着77个可用区。
-AWS提供了大量基于云的全球性服务，其中包括：
- 计算 存储 数据库 分析 联网 移动产品 开发人员工具 管理工具 物联网 安全性 企业应用程序  </description>
-    </item>
-    
-    <item>
-      <title>AWS计算服务</title>
-      <link>https://nijian.github.io/software/cloud/compute/</link>
-      <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
-      
-      <guid>https://nijian.github.io/software/cloud/compute/</guid>
-      <description>AWS计算服务
-   类别 服务描述     实例（虚拟机） 安全并且可以调整大小的云计算容量（虚拟服务器）   Mike 32    </description>
-    </item>
-    
+    <lastBuildDate>Fri, 01 Jan 2021 10:58:08 -0400</lastBuildDate><atom:link href="https://nijian.github.io/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo</title>
       <link>https://nijian.github.io/software/tool/hugo/</link>
@@ -63,16 +33,6 @@ themes</description>
     </item>
     
     <item>
-      <title>Kubernetes</title>
-      <link>https://nijian.github.io/software/platform/kubernetes/</link>
-      <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
-      
-      <guid>https://nijian.github.io/software/platform/kubernetes/</guid>
-      <description>Kubernetes简介 Kubernetes是一个可移植，可扩展的开源平台，用于管理容器化的负载和服务。容器技术非常有利于实现声明式配置和运行自动化。
-容器技术的演化 容器与虚拟机技术类似，拥有自己的文件系统、共享CPU和Memory、以及独立的进程空间，不同之处在于，容器之间共享OS。因此，容器技术相比与虚拟机技术，更加轻量化。</description>
-    </item>
-    
-    <item>
       <title>工具</title>
       <link>https://nijian.github.io/software/tool/tool/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
@@ -83,24 +43,6 @@ themes</description>
 在线绘图 https://www.diagrams.net/
 在线json编辑器 静态站点生成器 Hugo
 https://gohugo.io/</description>
-    </item>
-    
-    <item>
-      <title>软件基本特性</title>
-      <link>https://nijian.github.io/software/software/</link>
-      <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
-      
-      <guid>https://nijian.github.io/software/software/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>遥测</title>
-      <link>https://nijian.github.io/software/observability/telemetry/</link>
-      <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
-      
-      <guid>https://nijian.github.io/software/observability/telemetry/</guid>
-      <description></description>
     </item>
     
   </channel>

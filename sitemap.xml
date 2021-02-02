@@ -3,6 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nijian.github.io/software/blog/</loc>
+    <lastmod>2021-02-02T18:33:59+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/</loc>
+    <lastmod>2021-02-02T18:33:59+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://nijian.github.io/software/</loc>
     <lastmod>2021-01-30T12:00:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -10,21 +24,42 @@
   </url>
   
   <url>
-    <loc>https://nijian.github.io/</loc>
-    <lastmod>2021-01-30T12:00:00-05:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://nijian.github.io/software/platform/kubernetes/</loc>
+    <loc>https://nijian.github.io/tags/aws/</loc>
     <lastmod>2021-01-01T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://nijian.github.io/tags/platform/</loc>
+    <loc>https://nijian.github.io/software/cloud/aws/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/software/cloud/compute/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/tags/hugo/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/software/tool/hugo/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/software/platform/kubernetes/</loc>
     <lastmod>2021-01-01T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -38,7 +73,35 @@
   </url>
   
   <url>
-    <loc>https://nijian.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/</loc>
+    <loc>https://nijian.github.io/tags/%E4%BA%91%E5%B9%B3%E5%8F%B0/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/tags/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/software/tool/tool/</loc>
+    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/tags/%E5%B9%B3%E5%8F%B0/</loc>
     <lastmod>2021-01-01T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -53,20 +116,6 @@
   
   <url>
     <loc>https://nijian.github.io/software/software/</loc>
-    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://nijian.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-01-01T10:58:08-04:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://nijian.github.io/software/tool/tool/</loc>
     <lastmod>2021-01-01T10:58:08-04:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

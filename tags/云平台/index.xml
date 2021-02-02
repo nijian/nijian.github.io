@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>云平台 on 一缕书香一缕魂</title>
+    <link>https://nijian.github.io/tags/%E4%BA%91%E5%B9%B3%E5%8F%B0/</link>
+    <description>Recent content in 云平台 on 一缕书香一缕魂</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 01 Jan 2021 10:58:08 -0400</lastBuildDate><atom:link href="https://nijian.github.io/tags/%E4%BA%91%E5%B9%B3%E5%8F%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS</title>
+      <link>https://nijian.github.io/software/cloud/aws/</link>
+      <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://nijian.github.io/software/cloud/aws/</guid>
+      <description>Amazon Web Services(AWS) 是一个云平台，拥有全球化的云基础设施，目前在全球24个地理区域运营着77个可用区。
+AWS提供了大量基于云的全球性服务，其中包括：
+ 计算 存储 数据库 分析 联网 移动产品 开发人员工具 管理工具 物联网 安全性 企业应用程序  </description>
+    </item>
+    
+    <item>
+      <title>AWS计算服务</title>
+      <link>https://nijian.github.io/software/cloud/compute/</link>
+      <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://nijian.github.io/software/cloud/compute/</guid>
+      <description>AWS计算服务
+   类别 服务描述     实例（虚拟机） 安全并且可以调整大小的云计算容量（虚拟服务器）   Mike 32    </description>
+    </item>
+    
+  </channel>
+</rss>
