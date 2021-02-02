@@ -170,8 +170,9 @@ AWS提供了大量基于云的全球性服务，其中包括：
 ├── static
 └── themes
 archetypes
-Archetypes是用于创建新内容的模板，模板中包含了Front Matter元数据。当执行hugo new命令时，例如hugo new software/test.md，会根据以下次序搜索合适的archetype：
- archetypes/software.md archetypes/default.md themes/my-theme/archetypes/software.md themes/my-theme/archetypes/default.md  config
+Archetypes是用于创建新内容的模板，模板中包含了Front Matter元数据及其他的预制内容。当执行hugo new命令时，例如hugo new software/test.md，会根据以下次序搜索合适的archetype：
+ archetypes/software.md archetypes/default.md themes/my-theme/archetypes/software.md themes/my-theme/archetypes/default.md  Archetype还可以是一个完整的目录。在这种情况下，执行hugo new时需要带上kind选项。
+config
 content
 data
 layouts
@@ -270,8 +271,9 @@ AWS提供了大量基于云的全球性服务，其中包括：
 ├── static
 └── themes
 archetypes
-Archetypes是用于创建新内容的模板，模板中包含了Front Matter元数据。当执行hugo new命令时，例如hugo new software/test.md，会根据以下次序搜索合适的archetype：
- archetypes/software.md archetypes/default.md themes/my-theme/archetypes/software.md themes/my-theme/archetypes/default.md  config
+Archetypes是用于创建新内容的模板，模板中包含了Front Matter元数据及其他的预制内容。当执行hugo new命令时，例如hugo new software/test.md，会根据以下次序搜索合适的archetype：
+ archetypes/software.md archetypes/default.md themes/my-theme/archetypes/software.md themes/my-theme/archetypes/default.md  Archetype还可以是一个完整的目录。在这种情况下，执行hugo new时需要带上kind选项。
+config
 content
 data
 layouts

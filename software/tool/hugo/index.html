@@ -42,7 +42,7 @@
 <meta itemprop="description" content="静态站点生成器">
 <meta itemprop="datePublished" content="2021-01-01T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2021-01-01T10:58:08-04:00" />
-<meta itemprop="wordCount" content="57">
+<meta itemprop="wordCount" content="59">
 
 
 
@@ -190,13 +190,14 @@
 ├── static<br>
 └── themes</p>
 <p><strong>archetypes</strong></p>
-<p>Archetypes是用于创建新内容的模板，模板中包含了Front Matter元数据。当执行hugo new命令时，例如hugo new software/test.md，会根据以下次序搜索合适的archetype：</p>
+<p>Archetypes是用于创建新内容的模板，模板中包含了Front Matter元数据及其他的预制内容。当执行hugo new命令时，例如hugo new software/test.md，会根据以下次序搜索合适的archetype：</p>
 <ol>
 <li>archetypes/software.md</li>
 <li>archetypes/default.md</li>
 <li>themes/my-theme/archetypes/software.md</li>
 <li>themes/my-theme/archetypes/default.md</li>
 </ol>
+<p>Archetype还可以是一个完整的目录。在这种情况下，执行hugo new时需要带上kind选项。</p>
 <p><strong>config</strong></p>
 <p><strong>content</strong></p>
 <p><strong>data</strong></p>
