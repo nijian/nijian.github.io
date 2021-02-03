@@ -39,7 +39,7 @@
 <meta property="og:description" content="记录、积累、归纳、思考..." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://nijian.github.io/tags/" />
-<meta property="og:updated_time" content="2021-01-01T10:58:08-04:00" /><meta property="og:site_name" content="一缕书香一缕魂" />
+<meta property="og:updated_time" content="2021-02-03T15:19:13+08:00" /><meta property="og:site_name" content="一缕书香一缕魂" />
 <meta itemprop="name" content="Tags">
 <meta itemprop="description" content="记录、积累、归纳、思考...">
 <meta name="twitter:card" content="summary"/>
@@ -159,7 +159,9 @@ AWS提供了大量基于云的全球性服务，其中包括：
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       简介 Hugo是一个用Go语言编写的静态站点生成器。从技术上来说，Hugo以某个目录下的文件和模板为输入，运行后可以创建一个完整的Web站点。
-主要特性  支持LiveReload 主题任意切换 预设项目目录结构（脚手架） 功能丰富的URL管理 支持用户定义的内容分组（taxonomy），包括categories和tags 通过模板函数对内容进行排序 动态菜单 支持多种内容格式，例如Markdown，HTML等 支持多种前页元数据格式，例如TOML，YAML，JSON等 可定制主页 支持多种内容类型，例如page，blog等，内容类型决定了内容如何渲染，以及选择什么archetype模板 自动生成或用户自定义内容汇总信息 Shortcodes使Markdown避免使用复杂的原生HTML脚本 计算并显示阅读时间 计算并显示内容长度 支持Go HTML模板 集成Disqus提供评论功能 集成Google Analytics 自动创建RSS 集成Chroma提供语法高亮功能  目录结构 .
+主要特性  支持LiveReload 主题任意切换 预设项目目录结构（脚手架） 功能丰富的URL管理 支持用户定义的内容分组（taxonomy），包括categories和tags 通过模板函数对内容进行排序 动态菜单 支持多种内容格式，例如Markdown，HTML等 支持多种前页元数据格式，例如TOML，YAML，JSON等 可定制主页 支持多种内容类型，例如page，blog等，内容类型决定了内容如何渲染，以及选择什么archetype模板 自动生成或用户自定义内容汇总信息 Shortcodes使Markdown避免使用复杂的原生HTML脚本 计算并显示预估阅读时间 计算并显示内容长度 支持Go HTML模板 集成Disqus提供评论功能 集成Google Analytics 自动创建RSS 集成Chroma提供语法高亮功能  目录结构 缺省生成的目录结构
+执行hugo new site命令生成的目录结构：
+.
 ├── archetypes
 ├── config.toml
 ├── content
@@ -169,7 +171,7 @@ AWS提供了大量基于云的全球性服务，其中包括：
 └── themes
 archetypes
 Archetypes目录包含创建新内容的模板，模板中包含了Front Matter元数据及其他的预制内容。当执行hugo new命令时，例如hugo new software/test.md，会根据以下次序搜索合适的archetype：
- archetypes/software.md archetypes/default.md themes/my-theme/archetypes/software.md themes/my-theme/archetypes/default.md  Archetype还可以是一个完整的目录。在这种情况下，执行hugo new时需要带上kind选项。
+ archetypes/software.md（自定义） archetypes/default.md（自定义） themes/my-theme/archetypes/software.md（主题定义） themes/my-theme/archetypes/default.md（主题定义）  Archetype还可以是一个完整的目录。在这种情况下，执行hugo new时需要带上kind选项。
 config
 content
 data
@@ -260,7 +262,9 @@ AWS提供了大量基于云的全球性服务，其中包括：
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       简介 Hugo是一个用Go语言编写的静态站点生成器。从技术上来说，Hugo以某个目录下的文件和模板为输入，运行后可以创建一个完整的Web站点。
-主要特性  支持LiveReload 主题任意切换 预设项目目录结构（脚手架） 功能丰富的URL管理 支持用户定义的内容分组（taxonomy），包括categories和tags 通过模板函数对内容进行排序 动态菜单 支持多种内容格式，例如Markdown，HTML等 支持多种前页元数据格式，例如TOML，YAML，JSON等 可定制主页 支持多种内容类型，例如page，blog等，内容类型决定了内容如何渲染，以及选择什么archetype模板 自动生成或用户自定义内容汇总信息 Shortcodes使Markdown避免使用复杂的原生HTML脚本 计算并显示阅读时间 计算并显示内容长度 支持Go HTML模板 集成Disqus提供评论功能 集成Google Analytics 自动创建RSS 集成Chroma提供语法高亮功能  目录结构 .
+主要特性  支持LiveReload 主题任意切换 预设项目目录结构（脚手架） 功能丰富的URL管理 支持用户定义的内容分组（taxonomy），包括categories和tags 通过模板函数对内容进行排序 动态菜单 支持多种内容格式，例如Markdown，HTML等 支持多种前页元数据格式，例如TOML，YAML，JSON等 可定制主页 支持多种内容类型，例如page，blog等，内容类型决定了内容如何渲染，以及选择什么archetype模板 自动生成或用户自定义内容汇总信息 Shortcodes使Markdown避免使用复杂的原生HTML脚本 计算并显示预估阅读时间 计算并显示内容长度 支持Go HTML模板 集成Disqus提供评论功能 集成Google Analytics 自动创建RSS 集成Chroma提供语法高亮功能  目录结构 缺省生成的目录结构
+执行hugo new site命令生成的目录结构：
+.
 ├── archetypes
 ├── config.toml
 ├── content
@@ -270,7 +274,7 @@ AWS提供了大量基于云的全球性服务，其中包括：
 └── themes
 archetypes
 Archetypes目录包含创建新内容的模板，模板中包含了Front Matter元数据及其他的预制内容。当执行hugo new命令时，例如hugo new software/test.md，会根据以下次序搜索合适的archetype：
- archetypes/software.md archetypes/default.md themes/my-theme/archetypes/software.md themes/my-theme/archetypes/default.md  Archetype还可以是一个完整的目录。在这种情况下，执行hugo new时需要带上kind选项。
+ archetypes/software.md（自定义） archetypes/default.md（自定义） themes/my-theme/archetypes/software.md（主题定义） themes/my-theme/archetypes/default.md（主题定义）  Archetype还可以是一个完整的目录。在这种情况下，执行hugo new时需要带上kind选项。
 config
 content
 data
@@ -319,6 +323,28 @@ https://gohugo.io/
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       Kubernetes简介 Kubernetes是一个可移植，可扩展的开源平台，用于管理容器化的负载和服务。容器技术非常有利于实现声明式配置和运行自动化。
 容器技术的演化 容器与虚拟机技术类似，拥有自己的文件系统、共享CPU和Memory、以及独立的进程空间，不同之处在于，容器之间共享OS。因此，容器技术相比与虚拟机技术，更加轻量化。
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/%E8%BD%AF%E4%BB%B6" class="link blue hover-black">
+            Tag: 软件
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/my/xltxdt/" class="link black dim">
+        Excel格式的决策表/决策树
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      构思   xxx   
     </div>
   </div>
 </div>
