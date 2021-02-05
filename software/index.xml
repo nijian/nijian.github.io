@@ -8,6 +8,30 @@
     <language>zh-cn</language>
     <lastBuildDate>Sat, 30 Jan 2021 12:00:00 -0500</lastBuildDate><atom:link href="https://nijian.github.io/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>AWS 术语</title>
+      <link>https://nijian.github.io/software/cloud/aws-concept/</link>
+      <pubDate>Fri, 05 Feb 2021 16:06:03 +0800</pubDate>
+      
+      <guid>https://nijian.github.io/software/cloud/aws-concept/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS Lambda</title>
+      <link>https://nijian.github.io/software/cloud/aws-lambda/</link>
+      <pubDate>Fri, 05 Feb 2021 15:00:18 +0800</pubDate>
+      
+      <guid>https://nijian.github.io/software/cloud/aws-lambda/</guid>
+      <description>Lambda 函数调用 同步调用 使用AWS CLI或某种语言（目前支持Go，Java，C#，Ruby，Python，Node.js，PowerShell）的SDK可以发起同步调用。值得注意的是（？），最终触发Lambda函数的事件仍然是由下列AWS服务完成的：
+ 弹性负载均衡（Elastic Load Balancing）  该服务支持把Lambda函数作为应用负载均衡器（Application Load Balancer）的目标   Amazon Cognito Amazon Lex Amazon Alexa Amazon API Gateway Amazon CloudFront (Lambda@Edge) Amazon Kinesis Data Firehose  关于弹性负载均衡 弹性负载均衡（Elastic Load Balancing）服务可以转发流量至可用区内的各类目标，例如，EC2实例，容器，IP地址。它会监控目标的健康状况，并把流量转发至健康的目标。弹性负载均衡还会根据流量变化来对负载均衡器进行自动伸缩。
+弹性负载均衡服务支持下列负载均衡器：
+ 应用负载均衡器（Application Load Balancer） 网络负载均衡器（Network Load Balancer） 网关负载均衡器（Gateway Load Balancer） 传统负载均衡器（Classic Load Balancer）  关于负载均衡器 负载均衡器（Load Balancer）为客户端提供一个单点服务，流量分发对客户端来说是透明的。负载均衡器包含一个或多个监听器（listener）。
+监听器通过配置的协议和端口接收来自客户端的请求，而定义在监听器上的规则（rule）则决定了如何把请求路由到已注册的目标。每个规则都由优先级、条件、以及活动组成。当条件满足时，执行相应的活动。
+关于应用负载均衡器 应用负载均衡器（Application Load Balancer）
+异步调用 AWS Lambda 定价案例 Lambda 定价 流量定价 流量计价适用于仅具有 Lambda 目标的 Application Load Balancer。</description>
+    </item>
+    
+    <item>
       <title>Excel决策表</title>
       <link>https://nijian.github.io/software/my/xltxdt/</link>
       <pubDate>Wed, 03 Feb 2021 15:19:13 +0800</pubDate>
@@ -15,7 +39,7 @@
       <guid>https://nijian.github.io/software/my/xltxdt/</guid>
       <description>构思   图1   场景   图2   图2展示了Excel决策表设计时的场景。运行时场景较为丰富，且与业务关系紧密，不再赘述。这里只描述Excel决策表引擎的接口方法，即输入xltx文件，输出适配go-tree库的tree对象。
 分析模型 Excel模板定义与决策表概念及后续的解析密切相关，经初步分析，引入下面几个概念：
- 条件列（condition column） 条件（condition） 结论列（conclusion column） 结论（conclusion） 无法匹配（missing） 列类型（column type） 列名（column name） 布尔表达式（bool expression）  </description>
+ 条件列（condition column） 条件（condition） 结论列（conclusion column） 结论（conclusion） 无法匹配（missing） 列类型（column type） 列值类型（column value type） 列名（column name） 布尔表达式（bool expression）  </description>
     </item>
     
     <item>
@@ -60,11 +84,10 @@ archetypes
 Archetypes目录包含创建新内容的模板，模板中包含了Front Matter元数据及其他的预制内容。当执行hugo new命令时，例如hugo new software/test.md，会根据以下次序搜索合适的archetype：
  archetypes/software.md（自定义） archetypes/default.md（自定义） themes/my-theme/archetypes/software.md（主题定义） themes/my-theme/archetypes/default.md（主题定义）  Archetype还可以是一个完整的目录。在这种情况下，执行hugo new时需要带上kind选项。
 config
-content
-data
-layouts
-static
-themes</description>
+缺省生成的目录结构中不包含config目录，而是采用了简化处理，即在根目录下放置config.toml文件来提供一组不区分环境的配置指令。配置文件格式可以是TOML、YAML、或JSON。如果使用config目录，将可以针对不同的环境和特定的内容进行设置。
+├── config
+│ ├── _default
+│ │ ├── config.</description>
     </item>
     
     <item>

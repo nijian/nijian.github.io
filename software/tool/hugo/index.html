@@ -40,11 +40,11 @@
 <meta itemprop="description" content="静态站点生成器">
 <meta itemprop="datePublished" content="2021-01-01T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2021-01-01T10:58:08-04:00" />
-<meta itemprop="wordCount" content="63">
+<meta itemprop="wordCount" content="110">
 
 
 
-<meta itemprop="keywords" content="Hugo,工具," />
+<meta itemprop="keywords" content="软件,Hugo,工具," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hugo"/>
 <meta name="twitter:description" content="静态站点生成器"/>
@@ -199,12 +199,31 @@
 </ol>
 <p>Archetype还可以是一个完整的目录。在这种情况下，执行hugo new时需要带上kind选项。</p>
 <p><strong>config</strong></p>
+<p>缺省生成的目录结构中不包含config目录，而是采用了简化处理，即在根目录下放置config.toml文件来提供一组不区分环境的配置指令。配置文件格式可以是TOML、YAML、或JSON。如果使用config目录，将可以针对不同的环境和特定的内容进行设置。</p>
+<p>├── config<br>
+│   ├── _default<br>
+│   │   ├── config.toml<br>
+│   │   ├── languages.toml<br>
+│   │   ├── menus.en.toml<br>
+│   │   ├── menus.zh.toml<br>
+│   │   └── params.toml<br>
+│   ├── production<br>
+│   │   ├── config.toml<br>
+│   │   └── params.toml<br>
+│   └── staging<br>
+│       ├── config.toml<br>
+│       └── params.toml</p>
+<p>配置指令</p>
 <p><strong>content</strong></p>
 <p><strong>data</strong></p>
 <p><strong>layouts</strong></p>
 <p><strong>static</strong></p>
 <p><strong>themes</strong></p>
 <ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/%E8%BD%AF%E4%BB%B6" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">软件</a>
+   </li>
   
    <li class="list">
      <a href="/tags/hugo" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Hugo</a>

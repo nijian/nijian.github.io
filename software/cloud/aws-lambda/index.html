@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>AWS Lambda | 一缕书香一缕魂</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="AWS Lambda">
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+
+  
+  
+    <link rel="stylesheet" href="/ananke/dist/main.css_5c99d70a7725bacd4c701e995b969fea.css" >
+  
+
+
+
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="AWS Lambda" />
+<meta property="og:description" content="AWS Lambda" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nijian.github.io/software/cloud/aws-lambda/" />
+<meta property="article:published_time" content="2021-02-05T15:00:18+08:00" />
+<meta property="article:modified_time" content="2021-02-05T15:00:18+08:00" /><meta property="og:site_name" content="一缕书香一缕魂" />
+<meta itemprop="name" content="AWS Lambda">
+<meta itemprop="description" content="AWS Lambda">
+<meta itemprop="datePublished" content="2021-02-05T15:00:18+08:00" />
+<meta itemprop="dateModified" content="2021-02-05T15:00:18+08:00" />
+<meta itemprop="wordCount" content="238">
+
+
+
+<meta itemprop="keywords" content="软件," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AWS Lambda"/>
+<meta name="twitter:description" content="AWS Lambda"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        一缕书香一缕魂
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/software/" title="技术文章 page">
+              技术文章
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        技术文章
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=https://nijian.github.io/software/cloud/aws-lambda/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=https://nijian.github.io/software/cloud/aws-lambda/&amp;text=AWS%20Lambda" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://nijian.github.io/software/cloud/aws-lambda/&amp;title=AWS%20Lambda" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">AWS Lambda</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2021-02-05T15:00:18+08:00">February 5, 2021</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="lambda-函数调用">Lambda 函数调用</h2>
+<h3 id="同步调用">同步调用</h3>
+<p>使用AWS CLI或某种语言（目前支持Go，Java，C#，Ruby，Python，Node.js，PowerShell）的SDK可以<strong>发起</strong>同步调用。值得注意的是（？），最终触发Lambda函数的事件仍然是由下列AWS服务完成的：</p>
+<ul>
+<li>弹性负载均衡（Elastic Load Balancing）
+<ul>
+<li>该服务支持把Lambda函数作为应用负载均衡器（Application Load Balancer）的目标</li>
+</ul>
+</li>
+<li>Amazon Cognito</li>
+<li>Amazon Lex</li>
+<li>Amazon Alexa</li>
+<li>Amazon API Gateway</li>
+<li>Amazon CloudFront (Lambda@Edge)</li>
+<li>Amazon Kinesis Data Firehose</li>
+</ul>
+<h4 id="关于弹性负载均衡">关于弹性负载均衡</h4>
+<p>弹性负载均衡（Elastic Load Balancing）服务可以转发流量至可用区内的各类目标，例如，EC2实例，容器，IP地址。它会监控目标的健康状况，并把流量转发至健康的目标。弹性负载均衡还会根据流量变化来对<strong>负载均衡器</strong>进行自动伸缩。</p>
+<p>弹性负载均衡服务支持下列负载均衡器：</p>
+<ul>
+<li>应用负载均衡器（Application Load Balancer）</li>
+<li>网络负载均衡器（Network Load Balancer）</li>
+<li>网关负载均衡器（Gateway Load Balancer）</li>
+<li>传统负载均衡器（Classic Load Balancer）</li>
+</ul>
+<h4 id="关于负载均衡器">关于负载均衡器</h4>
+<p>负载均衡器（Load Balancer）为客户端提供一个单点服务，流量分发对客户端来说是透明的。负载均衡器包含一个或多个监听器（listener）。</p>
+<p>监听器通过配置的协议和端口接收来自客户端的请求，而定义在监听器上的规则（rule）则决定了如何把请求路由到已注册的目标。每个规则都由优先级、条件、以及活动组成。当条件满足时，执行相应的活动。</p>
+<h4 id="关于应用负载均衡器">关于应用负载均衡器</h4>
+<p>应用负载均衡器（Application Load Balancer）</p>
+<h3 id="异步调用">异步调用</h3>
+<h2 id="aws-lambda-定价案例">AWS Lambda 定价案例</h2>
+<h3 id="lambda-定价">Lambda 定价</h3>
+<h3 id="流量定价">流量定价</h3>
+<p>流量计价适用于仅具有 Lambda 目标的 Application Load Balancer。</p>
+<p>假设您的应用程序平均每秒接收 100 个新连接，并且每个连接持续 200 毫秒。客户端平均每秒发送 100 个请求，并且在连接的持续时间内 Lambda 请求和响应的已处理的字节数为 14 KB。您已经在负载均衡器上配置了 20 个规则来路由您的客户端请求。我们使用 US-East-1 区域的定价来计算您的 Application Load Balancer 月度费用，具体如下：</p>
+<ul>
+<li>新连接数 (每秒)：
+<ul>
+<li>每个 LCU 每秒提供 25 个新连接 (每小时的平均值)。您的应用程序每秒接收 100 个新连接，可换算为 4 个 LCU (每秒 100 个连接/每秒 25 个连接)</li>
+</ul>
+</li>
+<li>活跃连接数 (每分钟)：
+<ul>
+<li>每个 LCU 每分钟提供 3000 个活跃连接。您的应用程序每秒接收 100 个新连接，每个新连接持续 200 毫秒。这可换算为每分钟 100 个活跃连接，或 0.03 个 LCU (每分钟 100 个活跃连接/每分钟 3,000 个活跃连接)</li>
+</ul>
+</li>
+<li>已处理的字节数（每小时的 GB 数）：
+<ul>
+<li>每个 LCU 每小时为 Lambda 流量提供 0.4 GB。每个客户端连接平均传输 14 KB 的数据，可换算成每小时 5.04 GB（每个请求 + 响应的 14 KB 的已处理的字节数 * 每秒 100 个请求 * 3600 秒）或每小时 12.6 个 LCU (5.04 GB/0.4 GB)。</li>
+</ul>
+</li>
+<li>规则评估数 (每秒)：
+<ul>
+<li>简单起见，假设配置的所有规则均针对一个请求进行处理。每个 LCU 每秒提供 1000 个规则评估 (每小时的平均值)。您的应用程序每秒接收 100 个请求，每个请求处理 20 个规则，则每秒最多会产生 1000 个规则评估（20 个处理的规则 – 10 个免费规则）* 100 或 1 个 LCU（每秒 1000 个规则评估/每秒 1000 个规则评估）。</li>
+</ul>
+</li>
+</ul>
+<p>在本示例中，LCU 使用率最高的维度是已处理字节数维度，因此我们将在账单计算中使用已处理字节数维度的 LCU 使用率。每小时 LCU 费用为 0.1008 USD（12.6 个 LCU * 每个 LCU 0.008）。加上每小时 0.0225 USD 的费用，Application Load Balancer 的总费用为：</p>
+<ul>
+<li>每小时 0.1233 USD (每小时 0.0225 USD 的费用 + 0.1008 USD 的 LCU 费用)；或</li>
+<li>每月 88.78 USD (0.1233 USD * 24 小时 * 30 天)</li>
+</ul>
+<p>每秒 100 个请求可换算成每月 2.592 亿 (100<em>3600</em>24*30) 个请求。这可换算成每百万个请求 0.34 USD (88.78 USD/259.2)。</p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/%E8%BD%AF%E4%BB%B6" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">软件</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l"><div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">这是什么 software</p>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#lambda-函数调用">Lambda 函数调用</a>
+      <ul>
+        <li><a href="#同步调用">同步调用</a></li>
+        <li><a href="#异步调用">异步调用</a></li>
+      </ul>
+    </li>
+    <li><a href="#aws-lambda-定价案例">AWS Lambda 定价案例</a>
+      <ul>
+        <li><a href="#lambda-定价">Lambda 定价</a></li>
+        <li><a href="#流量定价">流量定价</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">相关內容</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/software/my/xltxdt/">Excel决策表</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/software/tool/hugo/">Hugo</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://nijian.github.io/" >
+    &copy;  一缕书香一缕魂 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
