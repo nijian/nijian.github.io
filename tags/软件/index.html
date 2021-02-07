@@ -145,13 +145,11 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Lambda 函数调用 同步调用 使用AWS CLI或某种语言（目前支持Go，Java，C#，Ruby，Python，Node.js，PowerShell）的SDK可以发起同步调用。值得注意的是（？），最终触发Lambda函数的事件仍然是由下列AWS服务完成的：
- 弹性负载均衡（Elastic Load Balancing）  该服务支持把Lambda函数作为应用负载均衡器（Application Load Balancer）的目标   Amazon Cognito Amazon Lex Amazon Alexa Amazon API Gateway Amazon CloudFront (Lambda@Edge) Amazon Kinesis Data Firehose  关于弹性负载均衡 弹性负载均衡（Elastic Load Balancing）服务可以转发流量至可用区内的各类目标，例如，EC2实例，容器，IP地址。它会监控目标的健康状况，并把流量转发至健康的目标。弹性负载均衡还会根据流量变化来对负载均衡器进行自动伸缩。
+      Lambda 函数调用 同步调用 使用 AWS CLI 或某种语言（目前支持 Go，Java，C#，Ruby，Python，Node.js，PowerShell）的 SDK 可以发起同步调用。值得注意的是，最终触发 Lambda 的事件仍然是由下列 AWS 服务完成的：
+ 弹性负载均衡（Elastic Load Balancing）  该服务支持把 Lambda 作为应用负载均衡器（Application Load Balancer）的目标   Amazon Cognito Amazon Lex Amazon Alexa Amazon API Gateway Amazon CloudFront ( Lambda@Edge ) Amazon Kinesis Data Firehose  关于弹性负载均衡 弹性负载均衡（Elastic Load Balancing）服务属于联网和内容分发服务大类，该服务可以转发流量至可用区内的各类目标，例如，EC2 实例，容器，IP 地址。它会监控目标的健康状况，并把流量转发至健康的目标。弹性负载均衡还会根据流量变化来对负载均衡器进行自动伸缩。
 弹性负载均衡服务支持下列负载均衡器：
- 应用负载均衡器（Application Load Balancer） 网络负载均衡器（Network Load Balancer） 网关负载均衡器（Gateway Load Balancer） 传统负载均衡器（Classic Load Balancer）  关于负载均衡器 负载均衡器（Load Balancer）为客户端提供一个单点服务，流量分发对客户端来说是透明的。负载均衡器包含一个或多个监听器（listener）。
-监听器通过配置的协议和端口接收来自客户端的请求，而定义在监听器上的规则（rule）则决定了如何把请求路由到已注册的目标。每个规则都由优先级、条件、以及活动组成。当条件满足时，执行相应的活动。
-关于应用负载均衡器 应用负载均衡器（Application Load Balancer）
-异步调用 AWS Lambda 定价案例 Lambda 定价 流量定价 流量计价适用于仅具有 Lambda 目标的 Application Load Balancer。
+ 应用负载均衡器（Application Load Balancer） 网络负载均衡器（Network Load Balancer） 网关负载均衡器（Gateway Load Balancer） 传统负载均衡器（Classic Load Balancer）  关于负载均衡器 负载均衡器（Load Balancer）为客户端提供一个单点服务，流量分发对客户端来说是透明的。
+负载均衡器包含一个或多个监听器（listener）。监听器通过配置的协议和端口接收来自客户端的请求，而定义在监听器上的规则（rule）则决定了如何把请求路由到已注册的目标。每个规则都由优先级、条件、以及活动组成。当条件满足时，执行相应的活动。
     </div>
   </div>
 </div>

@@ -40,7 +40,7 @@
 <meta itemprop="description" content="AWS Lambda">
 <meta itemprop="datePublished" content="2021-02-05T15:00:18+08:00" />
 <meta itemprop="dateModified" content="2021-02-05T15:00:18+08:00" />
-<meta itemprop="wordCount" content="238">
+<meta itemprop="wordCount" content="714">
 
 
 
@@ -155,22 +155,22 @@
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="lambda-函数调用">Lambda 函数调用</h2>
 <h3 id="同步调用">同步调用</h3>
-<p>使用AWS CLI或某种语言（目前支持Go，Java，C#，Ruby，Python，Node.js，PowerShell）的SDK可以<strong>发起</strong>同步调用。值得注意的是（？），最终触发Lambda函数的事件仍然是由下列AWS服务完成的：</p>
+<p>使用 AWS CLI 或某种语言（目前支持 Go，Java，C#，Ruby，Python，Node.js，PowerShell）的 SDK 可以<strong>发起</strong>同步调用。值得注意的是，最终触发 Lambda 的事件仍然是由下列 AWS 服务完成的：</p>
 <ul>
 <li>弹性负载均衡（Elastic Load Balancing）
 <ul>
-<li>该服务支持把Lambda函数作为应用负载均衡器（Application Load Balancer）的目标</li>
+<li>该服务支持把 Lambda 作为应用负载均衡器（Application Load Balancer）的目标</li>
 </ul>
 </li>
 <li>Amazon Cognito</li>
 <li>Amazon Lex</li>
 <li>Amazon Alexa</li>
 <li>Amazon API Gateway</li>
-<li>Amazon CloudFront (Lambda@Edge)</li>
+<li>Amazon CloudFront ( Lambda@Edge )</li>
 <li>Amazon Kinesis Data Firehose</li>
 </ul>
 <h4 id="关于弹性负载均衡">关于弹性负载均衡</h4>
-<p>弹性负载均衡（Elastic Load Balancing）服务可以转发流量至可用区内的各类目标，例如，EC2实例，容器，IP地址。它会监控目标的健康状况，并把流量转发至健康的目标。弹性负载均衡还会根据流量变化来对<strong>负载均衡器</strong>进行自动伸缩。</p>
+<p>弹性负载均衡（Elastic Load Balancing）服务属于联网和内容分发服务大类，该服务可以转发流量至可用区内的各类目标，例如，EC2 实例，容器，IP 地址。它会监控目标的健康状况，并把流量转发至健康的目标。弹性负载均衡还会根据流量变化来对<strong>负载均衡器</strong>进行自动伸缩。</p>
 <p>弹性负载均衡服务支持下列负载均衡器：</p>
 <ul>
 <li>应用负载均衡器（Application Load Balancer）</li>
@@ -179,25 +179,194 @@
 <li>传统负载均衡器（Classic Load Balancer）</li>
 </ul>
 <h4 id="关于负载均衡器">关于负载均衡器</h4>
-<p>负载均衡器（Load Balancer）为客户端提供一个单点服务，流量分发对客户端来说是透明的。负载均衡器包含一个或多个监听器（listener）。</p>
-<p>监听器通过配置的协议和端口接收来自客户端的请求，而定义在监听器上的规则（rule）则决定了如何把请求路由到已注册的目标。每个规则都由优先级、条件、以及活动组成。当条件满足时，执行相应的活动。</p>
+<p>负载均衡器（Load Balancer）为客户端提供一个单点服务，流量分发对客户端来说是透明的。</p>
+<p>负载均衡器包含一个或多个监听器（listener）。监听器通过配置的协议和端口接收来自客户端的请求，而定义在监听器上的规则（rule）则决定了如何把请求路由到已注册的目标。每个规则都由优先级、条件、以及活动组成。当条件满足时，执行相应的活动。</p>
 <h4 id="关于应用负载均衡器">关于应用负载均衡器</h4>
 <p>应用负载均衡器（Application Load Balancer）</p>
 <h3 id="异步调用">异步调用</h3>
-<h2 id="aws-lambda-定价案例">AWS Lambda 定价案例</h2>
-<h3 id="lambda-定价">Lambda 定价</h3>
-<h3 id="流量定价">流量定价</h3>
-<p>流量计价适用于仅具有 Lambda 目标的 Application Load Balancer。</p>
-<p>假设您的应用程序平均每秒接收 100 个新连接，并且每个连接持续 200 毫秒。客户端平均每秒发送 100 个请求，并且在连接的持续时间内 Lambda 请求和响应的已处理的字节数为 14 KB。您已经在负载均衡器上配置了 20 个规则来路由您的客户端请求。我们使用 US-East-1 区域的定价来计算您的 Application Load Balancer 月度费用，具体如下：</p>
+<h2 id="aws-lambda-使用成本简析">AWS Lambda 使用成本简析</h2>
+<p>AWS Lambda 使用成本由以下几项费用组成：</p>
+<ul>
+<li>AWS Lambda 基本费用</li>
+<li>启用预配置并发产生的费用</li>
+<li>数据传输产生的费用</li>
+<li>启用 Lambda@Edge 产生的费用</li>
+</ul>
+<p>以上费用都是基于一些基础定价进行计算而得。这些基础定价又与多个因素相关，例如，可用区，为 Lambda 分配的内存量，调用 Lambda 的方式等等。下面在介绍各项费用时，会对相关的基础定价展开描述。</p>
+<blockquote>
+<p><em>注：一些优惠活动会节省 AWS Lambda 的使用成本，例如，AWS Lambda 免费使用套餐， Compute Savings Plans。</em></p>
+</blockquote>
+<h3 id="aws-lambda-基本费用">AWS Lambda 基本费用</h3>
+<p>AWS Lambda 的基本费用由两个指标所产生的费用相加而成：</p>
+<ul>
+<li>请求数</li>
+<li>执行时间</li>
+</ul>
+<blockquote>
+<p><em>注：每当 Lambda 为响应事件通知或调用（包括控制台的测试调用）而开始执行时便记为一次请求。而持续时间是指从 Lambda 代码开始执行时算起直到其返回或以其他方式终止为止，舍入到最近的 1ms。</em></p>
+</blockquote>
+<p>以美国东部（俄亥俄）区域为例</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>基础价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>请求</strong></td>
+<td>每 100 万个请求 0.20 USD</td>
+</tr>
+<tr>
+<td><strong>持续时间</strong></td>
+<td>每 GB 每秒 0.0000166667 USD</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><em>注：每 GB 每秒是指，当为 Lambda 分配了 1 GB （1024 MB）内存，Lambda 每运行 1 s，费用为 0.0000166667 USD。</em></p>
+</blockquote>
+<p>假设，部署了一个 Lambda 在美国东部（俄亥俄）区域，并为该 Lambda 分配了 10240 MB 内存。如果该 Lambda 某月响应了 100 万个请求，每个请求的平均持续时间为 100 ms，则该月的基本费用计算过程如下：</p>
+<ol>
+<li>请求数费用
+<ul>
+<li>1,000,000 requests x 0.0000002 USD = 0.20 USD (monthly request charges)</li>
+</ul>
+</li>
+<li>持续时间费用
+<ul>
+<li>10240 MB x 0.0009765625 GB in a MB = 10 GB</li>
+<li>1,000,000 requests x 100 ms x 0.001 ms to sec conversion factor = 100,000.00 total compute (seconds)</li>
+<li>10 GB x 100,000.00 seconds = 1,000,000.00 total compute (GB-s)</li>
+<li>1,000,000.00 GB-s x 0.0000166667 USD = 16.67 USD (monthly compute charges)</li>
+</ul>
+</li>
+<li><strong>AWS Lambda 基本费用</strong>
+<ul>
+<li>16.67 USD + 0.20 USD = 16.87 USD</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><em>注：AWS 提供了<a href="https://aws.amazon.com/lambda/pricing/">计算器</a>来辅助计算 Lambda 的基本费用。</em></p>
+</blockquote>
+<p>当参加一些优惠活动，以上费用会有所降低。例如，AWS Lambda 免费使用套餐包含每月 1M 次免费请求以及每月 400000GB-秒的计算时间。在这种情况下，上述场景中的请求数费用将被减免，持续时间费用会降低 40% 。免费套餐与区域政策有关。此外，如果承诺在 1 年或 3 年的期限内使用稳定数量的资源（以 USD/小时为单位衡量），可以注册适用于 AWS Lambda 的 Compute Saving Plans。注册后，承诺使用量将按 Savings Plans 费率收费，超出承诺的使用量将按常规的按需费率收费。</p>
+<h3 id="启用预配置并发产生的费用">启用预配置并发产生的费用</h3>
+<p>预配置并发可以使 Lambda 保持初始化状态，从而减少每次请求<strong>可能</strong>（在 Lambda 没有销毁的情况下，不必再次初始化）产生的初始化时间，从而提升无服务器应用程序的性能。</p>
+<p>启用预配置并发产生的费用由三个指标所产生的费用相加而成：</p>
+<ul>
+<li>预配置并发</li>
+<li>请求数</li>
+<li>执行时间</li>
+</ul>
+<blockquote>
+<p><em>注：预配置并发从在 Lambda 上启用时开始算起直至将其禁用，舍入到最近的 5 分钟。启用预配置并发通常是针对需要较长初始化时间的 Lambda，同时该 Lambda 正面临请求的高峰。</em></p>
+</blockquote>
+<p>以美国东部（俄亥俄）区域为例</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>基础价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>预配置并发</strong></td>
+<td>每 GB 每秒 0.0000041667 USD</td>
+</tr>
+<tr>
+<td><strong>请求</strong></td>
+<td>每 100 万个请求 0.20 USD</td>
+</tr>
+<tr>
+<td><strong>持续时间</strong></td>
+<td>每 GB 每秒 0.0000097222 USD</td>
+</tr>
+</tbody>
+</table>
+<p>假设，当为 AWS Lambda 基本费用一节中的案例启用预配置并发 2 小时，并发数为1,000。也就是说，该 Lambda 被分配了 10240 MB 内存，在 2 小时内执行了 1 M 次，每次运行的时间为 100 ms。在这种情况下，将产生预配置并发费用。</p>
+<ul>
+<li>预配置并发为 0.000004167 USD/GB-s</li>
+<li>预配置并发启用的总时长（秒）= 2 小时 = 7,200 秒</li>
+<li>配置的总并发 (GB)：1000 * 1024MB/1024MB = 1000 GB</li>
+<li>总预配置并发量 (GB-s) = 1000 GB * 7,200 秒 = 7.2M GB-s</li>
+</ul>
+<p>预配置并发费用 = 7.2M GB-s * 0.000004167 USD = 30 USD</p>
+<p>请求与持续时间费用的计算方式与 AWS Lambda 基本费用一节中的案例相同。值得注意的是，当启用预配置并发时，持续时间的基础价格相比于未启用时要低一些。当然，加上预配置并发的费用，最终的基本费用将大大高于未启用的场景。</p>
+<h3 id="数据传输产生的费用">数据传输产生的费用</h3>
+<p>数据传输产生的费用与数据传输的场景相关：</p>
+<ul>
+<li>AWS Lambda 与相同区域内的服务进行数据传输
+<ul>
+<li>相互之间可免费进行数据传输的服务（请阅读下面的注）
+<ul>
+<li>Amazon S3</li>
+<li>Amazon Glacier</li>
+<li>Amazon DynamoDB</li>
+<li>Amazon SES</li>
+<li>Amazon SQS</li>
+<li>Amazon Kinesis</li>
+<li>Amazon ECR</li>
+<li>Amazon SNS</li>
+<li>Amazon EFS</li>
+<li>Amazon SimpleDB</li>
+</ul>
+</li>
+<li>除以上提及之外的服务与 AWS Lambda 进行数据传输产生的费用
+<ul>
+<li>弹性负载均衡（Elastic Load Balancing）</li>
+<li>其他（请阅读下面的注）</li>
+</ul>
+</li>
+<li>使用 AWS Lambda 进行 VPC 或 VPC 对等连接将产生额外费用</li>
+</ul>
+</li>
+<li>AWS Lambda 与不同区域内的服务进行数据传输
+<ul>
+<li>参照 EC2 数据传输速率收费</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><em>注：相同区域内可免费进行数据传输并不意味着没有费用产生，所免的只是数据传输费用！例如，当 Lambda 从 Amazon S3 读取数据，尽管数据传输是免费的，但对 Amazon S3 的读写请求是收费的，在 Amazon S3 中存储数据是收费的。</em></p>
+</blockquote>
+<blockquote>
+<p><em>注：其他将产生费用的服务众多，例如，上述所有同步调用 Lambda 的服务，此处无法一一详述，仅以弹性负载均衡为例。事实上，弹性负载均衡服务产生的费用不仅包含数据传输费用，还包含了相关负载均衡器的运行费用。以下将一并说明。</em></p>
+</blockquote>
+<h4 id="弹性负载均衡产生的费用">弹性负载均衡产生的费用</h4>
+<p>前文提到，弹性负载均衡服务提供了四种负载均衡器。不同的负载均衡器有不同的定价策略。本文以同步调用 Lambda 时使用的 Application Load Balancer 为例。</p>
+<p>AWS 区域中的 Application Load Balancer 产生的费用由两个指标所产生的费用相加而成：</p>
+<ul>
+<li>每 Application Load Balancer 小时（或不足一小时）0.0225 USD</li>
+<li>每 LCU 小时（或不足一小时）0.008 USD</li>
+</ul>
+<p>LCU 是指用于衡量 Application Load Balancer 处理流量时涉及的各个指标 (每小时平均值)。要衡量的四个指标包括：</p>
+<ul>
+<li>新连接数：每秒新建连接的数量。通常，每个连接可发送多个请求。</li>
+<li>活跃连接数：每分钟内活跃连接的数量。</li>
+<li>已处理的字节数：负载均衡器为 HTTP(S) 请求和响应处理的字节数（以 GB 为单位）。</li>
+<li>规则评估数：指负载均衡器处理的规则数量与请求率的乘积。免费处理前 10 个规则（规则评估数 = 请求率 * (处理的规则数量 – 10 个免费规则)）</li>
+</ul>
+<p>在计算费用时，只需按使用量最高的指标付费即可。</p>
+<p>一个 LCU 包括：</p>
+<ul>
+<li>每秒 25 个新连接。</li>
+<li>每分钟 3000 个活跃连接。</li>
+<li>EC2 实例、容器和 IP 地址作为目标时为每小时 1GB，Lambda 函数作为目标时为每小时 0.4 GB</li>
+<li>每秒 1000 个规则评估</li>
+</ul>
+<p>假设，某个 Lambda 平均每秒接收 100 个新连接，并且每个连接持续 100 毫秒。客户端平均每秒发送 100 个请求，并且在连接的持续时间内 Lambda 请求和响应的已处理的字节数为 14 KB。此外，负载均衡器上配置了 20 个规则来路由客户端请求。如果使用 US-East-1 区域的定价来计算 Application Load Balancer 月度费用，具体如下：</p>
 <ul>
 <li>新连接数 (每秒)：
 <ul>
-<li>每个 LCU 每秒提供 25 个新连接 (每小时的平均值)。您的应用程序每秒接收 100 个新连接，可换算为 4 个 LCU (每秒 100 个连接/每秒 25 个连接)</li>
+<li>每个 LCU 每秒提供 25 个新连接 (每小时的平均值)。该 Lambda 每秒接收 100 个新连接，可换算为 4 个 LCU (每秒 100 个连接/每秒 25 个连接)</li>
 </ul>
 </li>
 <li>活跃连接数 (每分钟)：
 <ul>
-<li>每个 LCU 每分钟提供 3000 个活跃连接。您的应用程序每秒接收 100 个新连接，每个新连接持续 200 毫秒。这可换算为每分钟 100 个活跃连接，或 0.03 个 LCU (每分钟 100 个活跃连接/每分钟 3,000 个活跃连接)</li>
+<li>每个 LCU 每分钟提供 3000 个活跃连接。该 Lambda 每秒接收 100 个新连接，每个新连接持续 200 毫秒。这可换算为每分钟 100 个活跃连接，或 0.03 个 LCU (每分钟 100 个活跃连接/每分钟 3,000 个活跃连接)</li>
 </ul>
 </li>
 <li>已处理的字节数（每小时的 GB 数）：
@@ -207,16 +376,40 @@
 </li>
 <li>规则评估数 (每秒)：
 <ul>
-<li>简单起见，假设配置的所有规则均针对一个请求进行处理。每个 LCU 每秒提供 1000 个规则评估 (每小时的平均值)。您的应用程序每秒接收 100 个请求，每个请求处理 20 个规则，则每秒最多会产生 1000 个规则评估（20 个处理的规则 – 10 个免费规则）* 100 或 1 个 LCU（每秒 1000 个规则评估/每秒 1000 个规则评估）。</li>
+<li>简单起见，假设配置的所有规则均针对一个请求进行处理。每个 LCU 每秒提供 1000 个规则评估 (每小时的平均值)。该 Lambda 每秒接收 100 个请求，每个请求处理 20 个规则，则每秒最多会产生 1000 个规则评估（20 个处理的规则 – 10 个免费规则）* 100 或 1 个 LCU（每秒 1000 个规则评估/每秒 1000 个规则评估）。</li>
 </ul>
 </li>
 </ul>
-<p>在本示例中，LCU 使用率最高的维度是已处理字节数维度，因此我们将在账单计算中使用已处理字节数维度的 LCU 使用率。每小时 LCU 费用为 0.1008 USD（12.6 个 LCU * 每个 LCU 0.008）。加上每小时 0.0225 USD 的费用，Application Load Balancer 的总费用为：</p>
+<p>在本示例中，LCU 使用率最高的维度是已处理字节数维度，因此，在费用计算中使用已处理字节数维度的 LCU 使用率。每小时 LCU 费用为 0.1008 USD（12.6 个 LCU * 每个 LCU 0.008）。加上每小时 0.0225 USD 的费用，Application Load Balancer 的总费用为：</p>
 <ul>
 <li>每小时 0.1233 USD (每小时 0.0225 USD 的费用 + 0.1008 USD 的 LCU 费用)；或</li>
 <li>每月 88.78 USD (0.1233 USD * 24 小时 * 30 天)</li>
 </ul>
 <p>每秒 100 个请求可换算成每月 2.592 亿 (100<em>3600</em>24*30) 个请求。这可换算成每百万个请求 0.34 USD (88.78 USD/259.2)。</p>
+<p><strong>简单来说，针对 AWS Lambda 基本费用一节中的案例，1 M 个请求，每次请求 14 KB 字节，弹性负载均衡服务每月产生的费用是 0.34 USD。</strong></p>
+<h3 id="启用-lambdaedge-产生的费用">启用 Lambda@Edge 产生的费用</h3>
+<p>Lambda@Edge 是 Amazon CloudFront 的一个功能，它可以让 Lambda 在靠近应用程序用户的地方运行，从而提高性能，降低延迟。Lambda@Edge 目前不提供免费套餐。Lambda@Edge 的基础价格如下：</p>
+<p>以美国东部（俄亥俄）区域为例</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>基础价格</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>请求</strong></td>
+<td>每 100 万个请求 0.60 USD</td>
+</tr>
+<tr>
+<td><strong>持续时间</strong></td>
+<td>每 GB 每秒 0.00005001 USD</td>
+</tr>
+</tbody>
+</table>
+<p>Lambda@Edge 所产生的费用，其计算过程与普通 Lambda 相同。Lambda@Edge 的基础价格相对较高，这是为获得低延迟高性能的应用所付出的成本。</p>
+<p>总而言之，在本文所讨论的案例中，使用 Lambda 的总体费用每月小于 20 USD，却支持了 1 M 次请求，每次请求平均 14 KB 。这是一种性价比较高的方案选项。</p>
 <ul class="pa0">
   
    <li class="list">
@@ -240,10 +433,12 @@
         <li><a href="#异步调用">异步调用</a></li>
       </ul>
     </li>
-    <li><a href="#aws-lambda-定价案例">AWS Lambda 定价案例</a>
+    <li><a href="#aws-lambda-使用成本简析">AWS Lambda 使用成本简析</a>
       <ul>
-        <li><a href="#lambda-定价">Lambda 定价</a></li>
-        <li><a href="#流量定价">流量定价</a></li>
+        <li><a href="#aws-lambda-基本费用">AWS Lambda 基本费用</a></li>
+        <li><a href="#启用预配置并发产生的费用">启用预配置并发产生的费用</a></li>
+        <li><a href="#数据传输产生的费用">数据传输产生的费用</a></li>
+        <li><a href="#启用-lambdaedge-产生的费用">启用 Lambda@Edge 产生的费用</a></li>
       </ul>
     </li>
   </ul>
