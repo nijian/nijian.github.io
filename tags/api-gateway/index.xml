@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>API Gateway on 一缕书香一缕魂</title>
+    <link>https://nijian.github.io/tags/api-gateway/</link>
+    <description>Recent content in API Gateway on 一缕书香一缕魂</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 20 Feb 2021 18:01:19 +0800</lastBuildDate><atom:link href="https://nijian.github.io/tags/api-gateway/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gloo Edge</title>
+      <link>https://nijian.github.io/software/product/gloo/</link>
+      <pubDate>Sat, 20 Feb 2021 18:01:19 +0800</pubDate>
+      
+      <guid>https://nijian.github.io/software/product/gloo/</guid>
+      <description>简介 Gloo Edge 是一个 API Gateway 产品。它基于 Envoy 构建。</description>
+    </item>
+    
+  </channel>
+</rss>

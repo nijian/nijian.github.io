@@ -39,7 +39,7 @@
 <meta property="og:description" content="记录、积累、归纳、思考..." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://nijian.github.io/tags/" />
-<meta property="og:updated_time" content="2021-02-05T16:06:03+08:00" /><meta property="og:site_name" content="一缕书香一缕魂" />
+<meta property="og:updated_time" content="2021-02-23T09:34:30+08:00" /><meta property="og:site_name" content="一缕书香一缕魂" />
 <meta itemprop="name" content="Tags">
 <meta itemprop="description" content="记录、积累、归纳、思考...">
 <meta name="twitter:card" content="summary"/>
@@ -120,10 +120,51 @@
     <section class="ph4">
       
         <h2 class="f1">
+          <a href="/tags/api-gateway" class="link blue hover-black">
+            Tag: api-gateway
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/product/gloo/" class="link black dim">
+        Gloo Edge
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      简介 Gloo Edge 是一个 API Gateway 产品。它基于 Envoy 构建。
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
           <a href="/tags/aws" class="link blue hover-black">
             Tag: aws
           </a>
         </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/cloud/aws-lambda/" class="link black dim">
+        AWS Lambda
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Lambda 函数调用 同步调用 使用 AWS CLI 或某种语言（目前支持 Go，Java，C#，Ruby，Python，Node.js，PowerShell）的 SDK 可以发起同步调用。值得注意的是，最终触发 Lambda 函数的事件仍然是由下列 AWS 服务完成的：
+ 弹性负载均衡（Elastic Load Balancing）  该服务支持把 Lambda 作为应用负载均衡器（Application Load Balancer）的目标   Amazon Cognito Amazon Lex Amazon Alexa Amazon API Gateway Amazon CloudFront ( Lambda@Edge ) Amazon Kinesis Data Firehose  关于弹性负载均衡 弹性负载均衡（Elastic Load Balancing）服务属于联网和内容分发服务大类，该服务可以转发流量至可用区内的各类目标，例如，EC2 实例，容器，IP 地址。它会监控目标的健康状况，并把流量转发至健康的目标。弹性负载均衡还会根据流量变化来对负载均衡器进行自动伸缩。
+弹性负载均衡服务支持下列负载均衡器：
+ 应用负载均衡器（Application Load Balancer） 网络负载均衡器（Network Load Balancer） 网关负载均衡器（Gateway Load Balancer） 传统负载均衡器（Classic Load Balancer）  关于负载均衡器 负载均衡器（Load Balancer）为客户端提供一个单点服务，流量分发对客户端来说是透明的。
+负载均衡器包含一个或多个监听器（listener）。监听器通过配置的协议和端口接收来自客户端的请求，而定义在监听器上的规则（rule）则决定了如何把请求路由到已注册的目标。每个规则都由优先级、条件、以及活动组成。当条件满足时，执行相应的活动。
+    </div>
+  </div>
+</div>
+
         
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -134,9 +175,28 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Amazon Web Services(AWS) 是一个云平台，拥有全球化的云基础设施，目前在全球24个地理区域运营着77个可用区。
+      简介 Amazon Web Services(AWS) 是一个云平台，拥有全球化的云基础设施，目前在全球24个地理区域运营着77个可用区。
 AWS提供了大量基于云的全球性服务，其中包括：
- 计算 存储 数据库 分析 联网 移动产品 开发人员工具 管理工具 物联网 安全性 企业应用程序  
+ 计算 存储 数据库 分析 联网 移动产品 开发人员工具 管理工具 物联网 安全性 企业应用程序  常用命令 安装 awscli
+sudo apt install awscli 查看 aws 版本
+aws --version 配置 awscli
+aws configure 
+    </div>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/cloud/compute/" class="link black dim">
+        AWS计算服务
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      AWS计算服务
+   类别 服务描述     实例（虚拟机） 安全并且可以调整大小的云计算容量（虚拟服务器）   Mike 32    
     </div>
   </div>
 </div>
@@ -158,25 +218,60 @@ AWS提供了大量基于云的全球性服务，其中包括：
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      简介 Hugo是一个用Go语言编写的静态站点生成器。从技术上来说，Hugo以某个目录下的文件和模板为输入，运行后可以创建一个完整的Web站点。
-主要特性  支持LiveReload 主题任意切换 预设项目目录结构（脚手架） 功能丰富的URL管理 支持用户定义的内容分组（taxonomy），包括categories和tags 通过模板函数对内容进行排序 动态菜单 支持多种内容格式，例如Markdown，HTML等 支持多种前页元数据格式，例如TOML，YAML，JSON等 可定制主页 支持多种内容类型，例如page，blog等，内容类型决定了内容如何渲染，以及选择什么archetype模板 自动生成或用户自定义内容汇总信息 Shortcodes使Markdown避免使用复杂的原生HTML脚本 计算并显示预估阅读时间 计算并显示内容长度 支持Go HTML模板 集成Disqus提供评论功能 集成Google Analytics 自动创建RSS 集成Chroma提供语法高亮功能  目录结构 缺省生成的目录结构
-执行hugo new site命令生成的目录结构：
-.
-├── archetypes
-├── config.toml
-├── content
-├── data
-├── layouts
-├── static
-└── themes
-archetypes
-Archetypes目录包含创建新内容的模板，模板中包含了Front Matter元数据及其他的预制内容。当执行hugo new命令时，例如hugo new software/test.md，会根据以下次序搜索合适的archetype：
- archetypes/software.md（自定义） archetypes/default.md（自定义） themes/my-theme/archetypes/software.md（主题定义） themes/my-theme/archetypes/default.md（主题定义）  Archetype还可以是一个完整的目录。在这种情况下，执行hugo new时需要带上kind选项。
-config
-缺省生成的目录结构中不包含config目录，而是采用了简化处理，即在根目录下放置config.toml文件来提供一组不区分环境的配置指令。配置文件格式可以是TOML、YAML、或JSON。如果使用config目录，将可以针对不同的环境和特定的内容进行设置。
-├── config
-│ ├── _default
-│ │ ├── config.
+      简介 Hugo 是一个用 Go 语言编写的静态站点生成器。从技术上来说， Hugo 以某个目录下的文件和模板为输入，运行后可以创建一个完整的 Web 站点。
+常用命令  创建新站点  hugo new site foo  foo 是站点名称
+  添加 theme  echo &#39;theme = &#34;ananke&#34;&#39; &gt;&gt; config.toml  对于使用 hugo new site 创建的缺省站点，配置简化存放在根目录下的 config.toml 中。通过上述命令，可在该配置文件中添加一条指令。 theme 的获取及安装可参考 https://gohugo.io/getting-started/quick-start/
+  创建文章  hugo new software/env/installation.md  software 是 category ， installation.md 是文件名称。使用此命令可以根据 archetype 自动生成一些内容，例如 title 等。
+  启动本地 hugo server 用于调试  hugo server -t ananke  ananke 是 theme 名称
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/lambda" class="link blue hover-black">
+            Tag: lambda
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/cloud/aws-lambda/" class="link black dim">
+        AWS Lambda
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Lambda 函数调用 同步调用 使用 AWS CLI 或某种语言（目前支持 Go，Java，C#，Ruby，Python，Node.js，PowerShell）的 SDK 可以发起同步调用。值得注意的是，最终触发 Lambda 函数的事件仍然是由下列 AWS 服务完成的：
+ 弹性负载均衡（Elastic Load Balancing）  该服务支持把 Lambda 作为应用负载均衡器（Application Load Balancer）的目标   Amazon Cognito Amazon Lex Amazon Alexa Amazon API Gateway Amazon CloudFront ( Lambda@Edge ) Amazon Kinesis Data Firehose  关于弹性负载均衡 弹性负载均衡（Elastic Load Balancing）服务属于联网和内容分发服务大类，该服务可以转发流量至可用区内的各类目标，例如，EC2 实例，容器，IP 地址。它会监控目标的健康状况，并把流量转发至健康的目标。弹性负载均衡还会根据流量变化来对负载均衡器进行自动伸缩。
+弹性负载均衡服务支持下列负载均衡器：
+ 应用负载均衡器（Application Load Balancer） 网络负载均衡器（Network Load Balancer） 网关负载均衡器（Gateway Load Balancer） 传统负载均衡器（Classic Load Balancer）  关于负载均衡器 负载均衡器（Load Balancer）为客户端提供一个单点服务，流量分发对客户端来说是透明的。
+负载均衡器包含一个或多个监听器（listener）。监听器通过配置的协议和端口接收来自客户端的请求，而定义在监听器上的规则（rule）则决定了如何把请求路由到已注册的目标。每个规则都由优先级、条件、以及活动组成。当条件满足时，执行相应的活动。
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/linux" class="link blue hover-black">
+            Tag: linux
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/tool/linuxcommand/" class="link black dim">
+        Linux 常用命令
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      #grep 用于查找文件中符合条件的字符串。
+-v 或 &ndash;invert-match : 显示不包含匹配文本的所有行
     </div>
   </div>
 </div>
@@ -198,9 +293,12 @@ config
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Amazon Web Services(AWS) 是一个云平台，拥有全球化的云基础设施，目前在全球24个地理区域运营着77个可用区。
+      简介 Amazon Web Services(AWS) 是一个云平台，拥有全球化的云基础设施，目前在全球24个地理区域运营着77个可用区。
 AWS提供了大量基于云的全球性服务，其中包括：
- 计算 存储 数据库 分析 联网 移动产品 开发人员工具 管理工具 物联网 安全性 企业应用程序  
+ 计算 存储 数据库 分析 联网 移动产品 开发人员工具 管理工具 物联网 安全性 企业应用程序  常用命令 安装 awscli
+sudo apt install awscli 查看 aws 版本
+aws --version 配置 awscli
+aws configure 
     </div>
   </div>
 </div>
@@ -217,6 +315,30 @@ AWS提供了大量基于云的全球性服务，其中包括：
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       AWS计算服务
    类别 服务描述     实例（虚拟机） 安全并且可以调整大小的云计算容量（虚拟服务器）   Mike 32    
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/%E5%86%B3%E7%AD%96%E8%A1%A8" class="link blue hover-black">
+            Tag: 决策表
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/my/xltxdt/" class="link black dim">
+        Excel决策表
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      构思   图1   场景   图2   图2展示了Excel决策表设计时的场景。运行时场景较为丰富，且与业务关系紧密，不再赘述。这里只描述Excel决策表引擎的接口方法，即输入xltx文件，输出适配go-tree库的tree对象。
+分析模型 Excel模板定义与决策表概念及后续的解析密切相关，经初步分析，引入下面几个概念：
+ 条件列（condition column） 条件（condition） 结论列（conclusion column） 结论（conclusion） 无法匹配（missing） 列类型（column type） 列值类型（column value type） 列名（column name） 布尔表达式（bool expression）  
     </div>
   </div>
 </div>
@@ -246,10 +368,73 @@ AWS提供了大量基于云的全球性服务，其中包括：
         
       
         <h2 class="f1">
+          <a href="/tags/%E5%91%BD%E4%BB%A4" class="link blue hover-black">
+            Tag: 命令
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/tool/linuxcommand/" class="link black dim">
+        Linux 常用命令
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      #grep 用于查找文件中符合条件的字符串。
+-v 或 &ndash;invert-match : 显示不包含匹配文本的所有行
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/%E5%AE%89%E8%A3%85" class="link blue hover-black">
+            Tag: 安装
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/env/installation/" class="link black dim">
+        软件开发工作环境搭建
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
           <a href="/tags/%E5%B7%A5%E5%85%B7" class="link blue hover-black">
             Tag: 工具
           </a>
         </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/tool/make/" class="link black dim">
+        GNU make
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      简介 make 是一类软件工具，它常常用于软件的构建。在构建软件的过程中（例如，对程序进行编译时），其核心能力是可以自动地感知并决定对一个程序的哪些内容进行重编译，并发出相应的命令。换句话说， make 本身不是编译工具，当执行包括编译在内的各种构建任务时，它依赖于其他的软件工具程序，那些软件工具程序必须可以通过 command shell 来执行。与此同时， make 自身关注的则是如何识别那些变化的内容，以及如何触发相应的命令。
+ 显然，make 的使用并不局限于软件的构建。
+ make 有很多实现，本文描述的是 GNU make （以下简称 make ）。另外，本文关注的是软件的构建。
+常用命令 用法 要使用 make ，必须编写一个 makefile 。 makefile 描述了程序中一些文件的关系，以及更新这些文件的命令。
+    </div>
+  </div>
+</div>
+
         
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -260,25 +445,11 @@ AWS提供了大量基于云的全球性服务，其中包括：
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      简介 Hugo是一个用Go语言编写的静态站点生成器。从技术上来说，Hugo以某个目录下的文件和模板为输入，运行后可以创建一个完整的Web站点。
-主要特性  支持LiveReload 主题任意切换 预设项目目录结构（脚手架） 功能丰富的URL管理 支持用户定义的内容分组（taxonomy），包括categories和tags 通过模板函数对内容进行排序 动态菜单 支持多种内容格式，例如Markdown，HTML等 支持多种前页元数据格式，例如TOML，YAML，JSON等 可定制主页 支持多种内容类型，例如page，blog等，内容类型决定了内容如何渲染，以及选择什么archetype模板 自动生成或用户自定义内容汇总信息 Shortcodes使Markdown避免使用复杂的原生HTML脚本 计算并显示预估阅读时间 计算并显示内容长度 支持Go HTML模板 集成Disqus提供评论功能 集成Google Analytics 自动创建RSS 集成Chroma提供语法高亮功能  目录结构 缺省生成的目录结构
-执行hugo new site命令生成的目录结构：
-.
-├── archetypes
-├── config.toml
-├── content
-├── data
-├── layouts
-├── static
-└── themes
-archetypes
-Archetypes目录包含创建新内容的模板，模板中包含了Front Matter元数据及其他的预制内容。当执行hugo new命令时，例如hugo new software/test.md，会根据以下次序搜索合适的archetype：
- archetypes/software.md（自定义） archetypes/default.md（自定义） themes/my-theme/archetypes/software.md（主题定义） themes/my-theme/archetypes/default.md（主题定义）  Archetype还可以是一个完整的目录。在这种情况下，执行hugo new时需要带上kind选项。
-config
-缺省生成的目录结构中不包含config目录，而是采用了简化处理，即在根目录下放置config.toml文件来提供一组不区分环境的配置指令。配置文件格式可以是TOML、YAML、或JSON。如果使用config目录，将可以针对不同的环境和特定的内容进行设置。
-├── config
-│ ├── _default
-│ │ ├── config.
+      简介 Hugo 是一个用 Go 语言编写的静态站点生成器。从技术上来说， Hugo 以某个目录下的文件和模板为输入，运行后可以创建一个完整的 Web 站点。
+常用命令  创建新站点  hugo new site foo  foo 是站点名称
+  添加 theme  echo &#39;theme = &#34;ananke&#34;&#39; &gt;&gt; config.toml  对于使用 hugo new site 创建的缺省站点，配置简化存放在根目录下的 config.toml 中。通过上述命令，可在该配置文件中添加一条指令。 theme 的获取及安装可参考 https://gohugo.io/getting-started/quick-start/
+  创建文章  hugo new software/env/installation.md  software 是 category ， installation.md 是文件名称。使用此命令可以根据 archetype 自动生成一些内容，例如 title 等。
+  启动本地 hugo server 用于调试  hugo server -t ananke  ananke 是 theme 名称
     </div>
   </div>
 </div>
@@ -293,10 +464,11 @@ config
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      在软件构建过程中，经常需要借助于一些工具。例如，在构思设计的初始阶段，使用思维导图来粗略地罗列设计约束，设计目标，软件的主要特性，设计相关的一些基本候选决策；在设计阶段，使用建模工具来捕捉用例，建立业务模型，设计软件实现模型；在编写程序的阶段，使用集成开发工具来高效地录入、重构、单元测试、调试代码，使用正则表达式工具来测试和调试正则表达式的正确性；在集成测试阶段，使用代理工具，把本地的微服务切换进远程的Kubernetes环境等等。
+      在软件构建过程中，经常需要借助于一些工具。例如，在构思设计的初始阶段，使用思维导图来粗略地罗列设计约束，设计目标，软件的主要特性，设计相关的一些基本候选决策；在设计阶段，使用建模工具来捕捉用例，建立业务模型，设计软件实现模型；在编写程序的阶段，使用集成开发工具来高效地录入、重构、单元测试、调试代码，使用正则表达式工具来测试和调试正则表达式的正确性；在集成测试阶段，使用代理工具，把本地的微服务切换进远程的 Kubernetes 环境等等。
 软件工具种类繁多。工具，编程语言，以及开发的内容构成了软件开发的领域。本文尝试系统地整理软件构建阶段及相关的工具。
 在线绘图 https://www.diagrams.net/
-在线json编辑器 静态站点生成器 Hugo
+在线 json 编辑器 https://jsoneditoronline.org/
+静态站点生成器 Hugo
 https://gohugo.io/
     </div>
   </div>
@@ -328,6 +500,77 @@ https://gohugo.io/
         
       
         <h2 class="f1">
+          <a href="/tags/%E6%9E%84%E5%BB%BA" class="link blue hover-black">
+            Tag: 构建
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/tool/make/" class="link black dim">
+        GNU make
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      简介 make 是一类软件工具，它常常用于软件的构建。在构建软件的过程中（例如，对程序进行编译时），其核心能力是可以自动地感知并决定对一个程序的哪些内容进行重编译，并发出相应的命令。换句话说， make 本身不是编译工具，当执行包括编译在内的各种构建任务时，它依赖于其他的软件工具程序，那些软件工具程序必须可以通过 command shell 来执行。与此同时， make 自身关注的则是如何识别那些变化的内容，以及如何触发相应的命令。
+ 显然，make 的使用并不局限于软件的构建。
+ make 有很多实现，本文描述的是 GNU make （以下简称 make ）。另外，本文关注的是软件的构建。
+常用命令 用法 要使用 make ，必须编写一个 makefile 。 makefile 描述了程序中一些文件的关系，以及更新这些文件的命令。
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86" class="link blue hover-black">
+            Tag: 版本管理
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/tool/git/" class="link black dim">
+        Git
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      简介 git 是一个分布式版本控制系统。
+ 版本控制是一个系统
+ 
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80" class="link blue hover-black">
+            Tag: 编程语言
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/language/go/" class="link black dim">
+        Go
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      #依赖管理
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
           <a href="/tags/%E8%A7%84%E5%88%99" class="link blue hover-black">
             Tag: 规则
           </a>
@@ -352,10 +595,195 @@ https://gohugo.io/
         
       
         <h2 class="f1">
+          <a href="/tags/%E8%AE%A1%E7%AE%97%E5%BC%95%E6%93%8E" class="link blue hover-black">
+            Tag: 计算引擎
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/my/calc-engine/" class="link black dim">
+        Calc Engine
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
+          <a href="/tags/%E8%B0%83%E8%AF%95" class="link blue hover-black">
+            Tag: 调试
+          </a>
+        </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/tool/telepresence/" class="link black dim">
+        Telepresence
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      
+    </div>
+  </div>
+</div>
+
+        
+      
+        <h2 class="f1">
           <a href="/tags/%E8%BD%AF%E4%BB%B6" class="link blue hover-black">
             Tag: 软件
           </a>
         </h2>
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/tool/git/" class="link black dim">
+        Git
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      简介 git 是一个分布式版本控制系统。
+ 版本控制是一个系统
+ 
+    </div>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/tool/linuxcommand/" class="link black dim">
+        Linux 常用命令
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      #grep 用于查找文件中符合条件的字符串。
+-v 或 &ndash;invert-match : 显示不包含匹配文本的所有行
+    </div>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/language/go/" class="link black dim">
+        Go
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      #依赖管理
+    </div>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/product/envoy/" class="link black dim">
+        Envoy
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      
+    </div>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/product/gloo/" class="link black dim">
+        Gloo Edge
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      简介 Gloo Edge 是一个 API Gateway 产品。它基于 Envoy 构建。
+    </div>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/tool/make/" class="link black dim">
+        GNU make
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      简介 make 是一类软件工具，它常常用于软件的构建。在构建软件的过程中（例如，对程序进行编译时），其核心能力是可以自动地感知并决定对一个程序的哪些内容进行重编译，并发出相应的命令。换句话说， make 本身不是编译工具，当执行包括编译在内的各种构建任务时，它依赖于其他的软件工具程序，那些软件工具程序必须可以通过 command shell 来执行。与此同时， make 自身关注的则是如何识别那些变化的内容，以及如何触发相应的命令。
+ 显然，make 的使用并不局限于软件的构建。
+ make 有很多实现，本文描述的是 GNU make （以下简称 make ）。另外，本文关注的是软件的构建。
+常用命令 用法 要使用 make ，必须编写一个 makefile 。 makefile 描述了程序中一些文件的关系，以及更新这些文件的命令。
+    </div>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/tool/telepresence/" class="link black dim">
+        Telepresence
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      
+    </div>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/env/installation/" class="link black dim">
+        软件开发工作环境搭建
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      
+    </div>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/my/calc-engine/" class="link black dim">
+        Calc Engine
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      
+    </div>
+  </div>
+</div>
+
         
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">
@@ -381,7 +809,7 @@ https://gohugo.io/
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Lambda 函数调用 同步调用 使用 AWS CLI 或某种语言（目前支持 Go，Java，C#，Ruby，Python，Node.js，PowerShell）的 SDK 可以发起同步调用。值得注意的是，最终触发 Lambda 的事件仍然是由下列 AWS 服务完成的：
+      Lambda 函数调用 同步调用 使用 AWS CLI 或某种语言（目前支持 Go，Java，C#，Ruby，Python，Node.js，PowerShell）的 SDK 可以发起同步调用。值得注意的是，最终触发 Lambda 函数的事件仍然是由下列 AWS 服务完成的：
  弹性负载均衡（Elastic Load Balancing）  该服务支持把 Lambda 作为应用负载均衡器（Application Load Balancer）的目标   Amazon Cognito Amazon Lex Amazon Alexa Amazon API Gateway Amazon CloudFront ( Lambda@Edge ) Amazon Kinesis Data Firehose  关于弹性负载均衡 弹性负载均衡（Elastic Load Balancing）服务属于联网和内容分发服务大类，该服务可以转发流量至可用区内的各类目标，例如，EC2 实例，容器，IP 地址。它会监控目标的健康状况，并把流量转发至健康的目标。弹性负载均衡还会根据流量变化来对负载均衡器进行自动伸缩。
 弹性负载均衡服务支持下列负载均衡器：
  应用负载均衡器（Application Load Balancer） 网络负载均衡器（Network Load Balancer） 网关负载均衡器（Gateway Load Balancer） 传统负载均衡器（Classic Load Balancer）  关于负载均衡器 负载均衡器（Load Balancer）为客户端提供一个单点服务，流量分发对客户端来说是透明的。
@@ -417,25 +845,31 @@ https://gohugo.io/
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      简介 Hugo是一个用Go语言编写的静态站点生成器。从技术上来说，Hugo以某个目录下的文件和模板为输入，运行后可以创建一个完整的Web站点。
-主要特性  支持LiveReload 主题任意切换 预设项目目录结构（脚手架） 功能丰富的URL管理 支持用户定义的内容分组（taxonomy），包括categories和tags 通过模板函数对内容进行排序 动态菜单 支持多种内容格式，例如Markdown，HTML等 支持多种前页元数据格式，例如TOML，YAML，JSON等 可定制主页 支持多种内容类型，例如page，blog等，内容类型决定了内容如何渲染，以及选择什么archetype模板 自动生成或用户自定义内容汇总信息 Shortcodes使Markdown避免使用复杂的原生HTML脚本 计算并显示预估阅读时间 计算并显示内容长度 支持Go HTML模板 集成Disqus提供评论功能 集成Google Analytics 自动创建RSS 集成Chroma提供语法高亮功能  目录结构 缺省生成的目录结构
-执行hugo new site命令生成的目录结构：
-.
-├── archetypes
-├── config.toml
-├── content
-├── data
-├── layouts
-├── static
-└── themes
-archetypes
-Archetypes目录包含创建新内容的模板，模板中包含了Front Matter元数据及其他的预制内容。当执行hugo new命令时，例如hugo new software/test.md，会根据以下次序搜索合适的archetype：
- archetypes/software.md（自定义） archetypes/default.md（自定义） themes/my-theme/archetypes/software.md（主题定义） themes/my-theme/archetypes/default.md（主题定义）  Archetype还可以是一个完整的目录。在这种情况下，执行hugo new时需要带上kind选项。
-config
-缺省生成的目录结构中不包含config目录，而是采用了简化处理，即在根目录下放置config.toml文件来提供一组不区分环境的配置指令。配置文件格式可以是TOML、YAML、或JSON。如果使用config目录，将可以针对不同的环境和特定的内容进行设置。
-├── config
-│ ├── _default
-│ │ ├── config.
+      简介 Hugo 是一个用 Go 语言编写的静态站点生成器。从技术上来说， Hugo 以某个目录下的文件和模板为输入，运行后可以创建一个完整的 Web 站点。
+常用命令  创建新站点  hugo new site foo  foo 是站点名称
+  添加 theme  echo &#39;theme = &#34;ananke&#34;&#39; &gt;&gt; config.toml  对于使用 hugo new site 创建的缺省站点，配置简化存放在根目录下的 config.toml 中。通过上述命令，可在该配置文件中添加一条指令。 theme 的获取及安装可参考 https://gohugo.io/getting-started/quick-start/
+  创建文章  hugo new software/env/installation.md  software 是 category ， installation.md 是文件名称。使用此命令可以根据 archetype 自动生成一些内容，例如 title 等。
+  启动本地 hugo server 用于调试  hugo server -t ananke  ananke 是 theme 名称
+    </div>
+  </div>
+</div>
+
+        
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
+      <a href="https://nijian.github.io/software/tool/tool/" class="link black dim">
+        工具
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      在软件构建过程中，经常需要借助于一些工具。例如，在构思设计的初始阶段，使用思维导图来粗略地罗列设计约束，设计目标，软件的主要特性，设计相关的一些基本候选决策；在设计阶段，使用建模工具来捕捉用例，建立业务模型，设计软件实现模型；在编写程序的阶段，使用集成开发工具来高效地录入、重构、单元测试、调试代码，使用正则表达式工具来测试和调试正则表达式的正确性；在集成测试阶段，使用代理工具，把本地的微服务切换进远程的 Kubernetes 环境等等。
+软件工具种类繁多。工具，编程语言，以及开发的内容构成了软件开发的领域。本文尝试系统地整理软件构建阶段及相关的工具。
+在线绘图 https://www.diagrams.net/
+在线 json 编辑器 https://jsoneditoronline.org/
+静态站点生成器 Hugo
+https://gohugo.io/
     </div>
   </div>
 </div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on 一缕书香一缕魂</title>
+    <link>https://nijian.github.io/tags/linux/</link>
+    <description>Recent content in Linux on 一缕书香一缕魂</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 22 Feb 2021 14:55:24 +0800</lastBuildDate><atom:link href="https://nijian.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux 常用命令</title>
+      <link>https://nijian.github.io/software/tool/linuxcommand/</link>
+      <pubDate>Mon, 22 Feb 2021 14:55:24 +0800</pubDate>
+      
+      <guid>https://nijian.github.io/software/tool/linuxcommand/</guid>
+      <description>#grep 用于查找文件中符合条件的字符串。
+-v 或 &amp;ndash;invert-match : 显示不包含匹配文本的所有行</description>
+    </item>
+    
+  </channel>
+</rss>

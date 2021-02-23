@@ -13,9 +13,12 @@
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
       <guid>https://nijian.github.io/software/cloud/aws/</guid>
-      <description>Amazon Web Services(AWS) 是一个云平台，拥有全球化的云基础设施，目前在全球24个地理区域运营着77个可用区。
+      <description>简介 Amazon Web Services(AWS) 是一个云平台，拥有全球化的云基础设施，目前在全球24个地理区域运营着77个可用区。
 AWS提供了大量基于云的全球性服务，其中包括：
- 计算 存储 数据库 分析 联网 移动产品 开发人员工具 管理工具 物联网 安全性 企业应用程序  </description>
+ 计算 存储 数据库 分析 联网 移动产品 开发人员工具 管理工具 物联网 安全性 企业应用程序  常用命令 安装 awscli
+sudo apt install awscli 查看 aws 版本
+aws --version 配置 awscli
+aws configure </description>
     </item>
     
     <item>
