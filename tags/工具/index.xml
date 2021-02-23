@@ -26,7 +26,8 @@
       
       <guid>https://nijian.github.io/software/tool/hugo/</guid>
       <description>简介 Hugo 是一个用 Go 语言编写的静态站点生成器。从技术上来说， Hugo 以某个目录下的文件和模板为输入，运行后可以创建一个完整的 Web 站点。
-常用命令  创建新站点  hugo new site foo  foo 是站点名称
+常用命令  创建新站点
+&amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD  hugo new site foo  foo 是站点名称
   添加 theme  echo &amp;#39;theme = &amp;#34;ananke&amp;#34;&amp;#39; &amp;gt;&amp;gt; config.toml  对于使用 hugo new site 创建的缺省站点，配置简化存放在根目录下的 config.toml 中。通过上述命令，可在该配置文件中添加一条指令。 theme 的获取及安装可参考 https://gohugo.io/getting-started/quick-start/
   创建文章  hugo new software/env/installation.md  software 是 category ， installation.md 是文件名称。使用此命令可以根据 archetype 自动生成一些内容，例如 title 等。
   启动本地 hugo server 用于调试  hugo server -t ananke  ananke 是 theme 名称</description>

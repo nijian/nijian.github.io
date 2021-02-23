@@ -8,6 +8,40 @@
     <language>zh-cn</language>
     <lastBuildDate>Sat, 30 Jan 2021 12:00:00 -0500</lastBuildDate><atom:link href="https://nijian.github.io/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Docker</title>
+      <link>https://nijian.github.io/software/tool/docker/</link>
+      <pubDate>Tue, 23 Feb 2021 18:02:56 +0800</pubDate>
+      
+      <guid>https://nijian.github.io/software/tool/docker/</guid>
+      <description>简介 安装 卸载老版本
+sudo apt-get remove docker docker-engine docker.io containerd runc 更新 apt 包索引并安装支持 apt 通过 https 访问 repository 的包
+sudo apt-get update sudo apt-get install \  apt-transport-https \  ca-certificates \  curl \  gnupg-agent \  software-properties-common 添加 Docker 官方 GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - 校验
+sudo apt-key fingerprint 0EBFCD88 设置 stable repository
+sudo add-apt-repository \  &amp;#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu \ $(lsb_release -cs)\ stable&amp;#34; 安装</description>
+    </item>
+    
+    <item>
+      <title>XLSX</title>
+      <link>https://nijian.github.io/software/tool/xlsx/</link>
+      <pubDate>Tue, 23 Feb 2021 14:04:22 +0800</pubDate>
+      
+      <guid>https://nijian.github.io/software/tool/xlsx/</guid>
+      <description>简介 XLSX 是一个用 Go 语言编写的工具库，其核心功能是读写 XLSX 文件。
+基本特性 Styles </description>
+    </item>
+    
+    <item>
+      <title>Excelize</title>
+      <link>https://nijian.github.io/software/tool/excelize/</link>
+      <pubDate>Tue, 23 Feb 2021 10:57:50 +0800</pubDate>
+      
+      <guid>https://nijian.github.io/software/tool/excelize/</guid>
+      <description>简介 Excelize 是一个用 Go 语言编写的工具库，其核心功能是读写 XLSX / XLSM / XLTM 文件。它支持 Microsoft Excel™ 2007 及以后的版本，支持复杂组件，并提供 Stream API 来支持对数据的读写。
+基本特性 Workbook  基于缺省模板来创建 Excel Document 打开 Excel 文件 （支持 password 选项，注意只支持解密，不支持加密） 打开 Excel 数据流 保存文件或另存为指定文件 创建 Worksheet 删除 Worksheet 复制 Worksheet 设置 Worksheet 背景图片 设置当前的 Worksheet 设置/获取 Worksheet 是否可见 设置/获取 Worksheet 属性，例如，列宽，行高等 设置/获取 Worksheet 显示属性，例如，缺省格子颜色，是否从右到左，是否显示格子线等 设置/获取 Worksheet 页面布局，例如，纵向或横向，A4 等 设置/获取 Worksheet 页边空白 设置页头和页尾 设置/获取 Workbook / Worksheet 的名称 设置/获取 Document 属性，例如， name 、 title 、 creator 等  Worksheet  设置/获取列是否可见 设置/获取列宽 设置/获取行高 设置/获取行是否可见 设置/获取 Worksheet 名称 获取 Worksheet 的 index 获取 Worksheet map/list 设置/获取 Worksheet 属性，例如，是否格式化条件计算，是否自动分页等 插入/删除列、行 复制行 设置/获取高亮显示列、行 列迭代器，用于流式读取数据的处理 行迭代器，用于流式读取数据的处理 查找 Worksheet 保护/取消保护 通过数组批量设置行值 插入/删除分页  Cell  设置/获取单元格的值 设置单元格的风格 （ Style ）  Style Data Utils Chart Picture Shape Sparklines Streaming write </description>
+    </item>
+    
+    <item>
       <title>Git</title>
       <link>https://nijian.github.io/software/tool/git/</link>
       <pubDate>Tue, 23 Feb 2021 09:34:30 +0800</pubDate>
@@ -109,11 +143,14 @@
       <pubDate>Fri, 05 Feb 2021 15:00:18 +0800</pubDate>
       
       <guid>https://nijian.github.io/software/cloud/aws-lambda/</guid>
-      <description>Lambda 函数调用 同步调用 使用 AWS CLI 或某种语言（目前支持 Go，Java，C#，Ruby，Python，Node.js，PowerShell）的 SDK 可以发起同步调用。值得注意的是，最终触发 Lambda 函数的事件仍然是由下列 AWS 服务完成的：
- 弹性负载均衡（Elastic Load Balancing）  该服务支持把 Lambda 作为应用负载均衡器（Application Load Balancer）的目标   Amazon Cognito Amazon Lex Amazon Alexa Amazon API Gateway Amazon CloudFront ( Lambda@Edge ) Amazon Kinesis Data Firehose  关于弹性负载均衡 弹性负载均衡（Elastic Load Balancing）服务属于联网和内容分发服务大类，该服务可以转发流量至可用区内的各类目标，例如，EC2 实例，容器，IP 地址。它会监控目标的健康状况，并把流量转发至健康的目标。弹性负载均衡还会根据流量变化来对负载均衡器进行自动伸缩。
-弹性负载均衡服务支持下列负载均衡器：
- 应用负载均衡器（Application Load Balancer） 网络负载均衡器（Network Load Balancer） 网关负载均衡器（Gateway Load Balancer） 传统负载均衡器（Classic Load Balancer）  关于负载均衡器 负载均衡器（Load Balancer）为客户端提供一个单点服务，流量分发对客户端来说是透明的。
-负载均衡器包含一个或多个监听器（listener）。监听器通过配置的协议和端口接收来自客户端的请求，而定义在监听器上的规则（rule）则决定了如何把请求路由到已注册的目标。每个规则都由优先级、条件、以及活动组成。当条件满足时，执行相应的活动。</description>
+      <description>Lambda 运行环境   Lambda 运行环境生命周期   三个阶段：
+ Init   第一次调用时触发（或根据并行预配置）。基本过程是，基于配置创建运行环境，下载函数及各层代码，初始化扩展和运行时，运行函数初始化代码。
+  Invoke   Lambda 调用函数 Handler。
+  Shutdown   一段时间没有收到任何调用后触发。
+ Lambda 函数发布 部署包有两种形式：
+ 容器镜像 （ container image ） .zip 文件  容器镜像 一般使用 Docker CLI 把函数代码和相关依赖打包成一个镜像，也可以使用 AWS Serverless Application Model （ AWS SAM ）来创建。
+AWS 提供了一些开源的基础镜像，这些基础镜像包含了相关编程语言的运行时，以及支持镜像在 AWS Lambda 中运行的组件，例如，运行时接口客户端 （ runtime interface clients ），用于管理 Lambda 和函数代码之间的交互。
+镜像创建后，使用 AWS CLI 上传至 Amazon Elastic Container Registry （ Amazon ECR ）。</description>
     </item>
     
     <item>
@@ -158,7 +195,8 @@ aws configure </description>
       
       <guid>https://nijian.github.io/software/tool/hugo/</guid>
       <description>简介 Hugo 是一个用 Go 语言编写的静态站点生成器。从技术上来说， Hugo 以某个目录下的文件和模板为输入，运行后可以创建一个完整的 Web 站点。
-常用命令  创建新站点  hugo new site foo  foo 是站点名称
+常用命令  创建新站点
+&amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD  hugo new site foo  foo 是站点名称
   添加 theme  echo &amp;#39;theme = &amp;#34;ananke&amp;#34;&amp;#39; &amp;gt;&amp;gt; config.toml  对于使用 hugo new site 创建的缺省站点，配置简化存放在根目录下的 config.toml 中。通过上述命令，可在该配置文件中添加一条指令。 theme 的获取及安装可参考 https://gohugo.io/getting-started/quick-start/
   创建文章  hugo new software/env/installation.md  software 是 category ， installation.md 是文件名称。使用此命令可以根据 archetype 自动生成一些内容，例如 title 等。
   启动本地 hugo server 用于调试  hugo server -t ananke  ananke 是 theme 名称</description>

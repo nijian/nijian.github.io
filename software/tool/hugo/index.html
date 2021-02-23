@@ -40,7 +40,7 @@
 <meta itemprop="description" content="静态站点生成器">
 <meta itemprop="datePublished" content="2021-01-01T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2021-01-01T10:58:08-04:00" />
-<meta itemprop="wordCount" content="233">
+<meta itemprop="wordCount" content="289">
 
 
 
@@ -157,7 +157,8 @@
 <p>Hugo 是一个用 Go 语言编写的静态站点生成器。从技术上来说， Hugo 以某个目录下的文件和模板为输入，运行后可以创建一个完整的 Web 站点。</p>
 <h2 id="常用命令">常用命令</h2>
 <ul>
-<li>创建新站点</li>
+<li>创建新站点<br>
+&laquo;&laquo;&laquo;&lt; HEAD</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site foo  
 </code></pre></div><blockquote>
@@ -188,8 +189,51 @@
 <li>生成静态站点</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo
-</code></pre></div><blockquote>
-<p>静态站点的内容生成在特定目录，缺省为 public 。可通过参数或配置来进行修改。</p>
+</code></pre></div><p>=======</p>
+<p>hugo new site foo</p>
+<blockquote>
+<p>foo 是站点名称</p>
+</blockquote>
+<ul>
+<li>添加 theme</li>
+</ul>
+<p>echo &lsquo;theme = &ldquo;ananke&rdquo;&rsquo; &raquo; config.toml</p>
+<blockquote>
+<p>对于使用 hugo new site 创建的缺省站点，配置简化存放在根目录下的 config.toml 中。通过上述命令，可在该配置文件中添加一条指令。 theme 的获取及安装可参考 <a href="https://gohugo.io/getting-started/quick-start/">https://gohugo.io/getting-started/quick-start/</a></p>
+</blockquote>
+<ul>
+<li>创建文章</li>
+</ul>
+<p>hugo new software/env/installation.md</p>
+<blockquote>
+<p>software 是 category ， installation.md 是文件名称。使用此命令可以根据 archetype 自动生成一些内容，例如 title 等。</p>
+</blockquote>
+<ul>
+<li>启动本地 hugo server 用于调试</li>
+</ul>
+<p>hugo server -t ananke</p>
+<blockquote>
+<p>ananke 是 theme 名称</p>
+</blockquote>
+<ul>
+<li>生成静态站点</li>
+</ul>
+<p>hugo</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>b1c814a1d24061ee04826807b4705929a5d51b6d
+静态站点的内容生成在特定目录，缺省为 public 。可通过参数或配置来进行修改。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 </blockquote>
 <h2 id="主要特性">主要特性</h2>
 <ul>

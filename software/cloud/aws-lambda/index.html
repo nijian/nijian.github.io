@@ -40,7 +40,7 @@
 <meta itemprop="description" content="AWS Lambda">
 <meta itemprop="datePublished" content="2021-02-05T15:00:18+08:00" />
 <meta itemprop="dateModified" content="2021-02-05T15:00:18+08:00" />
-<meta itemprop="wordCount" content="714">
+<meta itemprop="wordCount" content="786">
 
 
 
@@ -153,7 +153,49 @@
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="lambda-函数调用">Lambda 函数调用</h2>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="lambda-运行环境">Lambda 运行环境</h2>
+<figure>
+    <img src="/images/aws-lambda-execution-environment.png"/> 
+</figure>
+
+<h2 id="lambda-运行环境生命周期">Lambda 运行环境生命周期</h2>
+<figure>
+    <img src="/images/aws-lambda-execution-environment-lifecycle.png"/> 
+</figure>
+
+<p>三个阶段：</p>
+<ul>
+<li>Init</li>
+</ul>
+<blockquote>
+<p>第一次调用时触发（或根据并行预配置）。基本过程是，基于配置创建运行环境，下载函数及各层代码，初始化扩展和运行时，运行函数初始化代码。</p>
+</blockquote>
+<ul>
+<li>Invoke</li>
+</ul>
+<blockquote>
+<p>Lambda 调用函数 Handler。</p>
+</blockquote>
+<ul>
+<li>Shutdown</li>
+</ul>
+<blockquote>
+<p>一段时间没有收到任何调用后触发。</p>
+</blockquote>
+<h2 id="lambda-函数发布">Lambda 函数发布</h2>
+<p>部署包有两种形式：</p>
+<ul>
+<li>容器镜像 （ container image ）</li>
+<li>.zip 文件</li>
+</ul>
+<h3 id="容器镜像">容器镜像</h3>
+<p>一般使用 Docker CLI 把函数代码和相关依赖打包成一个镜像，也可以使用 AWS Serverless Application Model （ AWS SAM ）来创建。</p>
+<p>AWS 提供了一些开源的基础镜像，这些基础镜像包含了相关编程语言的运行时，以及支持镜像在 AWS Lambda 中运行的组件，例如，运行时接口客户端 （ runtime interface clients ），用于管理 Lambda 和函数代码之间的交互。</p>
+<p>镜像创建后，使用 AWS CLI 上传至 Amazon Elastic Container Registry （ Amazon ECR ）。</p>
+<p>以 Go 编写的函数为例，容器镜像创建和部署如下：</p>
+<p>本地测试 Lambda 镜像</p>
+<h3 id="zip-文件">.zip 文件</h3>
+<h2 id="lambda-函数调用">Lambda 函数调用</h2>
 <h3 id="同步调用">同步调用</h3>
 <p>使用 AWS CLI 或某种语言（目前支持 Go，Java，C#，Ruby，Python，Node.js，PowerShell）的 SDK 可以<strong>发起</strong>同步调用。值得注意的是，最终触发 Lambda 函数的事件仍然是由下列 AWS 服务完成的：</p>
 <ul>
@@ -184,6 +226,8 @@
 <h4 id="关于应用负载均衡器">关于应用负载均衡器</h4>
 <p>应用负载均衡器（Application Load Balancer）</p>
 <h3 id="异步调用">异步调用</h3>
+<h2 id="aws-lambda-配额">AWS Lambda 配额</h2>
+<p><a href="https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html">https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-limits.html</a></p>
 <h2 id="aws-lambda-使用成本简析">AWS Lambda 使用成本简析</h2>
 <p>AWS Lambda 使用成本由以下几项费用组成：</p>
 <ul>
@@ -435,12 +479,21 @@
     <p class="f5 b mb3">这是什么 software</p>
       <nav id="TableOfContents">
   <ul>
+    <li><a href="#lambda-运行环境">Lambda 运行环境</a></li>
+    <li><a href="#lambda-运行环境生命周期">Lambda 运行环境生命周期</a></li>
+    <li><a href="#lambda-函数发布">Lambda 函数发布</a>
+      <ul>
+        <li><a href="#容器镜像">容器镜像</a></li>
+        <li><a href="#zip-文件">.zip 文件</a></li>
+      </ul>
+    </li>
     <li><a href="#lambda-函数调用">Lambda 函数调用</a>
       <ul>
         <li><a href="#同步调用">同步调用</a></li>
         <li><a href="#异步调用">异步调用</a></li>
       </ul>
     </li>
+    <li><a href="#aws-lambda-配额">AWS Lambda 配额</a></li>
     <li><a href="#aws-lambda-使用成本简析">AWS Lambda 使用成本简析</a>
       <ul>
         <li><a href="#aws-lambda-基本费用">AWS Lambda 基本费用</a></li>
@@ -465,6 +518,10 @@
         </li>
 	    
 	     <li  class="mb2">
+          <a href="/software/cloud/aws/">AWS</a>
+        </li>
+	    
+	     <li  class="mb2">
           <a href="/software/tool/tool/">工具</a>
         </li>
 	    
@@ -474,10 +531,6 @@
 	    
 	     <li  class="mb2">
           <a href="/software/cloud/compute/">AWS计算服务</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/software/cloud/aws/">AWS</a>
         </li>
 	    
     </ul>

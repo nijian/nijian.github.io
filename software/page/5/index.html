@@ -119,17 +119,12 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Software</span>
     <h1 class="f3 near-black">
-      <a href="https://nijian.github.io/software/cloud/aws/" class="link black dim">
-        AWS
+      <a href="https://nijian.github.io/software/cloud/aws-concept/" class="link black dim">
+        AWS 术语
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      简介 Amazon Web Services(AWS) 是一个云平台，拥有全球化的云基础设施，目前在全球24个地理区域运营着77个可用区。
-AWS提供了大量基于云的全球性服务，其中包括：
- 计算 存储 数据库 分析 联网 移动产品 开发人员工具 管理工具 物联网 安全性 企业应用程序  常用命令 安装 awscli
-sudo apt install awscli 查看 aws 版本
-aws --version 配置 awscli
-aws configure 
+      
     </div>
   </div>
 </div>
@@ -139,13 +134,19 @@ aws configure
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Software</span>
     <h1 class="f3 near-black">
-      <a href="https://nijian.github.io/software/cloud/compute/" class="link black dim">
-        AWS计算服务
+      <a href="https://nijian.github.io/software/cloud/aws-lambda/" class="link black dim">
+        AWS Lambda
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      AWS计算服务
-   类别 服务描述     实例（虚拟机） 安全并且可以调整大小的云计算容量（虚拟服务器）   Mike 32    
+      Lambda 运行环境   Lambda 运行环境生命周期   三个阶段：
+ Init   第一次调用时触发（或根据并行预配置）。基本过程是，基于配置创建运行环境，下载函数及各层代码，初始化扩展和运行时，运行函数初始化代码。
+  Invoke   Lambda 调用函数 Handler。
+  Shutdown   一段时间没有收到任何调用后触发。
+ Lambda 函数发布 部署包有两种形式：
+ 容器镜像 （ container image ） .zip 文件  容器镜像 一般使用 Docker CLI 把函数代码和相关依赖打包成一个镜像，也可以使用 AWS Serverless Application Model （ AWS SAM ）来创建。
+AWS 提供了一些开源的基础镜像，这些基础镜像包含了相关编程语言的运行时，以及支持镜像在 AWS Lambda 中运行的组件，例如，运行时接口客户端 （ runtime interface clients ），用于管理 Lambda 和函数代码之间的交互。
+镜像创建后，使用 AWS CLI 上传至 Amazon Elastic Container Registry （ Amazon ECR ）。
     </div>
   </div>
 </div>
@@ -155,16 +156,14 @@ aws configure
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Software</span>
     <h1 class="f3 near-black">
-      <a href="https://nijian.github.io/software/tool/hugo/" class="link black dim">
-        Hugo
+      <a href="https://nijian.github.io/software/my/xltxdt/" class="link black dim">
+        Excel决策表
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      简介 Hugo 是一个用 Go 语言编写的静态站点生成器。从技术上来说， Hugo 以某个目录下的文件和模板为输入，运行后可以创建一个完整的 Web 站点。
-常用命令  创建新站点  hugo new site foo  foo 是站点名称
-  添加 theme  echo &#39;theme = &#34;ananke&#34;&#39; &gt;&gt; config.toml  对于使用 hugo new site 创建的缺省站点，配置简化存放在根目录下的 config.toml 中。通过上述命令，可在该配置文件中添加一条指令。 theme 的获取及安装可参考 https://gohugo.io/getting-started/quick-start/
-  创建文章  hugo new software/env/installation.md  software 是 category ， installation.md 是文件名称。使用此命令可以根据 archetype 自动生成一些内容，例如 title 等。
-  启动本地 hugo server 用于调试  hugo server -t ananke  ananke 是 theme 名称
+      构思   图1   场景   图2   图2展示了Excel决策表设计时的场景。运行时场景较为丰富，且与业务关系紧密，不再赘述。这里只描述Excel决策表引擎的接口方法，即输入xltx文件，输出适配go-tree库的tree对象。
+分析模型 Excel模板定义与决策表概念及后续的解析密切相关，经初步分析，引入下面几个概念：
+ 条件列（condition column） 条件（condition） 结论列（conclusion column） 结论（conclusion） 无法匹配（missing） 列类型（column type） 列值类型（column value type） 列名（column name） 布尔表达式（bool expression）  
     </div>
   </div>
 </div>
@@ -196,14 +195,17 @@ aws configure
   <li class="page-item">
     <a class="page-link" href="/software/page/6/">6</a>
   </li>
+  <li class="page-item disabled">
+    <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
+  </li>
   <li class="page-item">
-    <a class="page-link" href="/software/page/7/">7</a>
+    <a class="page-link" href="/software/page/8/">8</a>
   </li>
   <li class="page-item">
     <a href="/software/page/6/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
   </li>
   <li class="page-item">
-    <a href="/software/page/7/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    <a href="/software/page/8/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
   </li>
 </ul>
 
