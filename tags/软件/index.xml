@@ -68,7 +68,7 @@ sudo add-apt-repository \  &amp;#34;deb [arch=amd64] https://download.docker.com
       <pubDate>Mon, 22 Feb 2021 12:19:31 +0800</pubDate>
       
       <guid>https://nijian.github.io/software/language/go/</guid>
-      <description>#依赖管理</description>
+      <description>依赖管理 环境变量 GOPROXY</description>
     </item>
     
     <item>

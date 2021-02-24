@@ -40,7 +40,7 @@
 <meta itemprop="description" content="AWS Lambda">
 <meta itemprop="datePublished" content="2021-02-05T15:00:18+08:00" />
 <meta itemprop="dateModified" content="2021-02-05T15:00:18+08:00" />
-<meta itemprop="wordCount" content="786">
+<meta itemprop="wordCount" content="849">
 
 
 
@@ -193,8 +193,25 @@
 <p>AWS 提供了一些开源的基础镜像，这些基础镜像包含了相关编程语言的运行时，以及支持镜像在 AWS Lambda 中运行的组件，例如，运行时接口客户端 （ runtime interface clients ），用于管理 Lambda 和函数代码之间的交互。</p>
 <p>镜像创建后，使用 AWS CLI 上传至 Amazon Elastic Container Registry （ Amazon ECR ）。</p>
 <p>以 Go 编写的函数为例，容器镜像创建和部署如下：</p>
-<p>本地测试 Lambda 镜像</p>
+<h4 id="本地测试-lambda-镜像">本地测试 Lambda 镜像</h4>
+<p>本地测试可以使用 AWS Lambda Runtime Interface Emulator （ RIE ）。 RIE 是 AWS Lambda Runtime API 代理，一个轻量的 Web Server ，可把 HTTP 请求转换为 JSON 事件，并传递给镜像中的 Lambda 函数。</p>
+<p>测试过程如下：</p>
+<ul>
+<li>构建函数镜像</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker build -t myfunction:latest . 
+</code></pre></div><ul>
+<li>运行本地函数镜像</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run -p 9000:8080  myfunction:latest
+</code></pre></div><p>上述命令启动了一个 endpoint ，使用 POST 方法，设置请求 JSON ，调用该 API 。<br>
+http://localhost:9000/2015-03-31/functions/function/invocations</p>
 <h3 id="zip-文件">.zip 文件</h3>
+<h2 id="lambda-函数环境变量">Lambda 函数环境变量</h2>
+<p>可在 Lambda console 中设置，也可以通过 AWS CLI 或 AWS SDK 进行设置。</p>
+<blockquote>
+<p>所有环境变量大小总计不超过 4 KB</p>
+</blockquote>
 <h2 id="lambda-函数调用">Lambda 函数调用</h2>
 <h3 id="同步调用">同步调用</h3>
 <p>使用 AWS CLI 或某种语言（目前支持 Go，Java，C#，Ruby，Python，Node.js，PowerShell）的 SDK 可以<strong>发起</strong>同步调用。值得注意的是，最终触发 Lambda 函数的事件仍然是由下列 AWS 服务完成的：</p>
@@ -487,6 +504,7 @@
         <li><a href="#zip-文件">.zip 文件</a></li>
       </ul>
     </li>
+    <li><a href="#lambda-函数环境变量">Lambda 函数环境变量</a></li>
     <li><a href="#lambda-函数调用">Lambda 函数调用</a>
       <ul>
         <li><a href="#同步调用">同步调用</a></li>
@@ -518,7 +536,7 @@
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/cloud/aws/">AWS</a>
+          <a href="/software/cloud/compute/">AWS计算服务</a>
         </li>
 	    
 	     <li  class="mb2">
@@ -526,11 +544,11 @@
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/tool/hugo/">Hugo</a>
+          <a href="/software/cloud/aws/">AWS</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/cloud/compute/">AWS计算服务</a>
+          <a href="/software/tool/hugo/">Hugo</a>
         </li>
 	    
     </ul>
