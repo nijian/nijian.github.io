@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nijian.github.io/tags/docker/</loc>
+    <lastmod>2021-02-23T18:02:56+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://nijian.github.io/software/tool/docker/</loc>
     <lastmod>2021-02-23T18:02:56+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -11,6 +18,13 @@
   
   <url>
     <loc>https://nijian.github.io/tags/</loc>
+    <lastmod>2021-02-23T18:02:56+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nijian.github.io/tags/%E5%AE%B9%E5%99%A8/</loc>
     <lastmod>2021-02-23T18:02:56+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
