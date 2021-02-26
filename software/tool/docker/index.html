@@ -7,8 +7,8 @@
     <title>Docker | 一缕书香一缕魂</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
- 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像文件的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
- 架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。">
+ 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
+ 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像   registry 共享镜像库    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。">
     <meta name="generator" content="Hugo 0.80.0" />
     
     
@@ -34,19 +34,19 @@
     
     <meta property="og:title" content="Docker" />
 <meta property="og:description" content="简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
- 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像文件的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
- 架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。" />
+ 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
+ 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像   registry 共享镜像库    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nijian.github.io/software/tool/docker/" />
 <meta property="article:published_time" content="2021-02-23T18:02:56+08:00" />
 <meta property="article:modified_time" content="2021-02-23T18:02:56+08:00" /><meta property="og:site_name" content="一缕书香一缕魂" />
 <meta itemprop="name" content="Docker">
 <meta itemprop="description" content="简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
- 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像文件的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
- 架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。">
+ 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
+ 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像   registry 共享镜像库    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。">
 <meta itemprop="datePublished" content="2021-02-23T18:02:56+08:00" />
 <meta itemprop="dateModified" content="2021-02-23T18:02:56+08:00" />
-<meta itemprop="wordCount" content="280">
+<meta itemprop="wordCount" content="341">
 
 
 
@@ -54,8 +54,8 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker"/>
 <meta name="twitter:description" content="简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
- 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像文件的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
- 架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。"/>
+ 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
+ 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像   registry 共享镜像库    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。"/>
 
 	
   </head>
@@ -164,10 +164,37 @@
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="简介">简介</h2>
 <p>Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。</p>
 <blockquote>
-<p>容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像文件的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。</p>
+<p>容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。</p>
 </blockquote>
+<h2 id="术语">术语</h2>
+<table>
+<thead>
+<tr>
+<th>术语</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td>镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数</td>
+</tr>
+<tr>
+<td>layer</td>
+<td>层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。</td>
+</tr>
+<tr>
+<td>repository</td>
+<td>本地镜像库，包含了一组镜像</td>
+</tr>
+<tr>
+<td>registry</td>
+<td>共享镜像库</td>
+</tr>
+</tbody>
+</table>
 <h2 id="架构">架构</h2>
-<p>Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。</p>
+<p>Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。</p>
 <figure>
     <img src="/images/docker-architecture.svg"/> 
 </figure>
@@ -207,18 +234,37 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 newgrp docker <span style="color:#75715e">#更新 docker 用户组</span>
 </code></pre></div><h2 id="常用命令">常用命令</h2>
+<p>登录共享镜像库</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker login <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>SERVER<span style="color:#f92672">]</span>
+</code></pre></div><blockquote>
+<p>注意：实际操作共享镜像库资源的是 Docker daemon ， daemon 需要对登录共享镜像库的用户证书进行存储，存储的方式可以是内部配置文件（例如， $HOME/.docker/config.json ），也可以使用 credentials helpers 保存在外部（例如，操作系统的 native keychain ）。更多细节可参考<a href="https://docs.docker.com/engine/reference/commandline/login/"><strong>这里</strong></a>。</p>
+</blockquote>
+<p>登出共享镜像库</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker logout <span style="color:#f92672">[</span>SERVER<span style="color:#f92672">]</span>
+</code></pre></div><blockquote>
+<p>登出共享镜像库后， daemon 会删除用户证书信息。</p>
+</blockquote>
+<p>推送一个镜像或整个本地镜像库中的镜像至共享镜像库</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker push <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> NAME<span style="color:#f92672">[</span>:TAG<span style="color:#f92672">]</span>
+or
+docker image push <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> NAME<span style="color:#f92672">[</span>:TAG<span style="color:#f92672">]</span>
+</code></pre></div><blockquote>
+<p>推送时会进行压缩处理。另外，每次推送会缺省（可通过 -max-concurrent-uploads 修改）并发推送一个镜像的 5 层（ layers ）。注意：实际推送由 Docker daemon 完成。</p>
+</blockquote>
 <p>查看本地存储的镜像列表</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker image list
 </code></pre></div><p>删除所有的本地镜像</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker rmi <span style="color:#66d9ef">$(</span>docker images -a -q<span style="color:#66d9ef">)</span>
 </code></pre></div><p>进入容器内部执行命令</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker exec <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> CONTAINER COMMAND <span style="color:#f92672">[</span>ARG...<span style="color:#f92672">]</span>
-</code></pre></div><p>OPTIONS：</p>
+</code></pre></div><blockquote>
+<p>OPTIONS：</p>
 <ul>
 <li>-d ：分离模式: 在后台运行</li>
 <li>-i ：即使没有附加也保持 STDIN 打开</li>
 <li>-t ：分配一个伪终端</li>
 </ul>
+</blockquote>
 <h2 id="dockerfile">Dockerfile</h2>
 <p>Dockerfile 是一个文本文件，它包含装配一个镜像时需要通过命令行调用的全部命令。下面以 docker build 命令为例来展示 Dockerfile 的应用场景。</p>
 <p>docker build 命令基于一个 Dockerfile 和一个 context 。 context 是指定位置的一组文件，指定位置为 PATH 或 URL 。 PATH 是本地文件系统的一个目录， URL 是 Git repository 的 url 。</p>
@@ -258,6 +304,7 @@ newgrp docker <span style="color:#75715e">#更新 docker 用户组</span>
       <nav id="TableOfContents">
   <ul>
     <li><a href="#简介">简介</a></li>
+    <li><a href="#术语">术语</a></li>
     <li><a href="#架构">架构</a></li>
     <li><a href="#docker-对象">Docker 对象</a>
       <ul>
@@ -340,7 +387,7 @@ newgrp docker <span style="color:#75715e">#更新 docker 用户组</span>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/tool/tool/">工具</a>
+          <a href="/software/tool/hugo/">Hugo</a>
         </li>
 	    
     </ul>

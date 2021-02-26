@@ -156,14 +156,7 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Lambda 运行环境   Lambda 运行环境生命周期   三个阶段：
- Init   第一次调用时触发（或根据并行预配置）。基本过程是，基于配置创建运行环境，下载函数及各层代码，初始化扩展和运行时，运行函数初始化代码。
-  Invoke   Lambda 调用函数 Handler。
-  Shutdown   一段时间没有收到任何调用后触发。
- Lambda 函数发布 部署包有两种形式：
- 容器镜像 （ container image ） .zip 文件  容器镜像 一般使用 Docker CLI 把函数代码和相关依赖打包成一个镜像，也可以使用 AWS Serverless Application Model （ AWS SAM ）来创建。
-AWS 提供了一些开源的基础镜像，这些基础镜像包含了相关编程语言的运行时，以及支持镜像在 AWS Lambda 中运行的组件，例如，运行时接口客户端 （ runtime interface clients ），用于管理 Lambda 和函数代码之间的交互。
-镜像创建后，使用 AWS CLI 上传至 Amazon Elastic Container Registry （ Amazon ECR ）。
+      简介 术语    术语 描述     layer 一个层是一个 .zip 文件（不适用于镜像），使用层技术，可以使部署包尽可能地小，因为部署包依赖的库可以通过一个新的层提供   runtime 在 Lambda 运行环境中工作的一个编程语言相关的环境，负责转发调用事件，上下文信息，以及最终的响应   handler 函数代码中由 Lambda 调用并开始执行的方法   code signing 代码签名   execution role 授权 Lambda 函数去访问 AWS 服务和资源的 IAM 角色（ AWS Identity and Access Management (IAM) role ）   unpublished version 未发布的版本，当函数更新时，会发生相应的变化   published versions 已发布的版本，是函数的一个快照，不会发生变化   aliases 函数别名，可以设置使之对应于一个版本   ARN Amazon Resource Name ， 例如，execution role ARN 的样式为 arn:aws:iam::your-account-id:role/execution_role    常用命令 AWS CLI v1 - Lambda API 创建 Lambda 函数
     </div>
   </div>
 </div>
@@ -222,8 +215,8 @@ aws configure
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
- 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像文件的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
- 架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。
+ 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
+ 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像   registry 共享镜像库    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。
     </div>
   </div>
 </div>
@@ -350,14 +343,7 @@ aws configure
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Lambda 运行环境   Lambda 运行环境生命周期   三个阶段：
- Init   第一次调用时触发（或根据并行预配置）。基本过程是，基于配置创建运行环境，下载函数及各层代码，初始化扩展和运行时，运行函数初始化代码。
-  Invoke   Lambda 调用函数 Handler。
-  Shutdown   一段时间没有收到任何调用后触发。
- Lambda 函数发布 部署包有两种形式：
- 容器镜像 （ container image ） .zip 文件  容器镜像 一般使用 Docker CLI 把函数代码和相关依赖打包成一个镜像，也可以使用 AWS Serverless Application Model （ AWS SAM ）来创建。
-AWS 提供了一些开源的基础镜像，这些基础镜像包含了相关编程语言的运行时，以及支持镜像在 AWS Lambda 中运行的组件，例如，运行时接口客户端 （ runtime interface clients ），用于管理 Lambda 和函数代码之间的交互。
-镜像创建后，使用 AWS CLI 上传至 Amazon Elastic Container Registry （ Amazon ECR ）。
+      简介 术语    术语 描述     layer 一个层是一个 .zip 文件（不适用于镜像），使用层技术，可以使部署包尽可能地小，因为部署包依赖的库可以通过一个新的层提供   runtime 在 Lambda 运行环境中工作的一个编程语言相关的环境，负责转发调用事件，上下文信息，以及最终的响应   handler 函数代码中由 Lambda 调用并开始执行的方法   code signing 代码签名   execution role 授权 Lambda 函数去访问 AWS 服务和资源的 IAM 角色（ AWS Identity and Access Management (IAM) role ）   unpublished version 未发布的版本，当函数更新时，会发生相应的变化   published versions 已发布的版本，是函数的一个快照，不会发生变化   aliases 函数别名，可以设置使之对应于一个版本   ARN Amazon Resource Name ， 例如，execution role ARN 的样式为 arn:aws:iam::your-account-id:role/execution_role    常用命令 AWS CLI v1 - Lambda API 创建 Lambda 函数
     </div>
   </div>
 </div>
@@ -537,8 +523,8 @@ aws configure
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
- 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像文件的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
- 架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。
+ 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
+ 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像   registry 共享镜像库    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。
     </div>
   </div>
 </div>
@@ -788,8 +774,8 @@ https://gohugo.io/
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
- 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像文件的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
- 架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。
+ 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
+ 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像   registry 共享镜像库    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。
     </div>
   </div>
 </div>
@@ -992,14 +978,7 @@ https://gohugo.io/
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      Lambda 运行环境   Lambda 运行环境生命周期   三个阶段：
- Init   第一次调用时触发（或根据并行预配置）。基本过程是，基于配置创建运行环境，下载函数及各层代码，初始化扩展和运行时，运行函数初始化代码。
-  Invoke   Lambda 调用函数 Handler。
-  Shutdown   一段时间没有收到任何调用后触发。
- Lambda 函数发布 部署包有两种形式：
- 容器镜像 （ container image ） .zip 文件  容器镜像 一般使用 Docker CLI 把函数代码和相关依赖打包成一个镜像，也可以使用 AWS Serverless Application Model （ AWS SAM ）来创建。
-AWS 提供了一些开源的基础镜像，这些基础镜像包含了相关编程语言的运行时，以及支持镜像在 AWS Lambda 中运行的组件，例如，运行时接口客户端 （ runtime interface clients ），用于管理 Lambda 和函数代码之间的交互。
-镜像创建后，使用 AWS CLI 上传至 Amazon Elastic Container Registry （ Amazon ECR ）。
+      简介 术语    术语 描述     layer 一个层是一个 .zip 文件（不适用于镜像），使用层技术，可以使部署包尽可能地小，因为部署包依赖的库可以通过一个新的层提供   runtime 在 Lambda 运行环境中工作的一个编程语言相关的环境，负责转发调用事件，上下文信息，以及最终的响应   handler 函数代码中由 Lambda 调用并开始执行的方法   code signing 代码签名   execution role 授权 Lambda 函数去访问 AWS 服务和资源的 IAM 角色（ AWS Identity and Access Management (IAM) role ）   unpublished version 未发布的版本，当函数更新时，会发生相应的变化   published versions 已发布的版本，是函数的一个快照，不会发生变化   aliases 函数别名，可以设置使之对应于一个版本   ARN Amazon Resource Name ， 例如，execution role ARN 的样式为 arn:aws:iam::your-account-id:role/execution_role    常用命令 AWS CLI v1 - Lambda API 创建 Lambda 函数
     </div>
   </div>
 </div>
@@ -1101,8 +1080,8 @@ https://gohugo.io/
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
- 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像文件的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
- 架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。
+ 容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
+ 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像   registry 共享镜像库    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。
     </div>
   </div>
 </div>

@@ -13,14 +13,7 @@
       <pubDate>Fri, 05 Feb 2021 15:00:18 +0800</pubDate>
       
       <guid>https://nijian.github.io/software/cloud/aws-lambda/</guid>
-      <description>Lambda 运行环境   Lambda 运行环境生命周期   三个阶段：
- Init   第一次调用时触发（或根据并行预配置）。基本过程是，基于配置创建运行环境，下载函数及各层代码，初始化扩展和运行时，运行函数初始化代码。
-  Invoke   Lambda 调用函数 Handler。
-  Shutdown   一段时间没有收到任何调用后触发。
- Lambda 函数发布 部署包有两种形式：
- 容器镜像 （ container image ） .zip 文件  容器镜像 一般使用 Docker CLI 把函数代码和相关依赖打包成一个镜像，也可以使用 AWS Serverless Application Model （ AWS SAM ）来创建。
-AWS 提供了一些开源的基础镜像，这些基础镜像包含了相关编程语言的运行时，以及支持镜像在 AWS Lambda 中运行的组件，例如，运行时接口客户端 （ runtime interface clients ），用于管理 Lambda 和函数代码之间的交互。
-镜像创建后，使用 AWS CLI 上传至 Amazon Elastic Container Registry （ Amazon ECR ）。</description>
+      <description>简介 术语    术语 描述     layer 一个层是一个 .zip 文件（不适用于镜像），使用层技术，可以使部署包尽可能地小，因为部署包依赖的库可以通过一个新的层提供   runtime 在 Lambda 运行环境中工作的一个编程语言相关的环境，负责转发调用事件，上下文信息，以及最终的响应   handler 函数代码中由 Lambda 调用并开始执行的方法   code signing 代码签名   execution role 授权 Lambda 函数去访问 AWS 服务和资源的 IAM 角色（ AWS Identity and Access Management (IAM) role ）   unpublished version 未发布的版本，当函数更新时，会发生相应的变化   published versions 已发布的版本，是函数的一个快照，不会发生变化   aliases 函数别名，可以设置使之对应于一个版本   ARN Amazon Resource Name ， 例如，execution role ARN 的样式为 arn:aws:iam::your-account-id:role/execution_role    常用命令 AWS CLI v1 - Lambda API 创建 Lambda 函数</description>
     </item>
     
   </channel>
