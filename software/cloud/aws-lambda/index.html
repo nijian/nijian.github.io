@@ -40,7 +40,7 @@
 <meta itemprop="description" content="AWS Lambda">
 <meta itemprop="datePublished" content="2021-02-05T15:00:18+08:00" />
 <meta itemprop="dateModified" content="2021-02-05T15:00:18+08:00" />
-<meta itemprop="wordCount" content="1067">
+<meta itemprop="wordCount" content="1088">
 
 
 
@@ -201,8 +201,18 @@
 </tr>
 </tbody>
 </table>
-<h2 id="常用命令-aws-cli-v1---lambda-api">常用命令 AWS CLI v1 - Lambda API</h2>
-<p>创建 Lambda 函数</p>
+<h2 id="常用命令-aws-cli">常用命令 AWS CLI</h2>
+<p>卸载 AWS CLI version 1</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo rm -rf /usr/local/aws
+
+sudo rm /usr/local/bin/aws
+</code></pre></div><p>安装 AWS CLI version 2</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl <span style="color:#e6db74">&#34;https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip&#34;</span> -o <span style="color:#e6db74">&#34;awscliv2.zip&#34;</span>
+
+unzip awscliv2.zip
+
+sudo ./aws/install
+</code></pre></div><p>创建 Lambda 函数</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">aws lambda create-function <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --function-name my-function <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    --runtime go1.x <span style="color:#ae81ff">\
@@ -594,7 +604,7 @@
   <ul>
     <li><a href="#简介">简介</a></li>
     <li><a href="#术语">术语</a></li>
-    <li><a href="#常用命令-aws-cli-v1---lambda-api">常用命令 AWS CLI v1 - Lambda API</a></li>
+    <li><a href="#常用命令-aws-cli">常用命令 AWS CLI</a></li>
     <li><a href="#lambda-运行环境">Lambda 运行环境</a></li>
     <li><a href="#lambda-运行环境生命周期">Lambda 运行环境生命周期</a></li>
     <li><a href="#lambda-函数发布">Lambda 函数发布</a>
@@ -636,7 +646,11 @@
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/tool/hugo/">Hugo</a>
+          <a href="/software/cloud/compute/">AWS计算服务</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/software/cloud/aws/">AWS</a>
         </li>
 	    
 	     <li  class="mb2">
@@ -644,11 +658,7 @@
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/cloud/compute/">AWS计算服务</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/software/cloud/aws/">AWS</a>
+          <a href="/software/tool/hugo/">Hugo</a>
         </li>
 	    
     </ul>
