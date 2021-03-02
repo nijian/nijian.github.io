@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
  容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
- 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数。   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像。   registry 共享镜像库，通常是指 Public Repository 。    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。">
+ 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像   registry 共享镜像库    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。">
     <meta name="generator" content="Hugo 0.80.0" />
     
     
@@ -35,7 +35,7 @@
     <meta property="og:title" content="Docker" />
 <meta property="og:description" content="简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
  容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
- 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数。   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像。   registry 共享镜像库，通常是指 Public Repository 。    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。" />
+ 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像   registry 共享镜像库    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nijian.github.io/software/tool/docker/" />
 <meta property="article:published_time" content="2021-02-23T18:02:56+08:00" />
@@ -43,10 +43,10 @@
 <meta itemprop="name" content="Docker">
 <meta itemprop="description" content="简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
  容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
- 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数。   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像。   registry 共享镜像库，通常是指 Public Repository 。    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。">
+ 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像   registry 共享镜像库    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。">
 <meta itemprop="datePublished" content="2021-02-23T18:02:56+08:00" />
 <meta itemprop="dateModified" content="2021-02-23T18:02:56+08:00" />
-<meta itemprop="wordCount" content="396">
+<meta itemprop="wordCount" content="341">
 
 
 
@@ -55,7 +55,7 @@
 <meta name="twitter:title" content="Docker"/>
 <meta name="twitter:description" content="简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
  容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
- 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数。   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像。   registry 共享镜像库，通常是指 Public Repository 。    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。"/>
+ 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像   registry 共享镜像库    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。"/>
 
 	
   </head>
@@ -177,7 +177,7 @@
 <tbody>
 <tr>
 <td>image</td>
-<td>镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数。</td>
+<td>镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数</td>
 </tr>
 <tr>
 <td>layer</td>
@@ -185,11 +185,11 @@
 </tr>
 <tr>
 <td>repository</td>
-<td>本地镜像库，包含了一组镜像。</td>
+<td>本地镜像库，包含了一组镜像</td>
 </tr>
 <tr>
 <td>registry</td>
-<td>共享镜像库，通常是指 Public Repository 。</td>
+<td>共享镜像库</td>
 </tr>
 </tbody>
 </table>
@@ -200,9 +200,9 @@
 </figure>
 
 <h2 id="docker-对象">Docker 对象</h2>
-<p><em><strong>镜像（ images ）</strong></em></p>
+<h3 id="镜像-images-">镜像（ images ）</h3>
 <p>镜像是包含指令的只读模板，用于创建 Docker 容器。一个镜像常常基于其他的镜像，并在其他镜像的基础上做一些额外的定制。要创建镜像，需要编写 Dockerfile 。 Dockerfile 中的每一条指令都在镜像中创建了一个层（ layer ）。当修改 Dockerfile 并重建镜像时，只有变化的层才会进行重建。这也是 Docker 镜像保持轻量的原因。</p>
-<p><em><strong>容器（ containers ）</strong></em></p>
+<h3 id="容器-containers-">容器（ containers ）</h3>
 <p>容器是镜像的运行实例。可以使用 Docker API 或 CLI 来创建、启动、停止、删除容器。创建或启动容器时，可以通过配置参数，来控制其如何对网络、存储等进行隔离。</p>
 <h2 id="安装">安装</h2>
 <p>卸载老版本</p>
@@ -233,7 +233,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo gpasswd -a $USER docker <span style="color:#75715e">#将当前用户添加至 docker 用户组</span>
 
 newgrp docker <span style="color:#75715e">#更新 docker 用户组</span>
-</code></pre></div><h2 id="docker-cli-常用命令">Docker CLI 常用命令</h2>
+</code></pre></div><h2 id="常用命令">常用命令</h2>
 <p>登录共享镜像库</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker login <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>SERVER<span style="color:#f92672">]</span>
 </code></pre></div><blockquote>
@@ -250,15 +250,6 @@ or
 docker image push <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> NAME<span style="color:#f92672">[</span>:TAG<span style="color:#f92672">]</span>
 </code></pre></div><blockquote>
 <p>推送时会进行压缩处理。另外，每次推送会缺省（可通过 -max-concurrent-uploads 修改）并发推送一个镜像的 5 层（ layers ）。注意：实际推送由 Docker daemon 完成。</p>
-</blockquote>
-<p>创建并运行容器</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> IMAGE <span style="color:#f92672">[</span>COMMAND<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>ARG...<span style="color:#f92672">]</span>
-</code></pre></div><blockquote>
-<p>基于指定的镜像创建一个可写的容器层（ container layer ），然后使用指定的命令来启动容器。 OPTIONS 提供的功能如下：</p>
-<ul>
-<li>xxx</li>
-<li>xxx</li>
-</ul>
 </blockquote>
 <p>查看本地存储的镜像列表</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker image list
@@ -282,19 +273,8 @@ docker image push <span style="color:#f92672">[</span>OPTIONS<span style="color:
 <blockquote>
 <p>docker build 命令的执行是在 Docker daemon 中完成的， 因此， docker 客户端会把当前 context 下的所有文件发送到 Docker daemon 。一个最佳实践是把 Dockerfile 放置在一个空的目录，然后通过 Dockerfile 提供的 COPY 指令，只添加构建所需的文件。</p>
 </blockquote>
-<p><strong>FROM</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">FROM <span style="color:#f92672">[</span>--platform<span style="color:#f92672">=</span>&lt;platform&gt;<span style="color:#f92672">]</span> &lt;image&gt; <span style="color:#f92672">[</span>AS &lt;name&gt;<span style="color:#f92672">]</span>
-Or
-FROM <span style="color:#f92672">[</span>--platform<span style="color:#f92672">=</span>&lt;platform&gt;<span style="color:#f92672">]</span> &lt;image&gt;<span style="color:#f92672">[</span>:&lt;tag&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>AS &lt;name&gt;<span style="color:#f92672">]</span>
-Or
-FROM <span style="color:#f92672">[</span>--platform<span style="color:#f92672">=</span>&lt;platform&gt;<span style="color:#f92672">]</span> &lt;image&gt;<span style="color:#f92672">[</span>@&lt;digest&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>AS &lt;name&gt;<span style="color:#f92672">]</span>
-</code></pre></div><p><strong>RUN</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">FROM <span style="color:#f92672">[</span>--platform<span style="color:#f92672">=</span>&lt;platform&gt;<span style="color:#f92672">]</span> &lt;image&gt; <span style="color:#f92672">[</span>AS &lt;name&gt;<span style="color:#f92672">]</span>
-Or
-FROM <span style="color:#f92672">[</span>--platform<span style="color:#f92672">=</span>&lt;platform&gt;<span style="color:#f92672">]</span> &lt;image&gt;<span style="color:#f92672">[</span>:&lt;tag&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>AS &lt;name&gt;<span style="color:#f92672">]</span>
-Or
-FROM <span style="color:#f92672">[</span>--platform<span style="color:#f92672">=</span>&lt;platform&gt;<span style="color:#f92672">]</span> &lt;image&gt;<span style="color:#f92672">[</span>@&lt;digest&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>AS &lt;name&gt;<span style="color:#f92672">]</span>
-</code></pre></div><ul class="pa0">
+<h3 id="from">FROM</h3>
+<ul class="pa0">
   
    <li class="list">
      <a href="/tags/%E8%BD%AF%E4%BB%B6" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">软件</a>
@@ -326,10 +306,19 @@ FROM <span style="color:#f92672">[</span>--platform<span style="color:#f92672">=
     <li><a href="#简介">简介</a></li>
     <li><a href="#术语">术语</a></li>
     <li><a href="#架构">架构</a></li>
-    <li><a href="#docker-对象">Docker 对象</a></li>
+    <li><a href="#docker-对象">Docker 对象</a>
+      <ul>
+        <li><a href="#镜像-images-">镜像（ images ）</a></li>
+        <li><a href="#容器-containers-">容器（ containers ）</a></li>
+      </ul>
+    </li>
     <li><a href="#安装">安装</a></li>
-    <li><a href="#docker-cli-常用命令">Docker CLI 常用命令</a></li>
-    <li><a href="#dockerfile">Dockerfile</a></li>
+    <li><a href="#常用命令">常用命令</a></li>
+    <li><a href="#dockerfile">Dockerfile</a>
+      <ul>
+        <li><a href="#from">FROM</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
