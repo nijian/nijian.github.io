@@ -13,8 +13,9 @@
       <pubDate>Mon, 22 Feb 2021 14:55:24 +0800</pubDate>
       
       <guid>http://nijian.life/software/tool/linuxcommand/</guid>
-      <description>#grep 用于查找文件中符合条件的字符串。
--v 或 &amp;ndash;invert-match : 显示不包含匹配文本的所有行</description>
+      <description>grep 查找文件中符合条件的字符串。
+-v 或 --invert-match : 显示不包含匹配文本的所有行  tar 解压文件
+tar -xzf myfile.tar.gz -C /opt </description>
     </item>
     
   </channel>

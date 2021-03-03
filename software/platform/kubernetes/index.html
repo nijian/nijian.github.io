@@ -40,7 +40,7 @@
 <meta itemprop="description" content="Kubernetes">
 <meta itemprop="datePublished" content="2021-01-01T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2021-01-01T10:58:08-04:00" />
-<meta itemprop="wordCount" content="66">
+<meta itemprop="wordCount" content="328">
 
 
 
@@ -213,14 +213,76 @@
 </tr>
 <tr>
 <td>service</td>
-<td>本地镜像库，包含了一组镜像。</td>
+<td>本f。</td>
+</tr>
+<tr>
+<td>apiserver</td>
+<td>。</td>
+</tr>
+<tr>
+<td>SCTP</td>
+<td>。</td>
+</tr>
+<tr>
+<td>Kubernetes API</td>
+<td>。</td>
+</tr>
+<tr>
+<td>DaemonSet</td>
+<td></td>
 </tr>
 </tbody>
 </table>
+<h2 id="本地环境">本地环境</h2>
+<p>minikube 是一个 kubernetes 本地版本，适合用于学习 kubernetes 。为了使本地环境更加干净，以下使用了 vmware 。</p>
+<p><strong>安装 vmware player</strong></p>
+<pre><code>sudo apt update
+
+sudo apt install build-essential linux-headers-generic
+
+wget --user-agent=&quot;Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0&quot; https://www.vmware.com/go/getplayer-linux
+
+chmod +x getplayer-linux
+
+sudo ./getplayer-linux --required --eulas-agreed
+</code></pre>
+<p>如果遇到 Could not open /dev/vmmon 的问题</p>
+<blockquote>
+<p>On Linux host with secure mode enabled, it is not allowed to load any unsigned drivers. Due to this, VMware drivers, such as vmmon and vmnet, are not able to be loaded which prevents virtual machine to power on.</p>
+</blockquote>
+<pre><code>openssl req -new -x509 -newkey rsa:2048 -keyout MOK.priv -outform DER -out MOK.der -nodes -days 36500 -subj &quot;/CN=VMWare&quot;
+
+sudo /usr/src/linux-headers-`uname -r`/scripts/sign-file sha256 ./MOK.priv ./MOK.der $(modinfo -n vmmon)
+
+sudo /usr/src/linux-headers-`uname -r`/scripts/sign-file sha256 ./MOK.priv ./MOK.der $(modinfo -n vmnet)
+
+sudo mokutil --import MOK.der
+
+sudo shutdown -r now
+</code></pre>
+<blockquote>
+<p>At first I didn&rsquo;t get a blue screen background after restart, but that was because my secure boot was set to boot from grubx64.efi but not shimx64.efi. But after I changed it to shim I got the MOK manager asking me to enroll this key</p>
+</blockquote>
+<p><strong>安装 minikube</strong></p>
+<pre><code>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+</code></pre>
+<p>minikube 运行需要依赖于一个容器的驱动，例如 docker 。设置缺省的 driver ：</p>
+<pre><code>minikube config set driver docker
+</code></pre>
+<p><strong>安装 kubectl</strong></p>
+<pre><code>curl -LO &quot;https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl&quot;
+
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+kubectl version --client
+</code></pre>
 <h2 id="相关技术">相关技术</h2>
 <h2 id="service">service</h2>
 <p><strong>kube-proxy</strong></p>
-<p>kube-proxy 是运行在每个工作节点（ node ）上的网络代理，它维护着集群内部或外部与 pods 通讯的网络规则。</p>
+<p>kube-proxy 是运行在每个工作节点（ node ）上的网络代理，它代理那些定义在 Kubernetes API 中的服务（ service ），负责对 TCP 、 UDP 、 及 SCTP 流（ stream ）进行转发（ forwarding ），并以轮询（ round-robin ）的方式转发至一组后端。</p>
+<p>服务（ service ）的 cluster IP 和 Port 是由 kube-proxy 公开出去的，这些 cluster IP 可以通过 cluster DNS （例如， CoreDNS ）提供一个服务名。如果要配置 kube-proxy ，必须通过 apiserver API 创建一个相应的服务（ service ）。 维护着集群内部或外部与 pods 通讯的网络规则。</p>
 <p>kube-proxy 首先会operating system packet filtering layer</p>
 <p><strong>用户空间代理模式（ user space proxy mode ）</strong></p>
 <ul class="pa0">
@@ -242,6 +304,7 @@
   <ul>
     <li><a href="#简介">简介</a></li>
     <li><a href="#术语">术语</a></li>
+    <li><a href="#本地环境">本地环境</a></li>
     <li><a href="#相关技术">相关技术</a></li>
     <li><a href="#service">service</a></li>
   </ul>
