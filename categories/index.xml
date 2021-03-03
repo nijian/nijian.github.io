@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 一缕书香一缕魂</title>
-    <link>https://nijian.github.io/categories/</link>
+    <link>http://nijian.life/categories/</link>
     <description>Recent content in Categories on 一缕书香一缕魂</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language><atom:link href="https://nijian.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language><atom:link href="http://nijian.life/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

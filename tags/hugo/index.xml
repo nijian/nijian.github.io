@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on 一缕书香一缕魂</title>
-    <link>https://nijian.github.io/tags/hugo/</link>
+    <link>http://nijian.life/tags/hugo/</link>
     <description>Recent content in Hugo on 一缕书香一缕魂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 01 Jan 2021 10:58:08 -0400</lastBuildDate><atom:link href="https://nijian.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jan 2021 10:58:08 -0400</lastBuildDate><atom:link href="http://nijian.life/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo</title>
-      <link>https://nijian.github.io/software/tool/hugo/</link>
+      <link>http://nijian.life/software/tool/hugo/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/hugo/</guid>
+      <guid>http://nijian.life/software/tool/hugo/</guid>
       <description>简介 Hugo 是一个用 Go 语言编写的静态站点生成器。从技术上来说， Hugo 以某个目录下的文件和模板为输入，运行后可以创建一个完整的 Web 站点。
 常用命令  创建新站点
 &amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD  hugo new site foo  foo 是站点名称

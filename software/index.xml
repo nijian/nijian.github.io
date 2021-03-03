@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>技术文章 on 一缕书香一缕魂</title>
-    <link>https://nijian.github.io/software/</link>
+    <link>http://nijian.life/software/</link>
     <description>Recent content in 技术文章 on 一缕书香一缕魂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 30 Jan 2021 12:00:00 -0500</lastBuildDate><atom:link href="https://nijian.github.io/software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jan 2021 12:00:00 -0500</lastBuildDate><atom:link href="http://nijian.life/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
-      <link>https://nijian.github.io/software/tool/docker/</link>
+      <link>http://nijian.life/software/tool/docker/</link>
       <pubDate>Tue, 23 Feb 2021 18:02:56 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/docker/</guid>
+      <guid>http://nijian.life/software/tool/docker/</guid>
       <description>简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
  容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
  术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数。   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像。   registry 共享镜像库，通常是指 Public Repository 。    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。</description>
@@ -20,30 +20,30 @@
     
     <item>
       <title>XLSX</title>
-      <link>https://nijian.github.io/software/tool/xlsx/</link>
+      <link>http://nijian.life/software/tool/xlsx/</link>
       <pubDate>Tue, 23 Feb 2021 14:04:22 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/xlsx/</guid>
+      <guid>http://nijian.life/software/tool/xlsx/</guid>
       <description>简介 XLSX 是一个用 Go 语言编写的工具库，其核心功能是读写 XLSX 文件。
 基本特性 Styles </description>
     </item>
     
     <item>
       <title>Excelize</title>
-      <link>https://nijian.github.io/software/tool/excelize/</link>
+      <link>http://nijian.life/software/tool/excelize/</link>
       <pubDate>Tue, 23 Feb 2021 10:57:50 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/excelize/</guid>
+      <guid>http://nijian.life/software/tool/excelize/</guid>
       <description>简介 Excelize 是一个用 Go 语言编写的工具库，其核心功能是读写 XLSX / XLSM / XLTM 文件。它支持 Microsoft Excel™ 2007 及以后的版本，支持复杂组件，并提供 Stream API 来支持对数据的读写。
 基本特性 Workbook  基于缺省模板来创建 Excel Document 打开 Excel 文件 （支持 password 选项，注意只支持解密，不支持加密） 打开 Excel 数据流 保存文件或另存为指定文件 创建 Worksheet 删除 Worksheet 复制 Worksheet 设置 Worksheet 背景图片 设置当前的 Worksheet 设置/获取 Worksheet 是否可见 设置/获取 Worksheet 属性，例如，列宽，行高等 设置/获取 Worksheet 显示属性，例如，缺省格子颜色，是否从右到左，是否显示格子线等 设置/获取 Worksheet 页面布局，例如，纵向或横向，A4 等 设置/获取 Worksheet 页边空白 设置页头和页尾 设置/获取 Workbook / Worksheet 的名称 设置/获取 Document 属性，例如， name 、 title 、 creator 等  Worksheet  设置/获取列是否可见 设置/获取列宽 设置/获取行高 设置/获取行是否可见 设置/获取 Worksheet 名称 获取 Worksheet 的 index 获取 Worksheet map/list 设置/获取 Worksheet 属性，例如，是否格式化条件计算，是否自动分页等 插入/删除列、行 复制行 设置/获取高亮显示列、行 列迭代器，用于流式读取数据的处理 行迭代器，用于流式读取数据的处理 查找 Worksheet 保护/取消保护 通过数组批量设置行值 插入/删除分页  Cell  设置/获取单元格的值 设置单元格的风格 （ Style ）  Style Data Utils Chart Picture Shape Sparklines Streaming write </description>
     </item>
     
     <item>
       <title>Git</title>
-      <link>https://nijian.github.io/software/tool/git/</link>
+      <link>http://nijian.life/software/tool/git/</link>
       <pubDate>Tue, 23 Feb 2021 09:34:30 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/git/</guid>
+      <guid>http://nijian.life/software/tool/git/</guid>
       <description>简介 git 是一个分布式版本控制系统。
  版本控制是一个系统
  </description>
@@ -51,47 +51,47 @@
     
     <item>
       <title>Linux 常用命令</title>
-      <link>https://nijian.github.io/software/tool/linuxcommand/</link>
+      <link>http://nijian.life/software/tool/linuxcommand/</link>
       <pubDate>Mon, 22 Feb 2021 14:55:24 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/linuxcommand/</guid>
+      <guid>http://nijian.life/software/tool/linuxcommand/</guid>
       <description>#grep 用于查找文件中符合条件的字符串。
 -v 或 &amp;ndash;invert-match : 显示不包含匹配文本的所有行</description>
     </item>
     
     <item>
       <title>Go</title>
-      <link>https://nijian.github.io/software/language/go/</link>
+      <link>http://nijian.life/software/language/go/</link>
       <pubDate>Mon, 22 Feb 2021 12:19:31 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/language/go/</guid>
+      <guid>http://nijian.life/software/language/go/</guid>
       <description>依赖管理 环境变量 GOPROXY</description>
     </item>
     
     <item>
       <title>Envoy</title>
-      <link>https://nijian.github.io/software/product/envoy/</link>
+      <link>http://nijian.life/software/product/envoy/</link>
       <pubDate>Sat, 20 Feb 2021 18:08:35 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/product/envoy/</guid>
+      <guid>http://nijian.life/software/product/envoy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gloo Edge</title>
-      <link>https://nijian.github.io/software/product/gloo/</link>
+      <link>http://nijian.life/software/product/gloo/</link>
       <pubDate>Sat, 20 Feb 2021 18:01:19 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/product/gloo/</guid>
+      <guid>http://nijian.life/software/product/gloo/</guid>
       <description>简介 Gloo Edge 是一个 API Gateway 产品。它基于 Envoy 构建。</description>
     </item>
     
     <item>
       <title>GNU make</title>
-      <link>https://nijian.github.io/software/tool/make/</link>
+      <link>http://nijian.life/software/tool/make/</link>
       <pubDate>Sat, 20 Feb 2021 17:56:11 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/make/</guid>
+      <guid>http://nijian.life/software/tool/make/</guid>
       <description>简介 make 是一类软件工具，它常常用于软件的构建。在构建软件的过程中（例如，对程序进行编译时），其核心能力是可以自动地感知并决定对一个程序的哪些内容进行重编译，并发出相应的命令。换句话说， make 本身不是编译工具，当执行包括编译在内的各种构建任务时，它依赖于其他的软件工具程序，那些软件工具程序必须可以通过 command shell 来执行。与此同时， make 自身关注的则是如何识别那些变化的内容，以及如何触发相应的命令。
  显然，make 的使用并不局限于软件的构建。
  make 有很多实现，本文描述的是 GNU make （以下简称 make ）。另外，本文关注的是软件的构建。
@@ -102,55 +102,55 @@
     
     <item>
       <title>Telepresence</title>
-      <link>https://nijian.github.io/software/tool/telepresence/</link>
+      <link>http://nijian.life/software/tool/telepresence/</link>
       <pubDate>Sat, 20 Feb 2021 15:33:05 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/telepresence/</guid>
+      <guid>http://nijian.life/software/tool/telepresence/</guid>
       <description></description>
     </item>
     
     <item>
       <title>软件开发工作环境搭建</title>
-      <link>https://nijian.github.io/software/env/installation/</link>
+      <link>http://nijian.life/software/env/installation/</link>
       <pubDate>Sat, 20 Feb 2021 15:25:44 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/env/installation/</guid>
+      <guid>http://nijian.life/software/env/installation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Calc Engine</title>
-      <link>https://nijian.github.io/software/my/calc-engine/</link>
+      <link>http://nijian.life/software/my/calc-engine/</link>
       <pubDate>Mon, 08 Feb 2021 10:23:22 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/my/calc-engine/</guid>
+      <guid>http://nijian.life/software/my/calc-engine/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AWS 术语</title>
-      <link>https://nijian.github.io/software/cloud/aws-concept/</link>
+      <link>http://nijian.life/software/cloud/aws-concept/</link>
       <pubDate>Fri, 05 Feb 2021 16:06:03 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/cloud/aws-concept/</guid>
+      <guid>http://nijian.life/software/cloud/aws-concept/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AWS Lambda</title>
-      <link>https://nijian.github.io/software/cloud/aws-lambda/</link>
+      <link>http://nijian.life/software/cloud/aws-lambda/</link>
       <pubDate>Fri, 05 Feb 2021 15:00:18 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/cloud/aws-lambda/</guid>
+      <guid>http://nijian.life/software/cloud/aws-lambda/</guid>
       <description>简介 术语    术语 描述     layer 一个层是一个 .zip 文件（不适用于镜像），使用层技术，可以使部署包尽可能地小，因为部署包依赖的库可以通过一个新的层提供   runtime 在 Lambda 运行环境中工作的一个编程语言相关的环境，负责转发调用事件，上下文信息，以及最终的响应   handler 函数代码中由 Lambda 调用并开始执行的方法   code signing 代码签名   execution role 授权 Lambda 函数去访问 AWS 服务和资源的 IAM 角色（ AWS Identity and Access Management (IAM) role ）   unpublished version 未发布的版本，当函数更新时，会发生相应的变化   published versions 已发布的版本，是函数的一个快照，不会发生变化   aliases 函数别名，可以设置使之对应于一个版本   ARN Amazon Resource Name ， 例如，execution role ARN 的样式为 arn:aws:iam::your-account-id:role/execution_role    常用命令 AWS CLI 卸载 AWS CLI version 1</description>
     </item>
     
     <item>
       <title>Excel决策表</title>
-      <link>https://nijian.github.io/software/my/xltxdt/</link>
+      <link>http://nijian.life/software/my/xltxdt/</link>
       <pubDate>Wed, 03 Feb 2021 15:19:13 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/my/xltxdt/</guid>
+      <guid>http://nijian.life/software/my/xltxdt/</guid>
       <description>构思   图1   场景   图2   图2展示了Excel决策表设计时的场景。运行时场景较为丰富，且与业务关系紧密，不再赘述。这里只描述Excel决策表引擎的接口方法，即输入xltx文件，输出适配go-tree库的tree对象。
 分析模型 Excel模板定义与决策表概念及后续的解析密切相关，经初步分析，引入下面几个概念：
  条件列（condition column） 条件（condition） 结论列（conclusion column） 结论（conclusion） 无法匹配（missing） 列类型（column type） 列值类型（column value type） 列名（column name） 布尔表达式（bool expression）  </description>
@@ -158,10 +158,10 @@
     
     <item>
       <title>AWS</title>
-      <link>https://nijian.github.io/software/cloud/aws/</link>
+      <link>http://nijian.life/software/cloud/aws/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/software/cloud/aws/</guid>
+      <guid>http://nijian.life/software/cloud/aws/</guid>
       <description>简介 Amazon Web Services(AWS) 是一个云平台，拥有全球化的云基础设施，目前在全球24个地理区域运营着77个可用区。
 AWS提供了大量基于云的全球性服务，其中包括：
  计算 存储 数据库 分析 联网 移动产品 开发人员工具 管理工具 物联网 安全性 企业应用程序  常用命令 安装 awscli
@@ -172,20 +172,20 @@ aws configure </description>
     
     <item>
       <title>AWS计算服务</title>
-      <link>https://nijian.github.io/software/cloud/compute/</link>
+      <link>http://nijian.life/software/cloud/compute/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/software/cloud/compute/</guid>
+      <guid>http://nijian.life/software/cloud/compute/</guid>
       <description>AWS计算服务
    类别 服务描述     实例（虚拟机） 安全并且可以调整大小的云计算容量（虚拟服务器）   Mike 32    </description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://nijian.github.io/software/tool/hugo/</link>
+      <link>http://nijian.life/software/tool/hugo/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/hugo/</guid>
+      <guid>http://nijian.life/software/tool/hugo/</guid>
       <description>简介 Hugo 是一个用 Go 语言编写的静态站点生成器。从技术上来说， Hugo 以某个目录下的文件和模板为输入，运行后可以创建一个完整的 Web 站点。
 常用命令  创建新站点
 &amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD  hugo new site foo  foo 是站点名称
@@ -196,20 +196,28 @@ aws configure </description>
     
     <item>
       <title>Kubernetes</title>
-      <link>https://nijian.github.io/software/platform/kubernetes/</link>
+      <link>http://nijian.life/software/platform/kubernetes/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/software/platform/kubernetes/</guid>
-      <description>Kubernetes简介 Kubernetes是一个可移植，可扩展的开源平台，用于管理容器化的负载和服务。容器技术非常有利于实现声明式配置和运行自动化。
-容器技术的演化 容器与虚拟机技术类似，拥有自己的文件系统、共享CPU和Memory、以及独立的进程空间，不同之处在于，容器之间共享OS。因此，容器技术相比与虚拟机技术，更加轻量化。</description>
+      <guid>http://nijian.life/software/platform/kubernetes/</guid>
+      <description>简介 Kubernetes是一个可移植，可扩展的开源平台，用于管理容器化的负载和服务。容器技术非常有利于实现声明式配置和运行自动化。
+部署技术的演化
+传统部署是基于物理机服务器，当一台物理机服务器上部署并运行了多个应用程序实例时，物理机的资源（ 例如 CPU ， Memory ）无法在这些应用程序实例之间进行有效的分配和控制。例如，在某一个时刻，某一个应用程序实例占用了物理机的大部分资源，而其他的应用程序实例则因缺少资源运行缓慢。也正是由于这个原因，应用程序的伸缩性无法得到可靠的支持。
+虚拟化部署通过引入虚拟机方案，解决了传统部署在资源分配和伸缩性方面的困扰。一台物理机上可以运行多个虚拟机，应用程序部署在虚拟机中。这些虚拟机运行在硬件虚拟化层之上，所使用的资源是可以进行分配和控制的，
+容器化部署是虚拟化部署的进一步发展，容器与虚拟机类似，它拥有自己的文件系统、独立的进程空间、以及共享的物理机资源，不同之处在于，容器之间共享操作系统，且不需要硬件虚拟化层。相比于虚拟机，容器更加轻量化。
+容器技术的特性
+使用容器技术可以带来：
+ Agile application creation and deployment  Kubernetes
+Kubernetes 提供了以下功能：
+ 服务发现和负载均衡 存储编排 自动伸缩 自愈 敏感信息和配置管理  术语    术语 描述     node 运行容器化应用程序的工作节点，每个 k8s 集群至少包含一个工作节点。   deployment 负责管理集群中一个可复制的应用程序。   service 负责管理集群中一个可复制的应用程序。   pod 一个 pod 代表了集群中一组正在运行的容器。 pod 是在运行应用程序时动态创建的。   service 本地镜像库，包含了一组镜像。    相关技术 service kube-proxy</description>
     </item>
     
     <item>
       <title>工具</title>
-      <link>https://nijian.github.io/software/tool/tool/</link>
+      <link>http://nijian.life/software/tool/tool/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/tool/</guid>
+      <guid>http://nijian.life/software/tool/tool/</guid>
       <description>在软件构建过程中，经常需要借助于一些工具。例如，在构思设计的初始阶段，使用思维导图来粗略地罗列设计约束，设计目标，软件的主要特性，设计相关的一些基本候选决策；在设计阶段，使用建模工具来捕捉用例，建立业务模型，设计软件实现模型；在编写程序的阶段，使用集成开发工具来高效地录入、重构、单元测试、调试代码，使用正则表达式工具来测试和调试正则表达式的正确性；在集成测试阶段，使用代理工具，把本地的微服务切换进远程的 Kubernetes 环境等等。
 软件工具种类繁多。工具，编程语言，以及开发的内容构成了软件开发的领域。本文尝试系统地整理软件构建阶段及相关的工具。
 在线绘图 https://www.diagrams.net/
@@ -220,19 +228,19 @@ https://gohugo.io/</description>
     
     <item>
       <title>软件基本特性</title>
-      <link>https://nijian.github.io/software/software/</link>
+      <link>http://nijian.life/software/software/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/software/software/</guid>
+      <guid>http://nijian.life/software/software/</guid>
       <description></description>
     </item>
     
     <item>
       <title>遥测</title>
-      <link>https://nijian.github.io/software/observability/telemetry/</link>
+      <link>http://nijian.life/software/observability/telemetry/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/software/observability/telemetry/</guid>
+      <guid>http://nijian.life/software/observability/telemetry/</guid>
       <description></description>
     </item>
     

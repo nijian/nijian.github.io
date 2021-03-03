@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>构建 on 一缕书香一缕魂</title>
-    <link>https://nijian.github.io/tags/%E6%9E%84%E5%BB%BA/</link>
+    <link>http://nijian.life/tags/%E6%9E%84%E5%BB%BA/</link>
     <description>Recent content in 构建 on 一缕书香一缕魂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 20 Feb 2021 17:56:11 +0800</lastBuildDate><atom:link href="https://nijian.github.io/tags/%E6%9E%84%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Feb 2021 17:56:11 +0800</lastBuildDate><atom:link href="http://nijian.life/tags/%E6%9E%84%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GNU make</title>
-      <link>https://nijian.github.io/software/tool/make/</link>
+      <link>http://nijian.life/software/tool/make/</link>
       <pubDate>Sat, 20 Feb 2021 17:56:11 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/make/</guid>
+      <guid>http://nijian.life/software/tool/make/</guid>
       <description>简介 make 是一类软件工具，它常常用于软件的构建。在构建软件的过程中（例如，对程序进行编译时），其核心能力是可以自动地感知并决定对一个程序的哪些内容进行重编译，并发出相应的命令。换句话说， make 本身不是编译工具，当执行包括编译在内的各种构建任务时，它依赖于其他的软件工具程序，那些软件工具程序必须可以通过 command shell 来执行。与此同时， make 自身关注的则是如何识别那些变化的内容，以及如何触发相应的命令。
  显然，make 的使用并不局限于软件的构建。
  make 有很多实现，本文描述的是 GNU make （以下简称 make ）。另外，本文关注的是软件的构建。

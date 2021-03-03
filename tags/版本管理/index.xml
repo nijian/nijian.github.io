@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>版本管理 on 一缕书香一缕魂</title>
-    <link>https://nijian.github.io/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</link>
+    <link>http://nijian.life/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</link>
     <description>Recent content in 版本管理 on 一缕书香一缕魂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 23 Feb 2021 09:34:30 +0800</lastBuildDate><atom:link href="https://nijian.github.io/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Feb 2021 09:34:30 +0800</lastBuildDate><atom:link href="http://nijian.life/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git</title>
-      <link>https://nijian.github.io/software/tool/git/</link>
+      <link>http://nijian.life/software/tool/git/</link>
       <pubDate>Tue, 23 Feb 2021 09:34:30 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/git/</guid>
+      <guid>http://nijian.life/software/tool/git/</guid>
       <description>简介 git 是一个分布式版本控制系统。
  版本控制是一个系统
  </description>

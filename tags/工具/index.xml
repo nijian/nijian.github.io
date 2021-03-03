@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工具 on 一缕书香一缕魂</title>
-    <link>https://nijian.github.io/tags/%E5%B7%A5%E5%85%B7/</link>
+    <link>http://nijian.life/tags/%E5%B7%A5%E5%85%B7/</link>
     <description>Recent content in 工具 on 一缕书香一缕魂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 20 Feb 2021 17:56:11 +0800</lastBuildDate><atom:link href="https://nijian.github.io/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Feb 2021 17:56:11 +0800</lastBuildDate><atom:link href="http://nijian.life/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GNU make</title>
-      <link>https://nijian.github.io/software/tool/make/</link>
+      <link>http://nijian.life/software/tool/make/</link>
       <pubDate>Sat, 20 Feb 2021 17:56:11 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/make/</guid>
+      <guid>http://nijian.life/software/tool/make/</guid>
       <description>简介 make 是一类软件工具，它常常用于软件的构建。在构建软件的过程中（例如，对程序进行编译时），其核心能力是可以自动地感知并决定对一个程序的哪些内容进行重编译，并发出相应的命令。换句话说， make 本身不是编译工具，当执行包括编译在内的各种构建任务时，它依赖于其他的软件工具程序，那些软件工具程序必须可以通过 command shell 来执行。与此同时， make 自身关注的则是如何识别那些变化的内容，以及如何触发相应的命令。
  显然，make 的使用并不局限于软件的构建。
  make 有很多实现，本文描述的是 GNU make （以下简称 make ）。另外，本文关注的是软件的构建。
@@ -23,10 +23,10 @@
     
     <item>
       <title>Hugo</title>
-      <link>https://nijian.github.io/software/tool/hugo/</link>
+      <link>http://nijian.life/software/tool/hugo/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/hugo/</guid>
+      <guid>http://nijian.life/software/tool/hugo/</guid>
       <description>简介 Hugo 是一个用 Go 语言编写的静态站点生成器。从技术上来说， Hugo 以某个目录下的文件和模板为输入，运行后可以创建一个完整的 Web 站点。
 常用命令  创建新站点
 &amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD  hugo new site foo  foo 是站点名称
@@ -37,10 +37,10 @@
     
     <item>
       <title>工具</title>
-      <link>https://nijian.github.io/software/tool/tool/</link>
+      <link>http://nijian.life/software/tool/tool/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/software/tool/tool/</guid>
+      <guid>http://nijian.life/software/tool/tool/</guid>
       <description>在软件构建过程中，经常需要借助于一些工具。例如，在构思设计的初始阶段，使用思维导图来粗略地罗列设计约束，设计目标，软件的主要特性，设计相关的一些基本候选决策；在设计阶段，使用建模工具来捕捉用例，建立业务模型，设计软件实现模型；在编写程序的阶段，使用集成开发工具来高效地录入、重构、单元测试、调试代码，使用正则表达式工具来测试和调试正则表达式的正确性；在集成测试阶段，使用代理工具，把本地的微服务切换进远程的 Kubernetes 环境等等。
 软件工具种类繁多。工具，编程语言，以及开发的内容构成了软件开发的领域。本文尝试系统地整理软件构建阶段及相关的工具。
 在线绘图 https://www.diagrams.net/

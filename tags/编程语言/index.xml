@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>编程语言 on 一缕书香一缕魂</title>
-    <link>https://nijian.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+    <link>http://nijian.life/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
     <description>Recent content in 编程语言 on 一缕书香一缕魂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 22 Feb 2021 12:19:31 +0800</lastBuildDate><atom:link href="https://nijian.github.io/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Feb 2021 12:19:31 +0800</lastBuildDate><atom:link href="http://nijian.life/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go</title>
-      <link>https://nijian.github.io/software/language/go/</link>
+      <link>http://nijian.life/software/language/go/</link>
       <pubDate>Mon, 22 Feb 2021 12:19:31 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/language/go/</guid>
+      <guid>http://nijian.life/software/language/go/</guid>
       <description>依赖管理 环境变量 GOPROXY</description>
     </item>
     

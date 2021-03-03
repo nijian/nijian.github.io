@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AWS on 一缕书香一缕魂</title>
-    <link>https://nijian.github.io/tags/aws/</link>
+    <link>http://nijian.life/tags/aws/</link>
     <description>Recent content in AWS on 一缕书香一缕魂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 05 Feb 2021 15:00:18 +0800</lastBuildDate><atom:link href="https://nijian.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Feb 2021 15:00:18 +0800</lastBuildDate><atom:link href="http://nijian.life/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS Lambda</title>
-      <link>https://nijian.github.io/software/cloud/aws-lambda/</link>
+      <link>http://nijian.life/software/cloud/aws-lambda/</link>
       <pubDate>Fri, 05 Feb 2021 15:00:18 +0800</pubDate>
       
-      <guid>https://nijian.github.io/software/cloud/aws-lambda/</guid>
+      <guid>http://nijian.life/software/cloud/aws-lambda/</guid>
       <description>简介 术语    术语 描述     layer 一个层是一个 .zip 文件（不适用于镜像），使用层技术，可以使部署包尽可能地小，因为部署包依赖的库可以通过一个新的层提供   runtime 在 Lambda 运行环境中工作的一个编程语言相关的环境，负责转发调用事件，上下文信息，以及最终的响应   handler 函数代码中由 Lambda 调用并开始执行的方法   code signing 代码签名   execution role 授权 Lambda 函数去访问 AWS 服务和资源的 IAM 角色（ AWS Identity and Access Management (IAM) role ）   unpublished version 未发布的版本，当函数更新时，会发生相应的变化   published versions 已发布的版本，是函数的一个快照，不会发生变化   aliases 函数别名，可以设置使之对应于一个版本   ARN Amazon Resource Name ， 例如，execution role ARN 的样式为 arn:aws:iam::your-account-id:role/execution_role    常用命令 AWS CLI 卸载 AWS CLI version 1</description>
     </item>
     
     <item>
       <title>AWS</title>
-      <link>https://nijian.github.io/software/cloud/aws/</link>
+      <link>http://nijian.life/software/cloud/aws/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/software/cloud/aws/</guid>
+      <guid>http://nijian.life/software/cloud/aws/</guid>
       <description>简介 Amazon Web Services(AWS) 是一个云平台，拥有全球化的云基础设施，目前在全球24个地理区域运营着77个可用区。
 AWS提供了大量基于云的全球性服务，其中包括：
  计算 存储 数据库 分析 联网 移动产品 开发人员工具 管理工具 物联网 安全性 企业应用程序  常用命令 安装 awscli
@@ -32,10 +32,10 @@ aws configure </description>
     
     <item>
       <title>AWS计算服务</title>
-      <link>https://nijian.github.io/software/cloud/compute/</link>
+      <link>http://nijian.life/software/cloud/compute/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
-      <guid>https://nijian.github.io/software/cloud/compute/</guid>
+      <guid>http://nijian.life/software/cloud/compute/</guid>
       <description>AWS计算服务
    类别 服务描述     实例（虚拟机） 安全并且可以调整大小的云计算容量（虚拟服务器）   Mike 32    </description>
     </item>
