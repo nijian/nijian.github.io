@@ -46,7 +46,7 @@
  术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数。   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像。   registry 共享镜像库，通常是指 Public Repository 。    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。">
 <meta itemprop="datePublished" content="2021-02-23T18:02:56+08:00" />
 <meta itemprop="dateModified" content="2021-02-23T18:02:56+08:00" />
-<meta itemprop="wordCount" content="396">
+<meta itemprop="wordCount" content="401">
 
 
 
@@ -244,6 +244,9 @@ newgrp docker <span style="color:#75715e">#更新 docker 用户组</span>
 </code></pre></div><blockquote>
 <p>登出共享镜像库后， daemon 会删除用户证书信息。</p>
 </blockquote>
+<p>给镜像打标签</p>
+<pre><code>docker tag 0e5574283393 fedora/httpd:version1.0
+</code></pre>
 <p>推送一个镜像或整个本地镜像库中的镜像至共享镜像库</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker push <span style="color:#f92672">[</span>OPTIONS<span style="color:#f92672">]</span> NAME<span style="color:#f92672">[</span>:TAG<span style="color:#f92672">]</span>
 or

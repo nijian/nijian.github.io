@@ -40,7 +40,7 @@
 <meta itemprop="description" content="关于搭建软件开发环境涉及的一些内容">
 <meta itemprop="datePublished" content="2021-02-20T15:25:44+08:00" />
 <meta itemprop="dateModified" content="2021-02-20T15:25:44+08:00" />
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="61">
 
 
 
@@ -153,7 +153,40 @@
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><ul class="pa0">
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="安装-ftp-server">安装 FTP Server</h2>
+<pre><code>sudo apt update
+
+sudo apt upgrade
+
+sudo apt install vsftpd
+
+sudo systemctl start vsftpd
+
+sudo systemctl enable vsftpd
+
+# 如果要创建一个 FTP 用户
+
+adduser someone
+
+mkdir -p /home/someone/ftp
+
+chown -R nobody:nogroup /home/someone/ftp
+
+chmod a-w /home/someone/ftp
+
+sudo mv /etc/vsftpd.conf /etc/vsftpd.conf.orig
+</code></pre>
+<h2 id="安装-filezilla-ftp-client">安装 FileZilla FTP Client</h2>
+<pre><code>sudo apt update
+
+sudo apt upgrade
+
+sudo add-apt-repository ppa:sicklylife/filezilla
+
+sudo apt update 
+
+sudo apt install filezilla    </code></pre>
+<ul class="pa0">
   
    <li class="list">
      <a href="/tags/%E8%BD%AF%E4%BB%B6" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">软件</a>

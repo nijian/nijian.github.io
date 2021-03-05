@@ -8,6 +8,15 @@
     <language>zh-cn</language>
     <lastBuildDate>Sat, 30 Jan 2021 12:00:00 -0500</lastBuildDate><atom:link href="http://nijian.life/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>基于 kube-proxy userspace 代理模式下的本地调试</title>
+      <link>http://nijian.life/software/my/k8slocaldebug/</link>
+      <pubDate>Fri, 05 Mar 2021 11:11:59 +0800</pubDate>
+      
+      <guid>http://nijian.life/software/my/k8slocaldebug/</guid>
+      <description>场景 </description>
+    </item>
+    
+    <item>
       <title>Docker</title>
       <link>http://nijian.life/software/tool/docker/</link>
       <pubDate>Tue, 23 Feb 2021 18:02:56 +0800</pubDate>
@@ -25,7 +34,7 @@
       
       <guid>http://nijian.life/software/tool/xlsx/</guid>
       <description>简介 XLSX 是一个用 Go 语言编写的工具库，其核心功能是读写 XLSX 文件。
-基本特性 Styles </description>
+基本功能  创建新 XLSX 文件 打开 XLSX 文件 创建 worksheet ，注意名称约束，例如，长度 1 ～ 31 ，名称不能包含 / ? * 等 复制一个已存在的 worksheet 访问/遍历 worksheet 关闭 worksheet 释放内存 添加/插入 row 删除 row 访问/遍历 row 添加 cell 访问/遍历 cell 设置 cell 类型、内容、格式和风格 访问 cell 类型、内容、格式和风格 支持两种 cell 引用方式： A1 和 RnCn 定义 column 为一个 cell 或一组 cell 设置名称，这个名称可以用于 formula 中  Styles </description>
     </item>
     
     <item>
@@ -56,7 +65,8 @@
       
       <guid>http://nijian.life/software/tool/linuxcommand/</guid>
       <description>grep 查找文件中符合条件的字符串。
--v 或 --invert-match : 显示不包含匹配文本的所有行  tar 解压文件
+-v 或 --invert-match : 显示不包含匹配文本的所有行  cp 拷贝文件。
+cp src.file /tmp/dst.file  tar 解压文件
 tar -xzf myfile.tar.gz -C /opt </description>
     </item>
     
@@ -66,7 +76,8 @@ tar -xzf myfile.tar.gz -C /opt </description>
       <pubDate>Mon, 22 Feb 2021 12:19:31 +0800</pubDate>
       
       <guid>http://nijian.life/software/language/go/</guid>
-      <description>依赖管理 环境变量 GOPROXY</description>
+      <description>简介 安装 如果不需要最新的版本，可简单安装
+sudo apt install golang go version  依赖管理 环境变量 GOPROXY</description>
     </item>
     
     <item>
@@ -116,7 +127,7 @@ tar -xzf myfile.tar.gz -C /opt </description>
       <pubDate>Sat, 20 Feb 2021 15:25:44 +0800</pubDate>
       
       <guid>http://nijian.life/software/env/installation/</guid>
-      <description></description>
+      <description>安装 FTP Server sudo apt update sudo apt upgrade sudo apt install vsftpd sudo systemctl start vsftpd sudo systemctl enable vsftpd # 如果要创建一个 FTP 用户 adduser someone mkdir -p /home/someone/ftp chown -R nobody:nogroup /home/someone/ftp chmod a-w /home/someone/ftp sudo mv /etc/vsftpd.conf /etc/vsftpd.conf.orig  安装 FileZilla FTP Client sudo apt update sudo apt upgrade sudo add-apt-repository ppa:sicklylife/filezilla sudo apt update sudo apt install filezilla  </description>
     </item>
     
     <item>

@@ -119,6 +119,26 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Software</span>
     <h1 class="f3 near-black">
+      <a href="http://nijian.life/software/tool/make/" class="link black dim">
+        GNU make
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      简介 make 是一类软件工具，它常常用于软件的构建。在构建软件的过程中（例如，对程序进行编译时），其核心能力是可以自动地感知并决定对一个程序的哪些内容进行重编译，并发出相应的命令。换句话说， make 本身不是编译工具，当执行包括编译在内的各种构建任务时，它依赖于其他的软件工具程序，那些软件工具程序必须可以通过 command shell 来执行。与此同时， make 自身关注的则是如何识别那些变化的内容，以及如何触发相应的命令。
+ 显然，make 的使用并不局限于软件的构建。
+ make 有很多实现，本文描述的是 GNU make （以下简称 make ）。另外，本文关注的是软件的构建。
+术语    术语 描述     recipe    xxx     常用命令 Makefile 要使用 make ，必须编写一个 makefile 。 makefile 描述了程序中一些文件的关系，以及更新这些文件的命令。
+虚名目标（ Phony Target ）
+所谓虚名，是指在 Makefile 中定义的名称不是一个真实文件的名称，而是对应于 recipe 的一个名称。
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
       <a href="http://nijian.life/software/tool/telepresence/" class="link black dim">
         Telepresence
       </a>
@@ -139,22 +159,7 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Software</span>
-    <h1 class="f3 near-black">
-      <a href="http://nijian.life/software/my/calc-engine/" class="link black dim">
-        Calc Engine
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      
+      安装 FTP Server sudo apt update sudo apt upgrade sudo apt install vsftpd sudo systemctl start vsftpd sudo systemctl enable vsftpd # 如果要创建一个 FTP 用户 adduser someone mkdir -p /home/someone/ftp chown -R nobody:nogroup /home/someone/ftp chmod a-w /home/someone/ftp sudo mv /etc/vsftpd.conf /etc/vsftpd.conf.orig  安装 FileZilla FTP Client sudo apt update sudo apt upgrade sudo add-apt-repository ppa:sicklylife/filezilla sudo apt update sudo apt install filezilla  
     </div>
   </div>
 </div>

@@ -14,7 +14,7 @@
       
       <guid>http://nijian.life/software/tool/xlsx/</guid>
       <description>简介 XLSX 是一个用 Go 语言编写的工具库，其核心功能是读写 XLSX 文件。
-基本特性 Styles </description>
+基本功能  创建新 XLSX 文件 打开 XLSX 文件 创建 worksheet ，注意名称约束，例如，长度 1 ～ 31 ，名称不能包含 / ? * 等 复制一个已存在的 worksheet 访问/遍历 worksheet 关闭 worksheet 释放内存 添加/插入 row 删除 row 访问/遍历 row 添加 cell 访问/遍历 cell 设置 cell 类型、内容、格式和风格 访问 cell 类型、内容、格式和风格 支持两种 cell 引用方式： A1 和 RnCn 定义 column 为一个 cell 或一组 cell 设置名称，这个名称可以用于 formula 中  Styles </description>
     </item>
     
     <item>

@@ -40,7 +40,7 @@
 <meta itemprop="description" content="Kubernetes">
 <meta itemprop="datePublished" content="2021-01-01T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2021-01-01T10:58:08-04:00" />
-<meta itemprop="wordCount" content="328">
+<meta itemprop="wordCount" content="360">
 
 
 
@@ -279,6 +279,24 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 kubectl version --client
 </code></pre>
 <h2 id="相关技术">相关技术</h2>
+<ul>
+<li>application workload</li>
+<li>control plane</li>
+</ul>
+<h2 id="kubernetes-控制面组件-control-plane-components-">Kubernetes 控制面组件（ Control Plane Components ）</h2>
+<ul>
+<li>API Server （ kube-apiserver ）</li>
+<li>etcd</li>
+</ul>
+<h2 id="kubernetes-api">Kubernetes API</h2>
+<p>Kubernetes API 用于查询和管理 Kubernetes Objects 的<strong>状态（ state ）</strong>。</p>
+<h2 id="kubernetes-objects">Kubernetes Objects</h2>
+<ul>
+<li>Pods</li>
+<li>Namespaces</li>
+<li>ConfigMaps</li>
+<li>Events</li>
+</ul>
 <h2 id="service">service</h2>
 <p><strong>kube-proxy</strong></p>
 <p>kube-proxy 是运行在每个工作节点（ node ）上的网络代理，它代理那些定义在 Kubernetes API 中的服务（ service ），负责对 TCP 、 UDP 、 及 SCTP 流（ stream ）进行转发（ forwarding ），并以轮询（ round-robin ）的方式转发至一组后端。</p>
@@ -306,6 +324,9 @@ kubectl version --client
     <li><a href="#术语">术语</a></li>
     <li><a href="#本地环境">本地环境</a></li>
     <li><a href="#相关技术">相关技术</a></li>
+    <li><a href="#kubernetes-控制面组件-control-plane-components-">Kubernetes 控制面组件（ Control Plane Components ）</a></li>
+    <li><a href="#kubernetes-api">Kubernetes API</a></li>
+    <li><a href="#kubernetes-objects">Kubernetes Objects</a></li>
     <li><a href="#service">service</a></li>
   </ul>
 </nav>

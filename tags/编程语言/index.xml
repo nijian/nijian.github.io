@@ -13,7 +13,8 @@
       <pubDate>Mon, 22 Feb 2021 12:19:31 +0800</pubDate>
       
       <guid>http://nijian.life/software/language/go/</guid>
-      <description>依赖管理 环境变量 GOPROXY</description>
+      <description>简介 安装 如果不需要最新的版本，可简单安装
+sudo apt install golang go version  依赖管理 环境变量 GOPROXY</description>
     </item>
     
   </channel>

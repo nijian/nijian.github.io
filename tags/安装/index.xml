@@ -13,7 +13,7 @@
       <pubDate>Sat, 20 Feb 2021 15:25:44 +0800</pubDate>
       
       <guid>http://nijian.life/software/env/installation/</guid>
-      <description></description>
+      <description>安装 FTP Server sudo apt update sudo apt upgrade sudo apt install vsftpd sudo systemctl start vsftpd sudo systemctl enable vsftpd # 如果要创建一个 FTP 用户 adduser someone mkdir -p /home/someone/ftp chown -R nobody:nogroup /home/someone/ftp chmod a-w /home/someone/ftp sudo mv /etc/vsftpd.conf /etc/vsftpd.conf.orig  安装 FileZilla FTP Client sudo apt update sudo apt upgrade sudo add-apt-repository ppa:sicklylife/filezilla sudo apt update sudo apt install filezilla  </description>
     </item>
     
   </channel>
