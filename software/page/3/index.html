@@ -119,13 +119,41 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Software</span>
     <h1 class="f3 near-black">
+      <a href="http://nijian.life/software/tool/linuxcommand/" class="link black dim">
+        Linux 常用命令
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      find 查找文件
+find / -name xx  grep 查找文件中符合条件的字符串。
+-v 或 --invert-match : 显示不包含匹配文本的所有行  mkdir 创建目录
+-p 创建目录时指定父目录  cp 拷贝文件。
+cp src.file /tmp/dst.file  tar 解压文件
+tar -xzf myfile.tar.gz -C /opt  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
       <a href="http://nijian.life/software/language/go/" class="link black dim">
         Go
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       简介 安装 如果不需要最新的版本，可简单安装
-sudo apt install golang go version  依赖管理 环境变量 GOPROXY
+sudo apt install golang go version   由于不同版本的 Go 在包管理机制及语言特性上的差异，编译特定的 Go 工程时可能无法成功。例如，编译 kubernetes v1.16.3 ，需要 go1.12.x 版本。
+ Go 多版本管理
+gvm
+安装
+bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone ... ./gvm-installer  常用命令
+gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 import
+导入包。
+ Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：
+假设 Go 安装目录为 /usr/local/go ， GOPATH 设置为 /home/myproject:/home/mylibraries，当 import net/http 时，编译器查找的顺序如下：
     </div>
   </div>
 </div>
@@ -141,21 +169,6 @@ sudo apt install golang go version  依赖管理 环境变量 GOPROXY
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Software</span>
-    <h1 class="f3 near-black">
-      <a href="http://nijian.life/software/product/gloo/" class="link black dim">
-        Gloo Edge
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      简介 Gloo Edge 是一个 API Gateway 产品。它基于 Envoy 构建。
     </div>
   </div>
 </div>

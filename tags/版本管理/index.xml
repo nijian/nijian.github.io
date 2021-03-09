@@ -15,7 +15,8 @@
       <guid>http://nijian.life/software/tool/git/</guid>
       <description>简介 git 是一个分布式版本控制系统。
  版本控制是一个系统
- </description>
+ 常用命令 获取一个 Git 仓库（ Git repository ）
+git clone [--template=&amp;lt;template_directory&amp;gt;] [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror] [-o &amp;lt;name&amp;gt;] [-b &amp;lt;name&amp;gt;] [-u &amp;lt;upload-pack&amp;gt;] [--reference &amp;lt;repository&amp;gt;] [--dissociate] [--separate-git-dir &amp;lt;git dir&amp;gt;] [--depth &amp;lt;depth&amp;gt;] [--[no-]single-branch] [--no-tags] [--recurse-submodules[=&amp;lt;pathspec&amp;gt;]] [--[no-]shallow-submodules] [--[no-]remote-submodules] [--jobs &amp;lt;n&amp;gt;] [--sparse] [--filter=&amp;lt;filter&amp;gt;] [--] &amp;lt;repository&amp;gt; [&amp;lt;directory&amp;gt;] </description>
     </item>
     
   </channel>

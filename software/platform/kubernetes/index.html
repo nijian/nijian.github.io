@@ -40,7 +40,7 @@
 <meta itemprop="description" content="Kubernetes">
 <meta itemprop="datePublished" content="2021-01-01T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2021-01-01T10:58:08-04:00" />
-<meta itemprop="wordCount" content="360">
+<meta itemprop="wordCount" content="500">
 
 
 
@@ -167,6 +167,9 @@
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="简介">简介</h2>
 <p>Kubernetes是一个可移植，可扩展的开源平台，用于管理容器化的负载和服务。容器技术非常有利于实现声明式配置和运行自动化。</p>
+<blockquote>
+<p>本文中涉及的命令都是基于 ubuntu 20.4 。</p>
+</blockquote>
 <p><strong>部署技术的演化</strong></p>
 <p><img src="/images/container_evolution.svg" alt="部署演化图"></p>
 <p>传统部署是基于物理机服务器，当一台物理机服务器上部署并运行了多个应用程序实例时，物理机的资源（ 例如 CPU ， Memory ）无法在这些应用程序实例之间进行有效的分配和控制。例如，在某一个时刻，某一个应用程序实例占用了物理机的大部分资源，而其他的应用程序实例则因缺少资源运行缓慢。也正是由于这个原因，应用程序的伸缩性无法得到可靠的支持。</p>
@@ -278,7 +281,12 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 kubectl version --client
 </code></pre>
-<h2 id="相关技术">相关技术</h2>
+<h2 id="kubectl-常用命令">kubectl 常用命令</h2>
+<p>kubectl 是一个命令行工具，用于控制 kubernetes 集群。</p>
+<pre><code>kubectl [command] [TYPE] [NAME] [flags]
+</code></pre>
+<p>访问多个集群</p>
+<h2 id="概念">概念</h2>
 <ul>
 <li>application workload</li>
 <li>control plane</li>
@@ -298,11 +306,43 @@ kubectl version --client
 <li>Events</li>
 </ul>
 <h2 id="service">service</h2>
+<p><strong>kubelet</strong></p>
+<p>kubelet 是运行在每个工作节点（ node ）上的代理，负责把工作节点在 Kubernetes API server 上进行注册。</p>
+<p>除了注册工作节点外， kubelet 的工作还包括确保容器（ 例如 pod ）健康地运行。这些容器通常使用 PodSpec （ YAML 或 JSON object ） 来描述。 PocSpec 的来源如下：</p>
+<ul>
+<li>通常来自于 Kubernetes API server</li>
+<li>命令行指定的文件路径</li>
+<li>命令行指定的 HTTP endpoint</li>
+<li>kubelet HTTP 服务</li>
+</ul>
+<p><strong>kube-apiserver</strong></p>
+<p>Kubernetes API server 用于校验和配置 api 对象（ objects ），例如， pods ， services ， replicationcontrollers 等。</p>
 <p><strong>kube-proxy</strong></p>
-<p>kube-proxy 是运行在每个工作节点（ node ）上的网络代理，它代理那些定义在 Kubernetes API 中的服务（ service ），负责对 TCP 、 UDP 、 及 SCTP 流（ stream ）进行转发（ forwarding ），并以轮询（ round-robin ）的方式转发至一组后端。</p>
-<p>服务（ service ）的 cluster IP 和 Port 是由 kube-proxy 公开出去的，这些 cluster IP 可以通过 cluster DNS （例如， CoreDNS ）提供一个服务名。如果要配置 kube-proxy ，必须通过 apiserver API 创建一个相应的服务（ service ）。 维护着集群内部或外部与 pods 通讯的网络规则。</p>
+<p>kube-proxy 是运行在每个工作节点（ node ）上的网络代理，它代理那些定义在 Kubernetes API 中的服务（ service ），即负责对 TCP 、 UDP 、 及 SCTP 流（ stream ）进行转发（ forwarding ），并以轮询（ round-robin ）的方式转发至一组后端。</p>
+<p>服务（ service ）的 cluster IP 和 Port 是由 kube-proxy 公开出去的，这些 cluster IP 也可以通过 cluster DNS （例如， CoreDNS ）提供一个集群内部的服务名。如果要配置 kube-proxy ，必须通过 apiserver API 创建一个相应的服务（ service ）。</p>
+<p>kube-proxy 提供的主要功能如下：</p>
+<ul>
+<li>清除 iptables 和 ipvs 规则</li>
+<li>指定 Azure container registry configuration 文件</li>
+<li>在指定 IP 地址监听（缺省值 IPv4 : 0.0.0.0 ， IPv6 : &lsquo;::&rsquo; ）</li>
+<li>指定健康检查的 IP 和端口（缺省值 IPv4 : 0.0.0.0:10256 ， IPv6 : &lsquo;[::]:10256&rsquo; ）</li>
+<li>主机名覆盖</li>
+<li>kubeconfig 文件地址配置</li>
+<li>指定 Kubernetes API server 的地址</li>
+<li>指定代理模式，包括 userspace ， iptables （缺省值）， ipvs 等</li>
+<li>生成配置文件</li>
+</ul>
 <p>kube-proxy 首先会operating system packet filtering layer</p>
 <p><strong>用户空间代理模式（ user space proxy mode ）</strong></p>
+<p><strong>iptables 代理模式</strong></p>
+<p>network address translation (NAT)</p>
+<h2 id="kubernetes-开发">kubernetes 开发</h2>
+<p>如果需要编写直接访问 kubernetes API 的代码，或者向 kubernetes 社区贡献代码，可以参考以下内容。</p>
+<p><strong>在本地 OS/shell 环境下构建 kubernetes</strong></p>
+<pre><code>sudo apt update
+
+sudo apt install build-essential
+</code></pre>
 <ul class="pa0">
   
    <li class="list">
@@ -323,11 +363,13 @@ kubectl version --client
     <li><a href="#简介">简介</a></li>
     <li><a href="#术语">术语</a></li>
     <li><a href="#本地环境">本地环境</a></li>
-    <li><a href="#相关技术">相关技术</a></li>
+    <li><a href="#kubectl-常用命令">kubectl 常用命令</a></li>
+    <li><a href="#概念">概念</a></li>
     <li><a href="#kubernetes-控制面组件-control-plane-components-">Kubernetes 控制面组件（ Control Plane Components ）</a></li>
     <li><a href="#kubernetes-api">Kubernetes API</a></li>
     <li><a href="#kubernetes-objects">Kubernetes Objects</a></li>
     <li><a href="#service">service</a></li>
+    <li><a href="#kubernetes-开发">kubernetes 开发</a></li>
   </ul>
 </nav>
   </div>

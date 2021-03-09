@@ -13,10 +13,12 @@
       <pubDate>Mon, 22 Feb 2021 14:55:24 +0800</pubDate>
       
       <guid>http://nijian.life/software/tool/linuxcommand/</guid>
-      <description>grep 查找文件中符合条件的字符串。
--v 或 --invert-match : 显示不包含匹配文本的所有行  cp 拷贝文件。
+      <description>find 查找文件
+find / -name xx  grep 查找文件中符合条件的字符串。
+-v 或 --invert-match : 显示不包含匹配文本的所有行  mkdir 创建目录
+-p 创建目录时指定父目录  cp 拷贝文件。
 cp src.file /tmp/dst.file  tar 解压文件
-tar -xzf myfile.tar.gz -C /opt </description>
+tar -xzf myfile.tar.gz -C /opt  </description>
     </item>
     
   </channel>

@@ -7,7 +7,15 @@
     <title>Go | 一缕书香一缕魂</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="简介 安装 如果不需要最新的版本，可简单安装
-sudo apt install golang go version  依赖管理 环境变量 GOPROXY">
+sudo apt install golang go version   由于不同版本的 Go 在包管理机制及语言特性上的差异，编译特定的 Go 工程时可能无法成功。例如，编译 kubernetes v1.16.3 ，需要 go1.12.x 版本。
+ Go 多版本管理
+gvm
+安装
+bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone ... ./gvm-installer  常用命令
+gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 import
+导入包。
+ Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：
+假设 Go 安装目录为 /usr/local/go ， GOPATH 设置为 /home/myproject:/home/mylibraries，当 import net/http 时，编译器查找的顺序如下：">
     <meta name="generator" content="Hugo 0.80.0" />
     
     
@@ -33,17 +41,33 @@ sudo apt install golang go version  依赖管理 环境变量 GOPROXY">
     
     <meta property="og:title" content="Go" />
 <meta property="og:description" content="简介 安装 如果不需要最新的版本，可简单安装
-sudo apt install golang go version  依赖管理 环境变量 GOPROXY" />
+sudo apt install golang go version   由于不同版本的 Go 在包管理机制及语言特性上的差异，编译特定的 Go 工程时可能无法成功。例如，编译 kubernetes v1.16.3 ，需要 go1.12.x 版本。
+ Go 多版本管理
+gvm
+安装
+bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone ... ./gvm-installer  常用命令
+gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 import
+导入包。
+ Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：
+假设 Go 安装目录为 /usr/local/go ， GOPATH 设置为 /home/myproject:/home/mylibraries，当 import net/http 时，编译器查找的顺序如下：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://nijian.life/software/language/go/" />
 <meta property="article:published_time" content="2021-02-22T12:19:31+08:00" />
 <meta property="article:modified_time" content="2021-02-22T12:19:31+08:00" /><meta property="og:site_name" content="一缕书香一缕魂" />
 <meta itemprop="name" content="Go">
 <meta itemprop="description" content="简介 安装 如果不需要最新的版本，可简单安装
-sudo apt install golang go version  依赖管理 环境变量 GOPROXY">
+sudo apt install golang go version   由于不同版本的 Go 在包管理机制及语言特性上的差异，编译特定的 Go 工程时可能无法成功。例如，编译 kubernetes v1.16.3 ，需要 go1.12.x 版本。
+ Go 多版本管理
+gvm
+安装
+bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone ... ./gvm-installer  常用命令
+gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 import
+导入包。
+ Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：
+假设 Go 安装目录为 /usr/local/go ， GOPATH 设置为 /home/myproject:/home/mylibraries，当 import net/http 时，编译器查找的顺序如下：">
 <meta itemprop="datePublished" content="2021-02-22T12:19:31+08:00" />
 <meta itemprop="dateModified" content="2021-02-22T12:19:31+08:00" />
-<meta itemprop="wordCount" content="12">
+<meta itemprop="wordCount" content="85">
 
 
 
@@ -51,7 +75,15 @@ sudo apt install golang go version  依赖管理 环境变量 GOPROXY">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Go"/>
 <meta name="twitter:description" content="简介 安装 如果不需要最新的版本，可简单安装
-sudo apt install golang go version  依赖管理 环境变量 GOPROXY"/>
+sudo apt install golang go version   由于不同版本的 Go 在包管理机制及语言特性上的差异，编译特定的 Go 工程时可能无法成功。例如，编译 kubernetes v1.16.3 ，需要 go1.12.x 版本。
+ Go 多版本管理
+gvm
+安装
+bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone ... ./gvm-installer  常用命令
+gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 import
+导入包。
+ Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：
+假设 Go 安装目录为 /usr/local/go ， GOPATH 设置为 /home/myproject:/home/mylibraries，当 import net/http 时，编译器查找的顺序如下："/>
 
 	
   </head>
@@ -164,7 +196,41 @@ sudo apt install golang go version  依赖管理 环境变量 GOPROXY"/>
 
 go version
 </code></pre>
+<blockquote>
+<p>由于不同版本的 Go 在包管理机制及语言特性上的差异，编译特定的 Go 工程时可能无法成功。例如，编译 kubernetes v1.16.3 ，需要 go1.12.x 版本。</p>
+</blockquote>
+<p><strong>Go 多版本管理</strong></p>
+<p>gvm</p>
+<p>安装</p>
+<pre><code>bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+
+or
+
+git clone ...
+./gvm-installer
+</code></pre>
+<p>常用命令</p>
+<pre><code>gvm list
+
+gvm listall
+
+gvm install go1.12.10
+
+gvm use go1.12.10
+</code></pre>
 <h2 id="依赖管理">依赖管理</h2>
+<p><strong>import</strong></p>
+<p>导入包。</p>
+<blockquote>
+<p>Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：</p>
+<p>假设 Go 安装目录为 /usr/local/go ， GOPATH 设置为 /home/myproject:/home/mylibraries，当 import net/http 时，编译器查找的顺序如下：</p>
+<ul>
+<li>/usr/local/go/src/pkg/net/http</li>
+<li>/home/myproject/src/net/http</li>
+<li>/home/mylibraries/src/net/http</li>
+</ul>
+</blockquote>
+<p>Go 1.11 版本出现后，引入了 Go 模块（ Go Modules ）机制，也称为 vgo （ versioned Go ），使用 go.mod 来记录每个包的版本。</p>
 <h2 id="环境变量">环境变量</h2>
 <p>GOPROXY</p>
 <ul class="pa0">
@@ -230,11 +296,11 @@ go version
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/tool/hugo/">Hugo</a>
+          <a href="/software/tool/tool/">工具</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/tool/tool/">工具</a>
+          <a href="/software/tool/hugo/">Hugo</a>
         </li>
 	    
     </ul>

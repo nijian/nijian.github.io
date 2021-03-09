@@ -8,6 +8,15 @@
     <language>zh-cn</language>
     <lastBuildDate>Sat, 30 Jan 2021 12:00:00 -0500</lastBuildDate><atom:link href="http://nijian.life/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>负载均衡</title>
+      <link>http://nijian.life/software/theory/loadbalancing/</link>
+      <pubDate>Tue, 09 Mar 2021 15:37:36 +0800</pubDate>
+      
+      <guid>http://nijian.life/software/theory/loadbalancing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>基于 kube-proxy userspace 代理模式下的本地调试</title>
       <link>http://nijian.life/software/my/k8slocaldebug/</link>
       <pubDate>Fri, 05 Mar 2021 11:11:59 +0800</pubDate>
@@ -55,7 +64,8 @@
       <guid>http://nijian.life/software/tool/git/</guid>
       <description>简介 git 是一个分布式版本控制系统。
  版本控制是一个系统
- </description>
+ 常用命令 获取一个 Git 仓库（ Git repository ）
+git clone [--template=&amp;lt;template_directory&amp;gt;] [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror] [-o &amp;lt;name&amp;gt;] [-b &amp;lt;name&amp;gt;] [-u &amp;lt;upload-pack&amp;gt;] [--reference &amp;lt;repository&amp;gt;] [--dissociate] [--separate-git-dir &amp;lt;git dir&amp;gt;] [--depth &amp;lt;depth&amp;gt;] [--[no-]single-branch] [--no-tags] [--recurse-submodules[=&amp;lt;pathspec&amp;gt;]] [--[no-]shallow-submodules] [--[no-]remote-submodules] [--jobs &amp;lt;n&amp;gt;] [--sparse] [--filter=&amp;lt;filter&amp;gt;] [--] &amp;lt;repository&amp;gt; [&amp;lt;directory&amp;gt;] </description>
     </item>
     
     <item>
@@ -64,10 +74,12 @@
       <pubDate>Mon, 22 Feb 2021 14:55:24 +0800</pubDate>
       
       <guid>http://nijian.life/software/tool/linuxcommand/</guid>
-      <description>grep 查找文件中符合条件的字符串。
--v 或 --invert-match : 显示不包含匹配文本的所有行  cp 拷贝文件。
+      <description>find 查找文件
+find / -name xx  grep 查找文件中符合条件的字符串。
+-v 或 --invert-match : 显示不包含匹配文本的所有行  mkdir 创建目录
+-p 创建目录时指定父目录  cp 拷贝文件。
 cp src.file /tmp/dst.file  tar 解压文件
-tar -xzf myfile.tar.gz -C /opt </description>
+tar -xzf myfile.tar.gz -C /opt  </description>
     </item>
     
     <item>
@@ -77,7 +89,15 @@ tar -xzf myfile.tar.gz -C /opt </description>
       
       <guid>http://nijian.life/software/language/go/</guid>
       <description>简介 安装 如果不需要最新的版本，可简单安装
-sudo apt install golang go version  依赖管理 环境变量 GOPROXY</description>
+sudo apt install golang go version   由于不同版本的 Go 在包管理机制及语言特性上的差异，编译特定的 Go 工程时可能无法成功。例如，编译 kubernetes v1.16.3 ，需要 go1.12.x 版本。
+ Go 多版本管理
+gvm
+安装
+bash &amp;lt; &amp;lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone ... ./gvm-installer  常用命令
+gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 import
+导入包。
+ Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：
+假设 Go 安装目录为 /usr/local/go ， GOPATH 设置为 /home/myproject:/home/mylibraries，当 import net/http 时，编译器查找的顺序如下：</description>
     </item>
     
     <item>
@@ -118,7 +138,7 @@ sudo apt install golang go version  依赖管理 环境变量 GOPROXY</descripti
       <pubDate>Sat, 20 Feb 2021 15:33:05 +0800</pubDate>
       
       <guid>http://nijian.life/software/tool/telepresence/</guid>
-      <description></description>
+      <description>简介 安装 curl -s https://packagecloud.io/install/repositories/datawireio/telepresence/script.deb.sh | sudo bash sudo apt install --no-install-recommends telepresence </description>
     </item>
     
     <item>
@@ -213,7 +233,8 @@ aws configure </description>
       
       <guid>http://nijian.life/software/platform/kubernetes/</guid>
       <description>简介 Kubernetes是一个可移植，可扩展的开源平台，用于管理容器化的负载和服务。容器技术非常有利于实现声明式配置和运行自动化。
-部署技术的演化
+ 本文中涉及的命令都是基于 ubuntu 20.4 。
+ 部署技术的演化
 传统部署是基于物理机服务器，当一台物理机服务器上部署并运行了多个应用程序实例时，物理机的资源（ 例如 CPU ， Memory ）无法在这些应用程序实例之间进行有效的分配和控制。例如，在某一个时刻，某一个应用程序实例占用了物理机的大部分资源，而其他的应用程序实例则因缺少资源运行缓慢。也正是由于这个原因，应用程序的伸缩性无法得到可靠的支持。
 虚拟化部署通过引入虚拟机方案，解决了传统部署在资源分配和伸缩性方面的困扰。一台物理机上可以运行多个虚拟机，应用程序部署在虚拟机中。这些虚拟机运行在硬件虚拟化层之上，所使用的资源是可以进行分配和控制的，
 容器化部署是虚拟化部署的进一步发展，容器与虚拟机类似，它拥有自己的文件系统、独立的进程空间、以及共享的物理机资源，不同之处在于，容器之间共享操作系统，且不需要硬件虚拟化层。相比于虚拟机，容器更加轻量化。

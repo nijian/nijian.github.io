@@ -119,6 +119,22 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Software</span>
     <h1 class="f3 near-black">
+      <a href="http://nijian.life/software/cloud/compute/" class="link black dim">
+        AWS计算服务
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      AWS计算服务
+   类别 服务描述     实例（虚拟机） 安全并且可以调整大小的云计算容量（虚拟服务器）   Mike 32    
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
       <a href="http://nijian.life/software/tool/hugo/" class="link black dim">
         Hugo
       </a>
@@ -145,7 +161,8 @@
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       简介 Kubernetes是一个可移植，可扩展的开源平台，用于管理容器化的负载和服务。容器技术非常有利于实现声明式配置和运行自动化。
-部署技术的演化
+ 本文中涉及的命令都是基于 ubuntu 20.4 。
+ 部署技术的演化
 传统部署是基于物理机服务器，当一台物理机服务器上部署并运行了多个应用程序实例时，物理机的资源（ 例如 CPU ， Memory ）无法在这些应用程序实例之间进行有效的分配和控制。例如，在某一个时刻，某一个应用程序实例占用了物理机的大部分资源，而其他的应用程序实例则因缺少资源运行缓慢。也正是由于这个原因，应用程序的伸缩性无法得到可靠的支持。
 虚拟化部署通过引入虚拟机方案，解决了传统部署在资源分配和伸缩性方面的困扰。一台物理机上可以运行多个虚拟机，应用程序部署在虚拟机中。这些虚拟机运行在硬件虚拟化层之上，所使用的资源是可以进行分配和控制的，
 容器化部署是虚拟化部署的进一步发展，容器与虚拟机类似，它拥有自己的文件系统、独立的进程空间、以及共享的物理机资源，不同之处在于，容器之间共享操作系统，且不需要硬件虚拟化层。相比于虚拟机，容器更加轻量化。
@@ -154,26 +171,6 @@
  Agile application creation and deployment  Kubernetes
 Kubernetes 提供了以下功能：
  服务发现和负载均衡 存储编排 自动伸缩 自愈 敏感信息和配置管理  术语    术语 描述     node 运行容器化应用程序的工作节点，每个 k8s 集群至少包含一个工作节点。   deployment 负责管理集群中一个可复制的应用程序。   service 负责管理集群中一个可复制的应用程序。   pod 一个 pod 代表了集群中一组正在运行的容器。 pod 是在运行应用程序时动态创建的。   service 本f。   apiserver 。   SCTP 。   Kubernetes API 。   DaemonSet     本地环境 minikube 是一个 kubernetes 本地版本，适合用于学习 kubernetes 。为了使本地环境更加干净，以下使用了 vmware 。
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Software</span>
-    <h1 class="f3 near-black">
-      <a href="http://nijian.life/software/tool/tool/" class="link black dim">
-        工具
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      在软件构建过程中，经常需要借助于一些工具。例如，在构思设计的初始阶段，使用思维导图来粗略地罗列设计约束，设计目标，软件的主要特性，设计相关的一些基本候选决策；在设计阶段，使用建模工具来捕捉用例，建立业务模型，设计软件实现模型；在编写程序的阶段，使用集成开发工具来高效地录入、重构、单元测试、调试代码，使用正则表达式工具来测试和调试正则表达式的正确性；在集成测试阶段，使用代理工具，把本地的微服务切换进远程的 Kubernetes 环境等等。
-软件工具种类繁多。工具，编程语言，以及开发的内容构成了软件开发的领域。本文尝试系统地整理软件构建阶段及相关的工具。
-在线绘图 https://www.diagrams.net/
-在线 json 编辑器 https://jsoneditoronline.org/
-静态站点生成器 Hugo
-https://gohugo.io/
     </div>
   </div>
 </div>
