@@ -13,8 +13,8 @@
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
       <guid>http://nijian.life/software/platform/kubernetes/</guid>
-      <description>简介 Kubernetes是一个可移植，可扩展的开源平台，用于管理容器化的负载和服务。容器技术非常有利于实现声明式配置和运行自动化。
- 本文中涉及的命令都是基于 ubuntu 20.4 。
+      <description>简介 Kubernetes 是一个可移植，可扩展的开源平台，用于管理容器化的负载和服务。容器技术非常有利于实现声明式配置和运行自动化。
+ 本文基于 ubuntu 20.4 。
  部署技术的演化
 传统部署是基于物理机服务器，当一台物理机服务器上部署并运行了多个应用程序实例时，物理机的资源（ 例如 CPU ， Memory ）无法在这些应用程序实例之间进行有效的分配和控制。例如，在某一个时刻，某一个应用程序实例占用了物理机的大部分资源，而其他的应用程序实例则因缺少资源运行缓慢。也正是由于这个原因，应用程序的伸缩性无法得到可靠的支持。
 虚拟化部署通过引入虚拟机方案，解决了传统部署在资源分配和伸缩性方面的困扰。一台物理机上可以运行多个虚拟机，应用程序部署在虚拟机中。这些虚拟机运行在硬件虚拟化层之上，所使用的资源是可以进行分配和控制的，
@@ -23,7 +23,7 @@
 使用容器技术可以带来：
  Agile application creation and deployment  Kubernetes
 Kubernetes 提供了以下功能：
- 服务发现和负载均衡 存储编排 自动伸缩 自愈 敏感信息和配置管理  术语    术语 描述     node 运行容器化应用程序的工作节点，每个 k8s 集群至少包含一个工作节点。   deployment 负责管理集群中一个可复制的应用程序。   service 负责管理集群中一个可复制的应用程序。   pod 一个 pod 代表了集群中一组正在运行的容器。 pod 是在运行应用程序时动态创建的。   service 本f。   apiserver 。   SCTP 。   Kubernetes API 。   DaemonSet     本地环境 minikube 是一个 kubernetes 本地版本，适合用于学习 kubernetes 。为了使本地环境更加干净，以下使用了 vmware 。</description>
+ 服务发现和负载均衡 存储编排 自动伸缩 自愈 敏感信息和配置管理  术语    术语 描述     node 运行容器化应用程序的工作节点，每个 k8s 集群至少包含一个工作节点。   deployment 负责管理集群中一个可复制的应用程序。   service 负责管理集群中一个可复制的应用程序。   pod 一个 pod 代表了集群中一组正在运行的容器。 pod 是在运行应用程序时动态创建的。   service 本f。   apiserver 。   SCTP 。   Kubernetes API 。   DaemonSet     本地环境 minikube 是一个用于运行本地 kubernetes 的工具。为了使本地环境更加干净，以下使用了 vmware 。</description>
     </item>
     
   </channel>

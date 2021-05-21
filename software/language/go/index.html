@@ -11,7 +11,7 @@ sudo apt install golang go version   由于不同版本的 Go 在包管理机制
  Go 多版本管理
 gvm
 安装
-bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone ... ./gvm-installer  常用命令
+bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone https://github.com/moovweb/gvm.git cd [path of gvm-installer] ./gvm-installer  常用命令
 gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 import
 导入包。
  Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：
@@ -45,7 +45,7 @@ sudo apt install golang go version   由于不同版本的 Go 在包管理机制
  Go 多版本管理
 gvm
 安装
-bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone ... ./gvm-installer  常用命令
+bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone https://github.com/moovweb/gvm.git cd [path of gvm-installer] ./gvm-installer  常用命令
 gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 import
 导入包。
  Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：
@@ -60,14 +60,14 @@ sudo apt install golang go version   由于不同版本的 Go 在包管理机制
  Go 多版本管理
 gvm
 安装
-bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone ... ./gvm-installer  常用命令
+bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone https://github.com/moovweb/gvm.git cd [path of gvm-installer] ./gvm-installer  常用命令
 gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 import
 导入包。
  Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：
 假设 Go 安装目录为 /usr/local/go ， GOPATH 设置为 /home/myproject:/home/mylibraries，当 import net/http 时，编译器查找的顺序如下：">
 <meta itemprop="datePublished" content="2021-02-22T12:19:31+08:00" />
 <meta itemprop="dateModified" content="2021-02-22T12:19:31+08:00" />
-<meta itemprop="wordCount" content="85">
+<meta itemprop="wordCount" content="89">
 
 
 
@@ -79,7 +79,7 @@ sudo apt install golang go version   由于不同版本的 Go 在包管理机制
  Go 多版本管理
 gvm
 安装
-bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone ... ./gvm-installer  常用命令
+bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone https://github.com/moovweb/gvm.git cd [path of gvm-installer] ./gvm-installer  常用命令
 gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 import
 导入包。
  Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：
@@ -206,7 +206,8 @@ go version
 
 or
 
-git clone ...
+git clone https://github.com/moovweb/gvm.git
+cd [path of gvm-installer]
 ./gvm-installer
 </code></pre>
 <p>常用命令</p>

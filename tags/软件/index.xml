@@ -6,7 +6,16 @@
     <description>Recent content in 软件 on 一缕书香一缕魂</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 09 Mar 2021 15:37:36 +0800</lastBuildDate><atom:link href="http://nijian.life/tags/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 May 2021 11:03:19 +0800</lastBuildDate><atom:link href="http://nijian.life/tags/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rational Software Architect</title>
+      <link>http://nijian.life/software/tool/rsa/</link>
+      <pubDate>Fri, 21 May 2021 11:03:19 +0800</pubDate>
+      
+      <guid>http://nijian.life/software/tool/rsa/</guid>
+      <description>简介 </description>
+    </item>
+    
     <item>
       <title>负载均衡</title>
       <link>http://nijian.life/software/theory/loadbalancing/</link>
@@ -93,7 +102,7 @@ sudo apt install golang go version   由于不同版本的 Go 在包管理机制
  Go 多版本管理
 gvm
 安装
-bash &amp;lt; &amp;lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone ... ./gvm-installer  常用命令
+bash &amp;lt; &amp;lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone https://github.com/moovweb/gvm.git cd [path of gvm-installer] ./gvm-installer  常用命令
 gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 import
 导入包。
  Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：
@@ -210,10 +219,9 @@ gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 impor
       <guid>http://nijian.life/software/tool/tool/</guid>
       <description>在软件构建过程中，经常需要借助于一些工具。例如，在构思设计的初始阶段，使用思维导图来粗略地罗列设计约束，设计目标，软件的主要特性，设计相关的一些基本候选决策；在设计阶段，使用建模工具来捕捉用例，建立业务模型，设计软件实现模型；在编写程序的阶段，使用集成开发工具来高效地录入、重构、单元测试、调试代码，使用正则表达式工具来测试和调试正则表达式的正确性；在集成测试阶段，使用代理工具，把本地的微服务切换进远程的 Kubernetes 环境等等。
 软件工具种类繁多。工具，编程语言，以及开发的内容构成了软件开发的领域。本文尝试系统地整理软件构建阶段及相关的工具。
-在线绘图 https://www.diagrams.net/
-在线 json 编辑器 https://jsoneditoronline.org/
-静态站点生成器 Hugo
-https://gohugo.io/</description>
+阅读文档 Adobe Reader wget http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.5.5/enu/AdbeRdr9.5.5-1_i386linux_enu.deb sudo apt install ./AdbeRdr9.5.5-1_i386linux_enu.deb  可以修改文档的背景和字体，来改善阅读体验。例如，黑色背景，黄色字体。
+在线绘图 https://www.diagrams.net/  在线 json 编辑器 https://jsoneditoronline.org/  软件设计 https://www.ibm.com/docs/en/rational-soft-arch/9.5  静态站点生成器 Hugo
+https://gohugo.io/  Windows Remote Desktop client sudo snap install remmina </description>
     </item>
     
   </channel>

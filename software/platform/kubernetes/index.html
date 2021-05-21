@@ -40,7 +40,7 @@
 <meta itemprop="description" content="Kubernetes">
 <meta itemprop="datePublished" content="2021-01-01T10:58:08-04:00" />
 <meta itemprop="dateModified" content="2021-01-01T10:58:08-04:00" />
-<meta itemprop="wordCount" content="500">
+<meta itemprop="wordCount" content="561">
 
 
 
@@ -166,9 +166,9 @@
       
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="简介">简介</h2>
-<p>Kubernetes是一个可移植，可扩展的开源平台，用于管理容器化的负载和服务。容器技术非常有利于实现声明式配置和运行自动化。</p>
+<p>Kubernetes 是一个可移植，可扩展的开源平台，用于管理容器化的负载和服务。容器技术非常有利于实现声明式配置和运行自动化。</p>
 <blockquote>
-<p>本文中涉及的命令都是基于 ubuntu 20.4 。</p>
+<p>本文基于 ubuntu 20.4 。</p>
 </blockquote>
 <p><strong>部署技术的演化</strong></p>
 <p><img src="/images/container_evolution.svg" alt="部署演化图"></p>
@@ -237,7 +237,7 @@
 </tbody>
 </table>
 <h2 id="本地环境">本地环境</h2>
-<p>minikube 是一个 kubernetes 本地版本，适合用于学习 kubernetes 。为了使本地环境更加干净，以下使用了 vmware 。</p>
+<p>minikube 是一个用于运行本地 kubernetes 的工具。为了使本地环境更加干净，以下使用了 vmware 。</p>
 <p><strong>安装 vmware player</strong></p>
 <pre><code>sudo apt update
 
@@ -274,6 +274,26 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 <p>minikube 运行需要依赖于一个容器的驱动，例如 docker 。设置缺省的 driver ：</p>
 <pre><code>minikube config set driver docker
 </code></pre>
+<p>启动时指定 kubernetes 版本</p>
+<pre><code>minikube start --kubernetes-version v1.16.3 
+</code></pre>
+<blockquote>
+<p>如果无法访问 k8s.gcr.io 等镜像库，可以通过 minikube ssh 命令进入，安装 docker 并从有效的镜像库拉取对应版本，并在本地打标签。</p>
+</blockquote>
+<p>进入 dashboard</p>
+<pre><code>minikube dashboard
+</code></pre>
+<blockquote>
+<p>如果本地已安装其他版本的 cluster ，可参考该命令给出的提示进行操作，例如，删除已安装 cluster ，或创建一个新的 cluster 。</p>
+</blockquote>
+<p>启动</p>
+<pre><code>minikube start
+--base-image=&quot;kicbase/...&quot;
+
+--image-mirror-country=&quot;cn&quot;
+
+--image-repository=&quot;registry.cn-hangzhou.aliyuncs.com/google_containers&quot;
+</code></pre>
 <p><strong>安装 kubectl</strong></p>
 <pre><code>curl -LO &quot;https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl&quot;
 
@@ -305,6 +325,12 @@ kubectl version --client
 <li>ConfigMaps</li>
 <li>Events</li>
 </ul>
+<h2 id="工作负载-workloads-">工作负载（ Workloads ）</h2>
+<p>工作负载是指在 Kubernetes 中运行的应用程序，这些应用程序运行在一组 Pod 中，而每一个 Pod 又代表着一组运行中的容器（ container ）。</p>
+<p>本节描述 Pod 相关的概念，以及确保 Pod 在 Kubernetes 中可控运行的相关资源（ workload resource ）。</p>
+<blockquote>
+<p>Kubernetes 不会直接控制 Pod 的运行，而是通过资源配置声明，由 controller 控制完成。这正是 Kubernetes 进行容器声明式自动化管理的基本特征。</p>
+</blockquote>
 <h2 id="service">service</h2>
 <p><strong>kubelet</strong></p>
 <p>kubelet 是运行在每个工作节点（ node ）上的代理，负责把工作节点在 Kubernetes API server 上进行注册。</p>
@@ -368,6 +394,7 @@ sudo apt install build-essential
     <li><a href="#kubernetes-控制面组件-control-plane-components-">Kubernetes 控制面组件（ Control Plane Components ）</a></li>
     <li><a href="#kubernetes-api">Kubernetes API</a></li>
     <li><a href="#kubernetes-objects">Kubernetes Objects</a></li>
+    <li><a href="#工作负载-workloads-">工作负载（ Workloads ）</a></li>
     <li><a href="#service">service</a></li>
     <li><a href="#kubernetes-开发">kubernetes 开发</a></li>
   </ul>
