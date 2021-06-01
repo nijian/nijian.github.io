@@ -125,6 +125,31 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Software</span>
     <h1 class="f3 near-black">
+      <a href="http://nijian.life/software/my/calc-engine/" class="link black dim">
+        可配置无状态原子计算引擎
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      简介 在一些业务场景中，包含了下列特定的数据及计算特征：
+ 业务领域内较大规模的一组数据 数据之间关联性强，存在聚合和分组计算 计算过程较为复杂，包含大量的决策表（树）计算，四则运算，聚合计算，以及简单条件规则 计算公式及过程需要基于配置完成  例如，保险领域车险团单的保费计算场景。一张车险团单可能包含了成千上万辆车，每辆车都需要计算出公式保费，然后，根据每辆车的最低最高保费调整统一的费率，再根据新的费率进行分组计算，最后，基于每辆车的公式保费进行汇总或分摊。
+成千上万辆车在业务领域内属于较大规模的一组数据，但在大数据领域并不算是。此外，在上述的计算场景中，计算公式及过程的可配置性与计算性能同等重要，因此，直接使用 Flink 这类分布式处理引擎并不合适。
+本文描述的可配置无状态原子计算引擎是针对上述业务计算场景的解决方案。
+为什么需要可配置性 让业务人员直接参与业务规则的制定，可以减少业务实现的中间环节。例如，保险领域的精算师有能力自行设计保费计算的逻辑，在现实世界中，这些计算逻辑常常通过 Excel 工具来实现。但由于 Excel 无法有效地与系统平滑集成，例如，数据的产生来自于系统程序的运行，而不是 Excel 中的一组单元格，与此同时，Excel 的计算结果无法方便地传递给系统，因此，Excel 往往被作为保费计算的辅助工具，而不是系统运行的一个组成部分。
+如果业务人员可以直接配置出计算公式和过程，并且，这些计算公式和过程可以直接作为系统运行的一部分，这将大大减少业务人员与软件开发人员之间的沟通成本，并使需求与实现之间的业务功能性误差降至最低。
+此外，配置是基于计算引擎来实现的，当计算引擎趋于成熟稳定时，计算过程中非业务功能性的错误也会越来越少。
+为什么需要原子化 如前文所述，在大数据领域，一张车险团单包含的数据是微不足道的，抛开可配置性概念，使用像 Flink 这样的分布式处理引擎来解决一张车险团单的计算问题是不太合适的，一方面，分布式计算引入了不必要的复杂性，另一方面，也带来了不必要的资源开销。关于 Flink 的介绍，参考 这里 。
+所谓原子，就是非分布式的、无依赖的、不可分割的、高度内聚的一个单元。本文描述的计算引擎，就是这样的一个计算单元。这个计算单元的目标，是充分使用单机（或单虚拟机）的 CPU 和内存来处理适当规模的数据，并在适当的时间内产生计算结果。所谓适当，是基于业务场景的一个模糊的衡量，例如，10 s 内计算出一万辆车的保费可能是一个适当的场景。当然，适当与否最终取决于相关业务人员的共识。
+原子化的计算单元，与 Flink 这样的分布式处理引擎并不冲突，相反，它是 Flink 的一个补充。例如，当业务场景需要处理海量团单时， Flink 就是一个很好的选择。一切取决于业务场景的需要。
+为什么需要无状态 
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
       <a href="http://nijian.life/software/cloud/aws-concept/" class="link black dim">
         AWS 术语
       </a>
@@ -146,23 +171,6 @@
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       简介 术语    术语 描述     layer 一个层是一个 .zip 文件（不适用于镜像），使用层技术，可以使部署包尽可能地小，因为部署包依赖的库可以通过一个新的层提供   runtime 在 Lambda 运行环境中工作的一个编程语言相关的环境，负责转发调用事件，上下文信息，以及最终的响应   handler 函数代码中由 Lambda 调用并开始执行的方法   code signing 代码签名   execution role 授权 Lambda 函数去访问 AWS 服务和资源的 IAM 角色（ AWS Identity and Access Management (IAM) role ）   unpublished version 未发布的版本，当函数更新时，会发生相应的变化   published versions 已发布的版本，是函数的一个快照，不会发生变化   aliases 函数别名，可以设置使之对应于一个版本   ARN Amazon Resource Name ， 例如，execution role ARN 的样式为 arn:aws:iam::your-account-id:role/execution_role    常用命令 AWS CLI 卸载 AWS CLI version 1
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Software</span>
-    <h1 class="f3 near-black">
-      <a href="http://nijian.life/software/my/xltxdt/" class="link black dim">
-        Excel决策表
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      构思   图1   场景   图2   图2展示了Excel决策表设计时的场景。运行时场景较为丰富，且与业务关系紧密，不再赘述。这里只描述Excel决策表引擎的接口方法，即输入xltx文件，输出适配go-tree库的tree对象。
-分析模型 Excel模板定义与决策表概念及后续的解析密切相关，经初步分析，引入下面几个概念：
- 条件列（condition column） 条件（condition） 结论列（conclusion column） 结论（conclusion） 无法匹配（missing） 列类型（column type） 列值类型（column value type） 列名（column name） 布尔表达式（bool expression）  
     </div>
   </div>
 </div>

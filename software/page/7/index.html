@@ -125,6 +125,23 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Software</span>
     <h1 class="f3 near-black">
+      <a href="http://nijian.life/software/my/xltxdt/" class="link black dim">
+        Excel决策表
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      构思   图1   场景   图2   图2展示了Excel决策表设计时的场景。运行时场景较为丰富，且与业务关系紧密，不再赘述。这里只描述Excel决策表引擎的接口方法，即输入xltx文件，输出适配go-tree库的tree对象。
+分析模型 Excel模板定义与决策表概念及后续的解析密切相关，经初步分析，引入下面几个概念：
+ 条件列（condition column） 条件（condition） 结论列（conclusion column） 结论（conclusion） 无法匹配（missing） 列类型（column type） 列值类型（column value type） 列名（column name） 布尔表达式（bool expression）  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Software</span>
+    <h1 class="f3 near-black">
       <a href="http://nijian.life/software/cloud/aws/" class="link black dim">
         AWS
       </a>
@@ -152,26 +169,6 @@ aws configure
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       AWS计算服务
    类别 服务描述     实例（虚拟机） 安全并且可以调整大小的云计算容量（虚拟服务器）   Mike 32    
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Software</span>
-    <h1 class="f3 near-black">
-      <a href="http://nijian.life/software/tool/hugo/" class="link black dim">
-        Hugo
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      简介 Hugo 是一个用 Go 语言编写的静态站点生成器。从技术上来说， Hugo 以某个目录下的文件和模板为输入，运行后可以创建一个完整的 Web 站点。
-常用命令  创建新站点
-&laquo;&laquo;&laquo;&lt; HEAD  hugo new site foo  foo 是站点名称
-  添加 theme  echo &#39;theme = &#34;ananke&#34;&#39; &gt;&gt; config.toml  对于使用 hugo new site 创建的缺省站点，配置简化存放在根目录下的 config.toml 中。通过上述命令，可在该配置文件中添加一条指令。 theme 的获取及安装可参考 https://gohugo.io/getting-started/quick-start/
-  创建文章  hugo new software/env/installation.md  software 是 category ， installation.md 是文件名称。使用此命令可以根据 archetype 自动生成一些内容，例如 title 等。
-  启动本地 hugo server 用于调试  hugo server -t ananke  ananke 是 theme 名称
     </div>
   </div>
 </div>
