@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>大数据 on 一缕书香一缕魂</title>
+    <link>http://nijian.life/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</link>
+    <description>Recent content in 大数据 on 一缕书香一缕魂</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 01 Jun 2021 11:29:32 +0800</lastBuildDate><atom:link href="http://nijian.life/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apache Flink</title>
+      <link>http://nijian.life/software/product/flink/</link>
+      <pubDate>Tue, 01 Jun 2021 11:29:32 +0800</pubDate>
+      
+      <guid>http://nijian.life/software/product/flink/</guid>
+      <description>简介 Flink 是一个框架和分布式处理引擎，用于在无边界和有边界数据流上进行有状态的计算，它能在各种集群环境中运行，并能以内存速度和任意规模进行计算。
+ 所谓有状态的计算，指的是有状态的计算任务。在分布式计算领域，一次计算被拆分成大量的计算任务，这些计算任务分布在集群中并发执行。理论上，分布式计算可使用的计算资源是无限的。
+ 作为框架， Flink 负责维护计算任务的状态，
+  Flink 之所以能在各种集群环境中运行，是因为它集成了各种集群资源管理器，例如 Hadoop YARN、 Apache Mesos 和 Kubernetes，它同时也可以作为独立集群运行。基于 Flink 编写的应用程序，可以通过配置（例如，并行数）标识出所需的资源，并通过 Flink 从集群资源管理器请求这些资源。在发生故障的情况下， Flink 还可以通过请求新资源来替换发生故障的容器。
+ 提交或控制 Flink 应用程序的所有通信都是通过 REST 调用进行的。
+ 下面是 Flink 在实践中已被验证的一些能力：
+ 处理每天处理数万亿的事件, 应用维护几TB大小的状态, 和 应用在数千个内核上运行。  </description>
+    </item>
+    
+  </channel>
+</rss>

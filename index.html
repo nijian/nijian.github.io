@@ -156,11 +156,17 @@
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
           <a href="http://nijian.life/software/product/flink/" class="color-inherit dim link">
-            Flink
+            Apache Flink
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          简介 
+          简介 Flink 是一个框架和分布式处理引擎，用于在无边界和有边界数据流上进行有状态的计算，它能在各种集群环境中运行，并能以内存速度和任意规模进行计算。
+ 所谓有状态的计算，指的是有状态的计算任务。在分布式计算领域，一次计算被拆分成大量的计算任务，这些计算任务分布在集群中并发执行。理论上，分布式计算可使用的计算资源是无限的。
+ 作为框架， Flink 负责维护计算任务的状态，
+  Flink 之所以能在各种集群环境中运行，是因为它集成了各种集群资源管理器，例如 Hadoop YARN、 Apache Mesos 和 Kubernetes，它同时也可以作为独立集群运行。基于 Flink 编写的应用程序，可以通过配置（例如，并行数）标识出所需的资源，并通过 Flink 从集群资源管理器请求这些资源。在发生故障的情况下， Flink 还可以通过请求新资源来替换发生故障的容器。
+ 提交或控制 Flink 应用程序的所有通信都是通过 REST 调用进行的。
+ 下面是 Flink 在实践中已被验证的一些能力：
+ 处理每天处理数万亿的事件, 应用维护几TB大小的状态, 和 应用在数千个内核上运行。  
         </div>
           <a href="http://nijian.life/software/product/flink/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">继续阅读</a>
         
