@@ -22,12 +22,12 @@ aws configure </description>
     </item>
     
     <item>
-      <title>AWS计算服务</title>
+      <title>AWS 计算服务</title>
       <link>http://nijian.life/software/cloud/compute/</link>
       <pubDate>Fri, 01 Jan 2021 10:58:08 -0400</pubDate>
       
       <guid>http://nijian.life/software/cloud/compute/</guid>
-      <description>AWS计算服务
+      <description>AWS 计算服务
    类别 服务描述     实例（虚拟机） 安全并且可以调整大小的云计算容量（虚拟服务器）   Mike 32    </description>
     </item>
     
