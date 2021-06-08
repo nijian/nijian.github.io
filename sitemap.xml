@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://nijian.life/tags/</loc>
+    <lastmod>2021-06-08T10:52:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nijian.life/</loc>
+    <lastmod>2021-06-08T10:52:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nijian.life/tags/%E7%BD%91%E7%BB%9C%E6%9C%AF%E8%AF%AD/</loc>
+    <lastmod>2021-06-08T10:52:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nijian.life/software/network/terms/</loc>
+    <lastmod>2021-06-08T10:52:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nijian.life/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2021-06-08T10:52:49+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://nijian.life/software/product/flink/</loc>
     <lastmod>2021-06-01T11:29:32+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -10,28 +45,7 @@
   </url>
   
   <url>
-    <loc>http://nijian.life/tags/</loc>
-    <lastmod>2021-06-01T11:29:32+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://nijian.life/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/</loc>
-    <lastmod>2021-06-01T11:29:32+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://nijian.life/</loc>
-    <lastmod>2021-06-01T11:29:32+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://nijian.life/tags/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2021-06-01T11:29:32+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -278,27 +292,6 @@
   <url>
     <loc>http://nijian.life/tags/lambda/</loc>
     <lastmod>2021-02-05T15:00:18+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://nijian.life/software/my/xltxdt/</loc>
-    <lastmod>2021-02-03T15:19:13+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://nijian.life/tags/%E5%86%B3%E7%AD%96%E8%A1%A8/</loc>
-    <lastmod>2021-02-03T15:19:13+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://nijian.life/tags/%E8%A7%84%E5%88%99/</loc>
-    <lastmod>2021-02-03T15:19:13+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
