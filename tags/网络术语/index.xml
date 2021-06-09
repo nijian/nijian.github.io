@@ -13,7 +13,7 @@
       <pubDate>Tue, 08 Jun 2021 10:52:49 +0800</pubDate>
       
       <guid>http://nijian.life/software/network/terms/</guid>
-      <description>WAF Web 应用防火墙（ Web Application Firewall ）
+      <description>WAF Web 应用防火墙（ Web Application Firewall ）。 WAF 部署在 Web Application 的前端，主要用于防御针对网络应用层的攻击，例如， SQL 注入，跨站脚本攻击，参数篡改、应用平台漏洞攻击、拒绝服务攻击等。
 XXX </description>
     </item>
     

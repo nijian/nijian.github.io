@@ -38,7 +38,21 @@
   </url>
   
   <url>
+    <loc>http://nijian.life/tags/apache/</loc>
+    <lastmod>2021-06-01T11:29:32+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://nijian.life/software/product/flink/</loc>
+    <lastmod>2021-06-01T11:29:32+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://nijian.life/tags/flink/</loc>
     <lastmod>2021-06-01T11:29:32+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
