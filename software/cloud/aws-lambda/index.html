@@ -40,7 +40,7 @@
 <meta itemprop="description" content="AWS Lambda">
 <meta itemprop="datePublished" content="2021-06-05T15:00:18+08:00" />
 <meta itemprop="dateModified" content="2021-06-05T15:00:18+08:00" />
-<meta itemprop="wordCount" content="1124">
+<meta itemprop="wordCount" content="1121">
 
 
 
@@ -167,11 +167,11 @@
 <li>仅在需要时运行 Lambda Function ，并根据计算时间计费</li>
 </ul>
 <blockquote>
-<p>Lambda Function 是部署在 Lambda 服务上的程序包。仅在<strong>需要</strong>时运行 Lambda Function ，并根据计算时间计费，这项服务内容可以极大地降低云平台的使用成本，事实上，这也是 Lambda 服务的核心价值。</p>
+<p>Lambda Function 是部署在 Lambda 服务上的程序包，仅在<strong>需要</strong>时运行，并根据计算时间计费，这项服务内容可以极大地降低应用在云平台上的使用成本，事实上，这也是 Lambda 服务的核心价值。</p>
 </blockquote>
 <p>使用 Lambda 服务需要引入一些新的编程思想，例如， Lambda Function 应该尽可能做到原子化和无状态计算。</p>
 <blockquote>
-<p>原子化意味着高度内聚。原子化的本质是尽量避免对<strong>外部服务</strong>的依赖。依赖通常是使应用系统趋于复杂的重要因素。例如，当同步依赖的外部服务需要长时间运行， Lambda Function 无法快速销毁，这可能破坏 Lambda 服务为应用带来的好处。无状态计算则是指在计算期间不涉及中间数据和计算任务的状态，这使 Lambda Function 的计算变得简单而纯粹。</p>
+<p>原子化意味着高度内聚。原子化的本质是尽量避免对<strong>外部服务</strong>的依赖。依赖通常是使应用系统趋于复杂的重要因素。例如，当同步依赖的外部服务需要长时间运行， Lambda Function 无法快速销毁，这可能破坏 Lambda 服务为应用带来的好处。无状态计算则是指在计算期间不涉及中间数据和计算任务的状态，这使 Lambda Function 的计算变得简单而纯粹。例如，<a href="http://nijian.life/software/my/calc-engine/"><strong>可配置无状态原子计算引擎</strong></a>。</p>
 </blockquote>
 <h2 id="术语">术语</h2>
 <table>
