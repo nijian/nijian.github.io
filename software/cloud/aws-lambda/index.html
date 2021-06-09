@@ -34,13 +34,13 @@
 <meta property="og:description" content="AWS Lambda" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://nijian.life/software/cloud/aws-lambda/" />
-<meta property="article:published_time" content="2021-02-05T15:00:18+08:00" />
-<meta property="article:modified_time" content="2021-02-05T15:00:18+08:00" /><meta property="og:site_name" content="一缕书香一缕魂" />
+<meta property="article:published_time" content="2021-06-05T15:00:18+08:00" />
+<meta property="article:modified_time" content="2021-06-05T15:00:18+08:00" /><meta property="og:site_name" content="一缕书香一缕魂" />
 <meta itemprop="name" content="AWS Lambda">
 <meta itemprop="description" content="AWS Lambda">
-<meta itemprop="datePublished" content="2021-02-05T15:00:18+08:00" />
-<meta itemprop="dateModified" content="2021-02-05T15:00:18+08:00" />
-<meta itemprop="wordCount" content="1115">
+<meta itemprop="datePublished" content="2021-06-05T15:00:18+08:00" />
+<meta itemprop="dateModified" content="2021-06-05T15:00:18+08:00" />
+<meta itemprop="wordCount" content="1124">
 
 
 
@@ -154,7 +154,7 @@
       <h1 class="f1 athelas mt3 mb1">AWS Lambda</h1>
       
       
-      <time class="f6 mv4 dib tracked" datetime="2021-02-05T15:00:18+08:00">February 5, 2021</time>
+      <time class="f6 mv4 dib tracked" datetime="2021-06-05T15:00:18+08:00">June 5, 2021</time>
 
       
       
@@ -169,7 +169,10 @@
 <blockquote>
 <p>Lambda Function 是部署在 Lambda 服务上的程序包。仅在<strong>需要</strong>时运行 Lambda Function ，并根据计算时间计费，这项服务内容可以极大地降低云平台的使用成本，事实上，这也是 Lambda 服务的核心价值。</p>
 </blockquote>
-<p>使用 Lambda 服务会对编程思想带来一定的改变，例如， Lambda Function 应该尽可能做到无状态和原子化。</p>
+<p>使用 Lambda 服务需要引入一些新的编程思想，例如， Lambda Function 应该尽可能做到原子化和无状态计算。</p>
+<blockquote>
+<p>原子化意味着高度内聚。原子化的本质是尽量避免对<strong>外部服务</strong>的依赖。依赖通常是使应用系统趋于复杂的重要因素。例如，当同步依赖的外部服务需要长时间运行， Lambda Function 无法快速销毁，这可能破坏 Lambda 服务为应用带来的好处。无状态计算则是指在计算期间不涉及中间数据和计算任务的状态，这使 Lambda Function 的计算变得简单而纯粹。</p>
+</blockquote>
 <h2 id="术语">术语</h2>
 <table>
 <thead>
@@ -658,19 +661,63 @@ sudo ./aws/install
     <ul class="pa0 list">
 	   
 	     <li  class="mb2">
-          <a href="/software/cloud/aws/">AWS</a>
+          <a href="/software/product/flink/">Apache Flink</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/cloud/compute/">AWS 计算服务</a>
+          <a href="/software/tool/rsa/">Rational Software Architect</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/tool/tool/">工具</a>
+          <a href="/software/theory/loadbalancing/">负载均衡</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/tool/hugo/">Hugo</a>
+          <a href="/software/my/k8slocaldebug/">基于 kube-proxy userspace 代理模式下的本地调试</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/software/tool/docker/">Docker</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/software/tool/xlsx/">XLSX</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/software/tool/excelize/">Excelize</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/software/tool/git/">Git</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/software/tool/linuxcommand/">Linux 常用命令</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/software/language/go/">Go</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/software/product/envoy/">Envoy</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/software/product/gloo/">Gloo Edge</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/software/tool/make/">GNU make</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/software/tool/telepresence/">Telepresence</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/software/env/installation/">软件开发工作环境搭建</a>
         </li>
 	    
     </ul>
