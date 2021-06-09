@@ -40,7 +40,7 @@
 <meta itemprop="description" content="Apache Flink">
 <meta itemprop="datePublished" content="2021-06-01T11:29:32+08:00" />
 <meta itemprop="dateModified" content="2021-06-01T11:29:32+08:00" />
-<meta itemprop="wordCount" content="69">
+<meta itemprop="wordCount" content="160">
 
 
 
@@ -159,7 +159,7 @@
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h1 id="简介">简介</h1>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="简介">简介</h2>
 <p>Flink 是一个分布式数据处理框架，被用于在无边界和有边界的数据流上进行有状态的计算。 Flink 能在各种集群环境中运行，并能以本地内存运行速度在任意规模上进行计算。</p>
 <blockquote>
 <p>所谓有状态的计算，指的是有状态的计算任务。在分布式计算领域，一次计算被拆分成大量的计算任务，这些计算任务分布在集群中并发执行。理论上，分布式计算可使用的计算资源是无限的。</p>
@@ -186,30 +186,75 @@
 <li>应用维护几 TB 大小的状态, 和</li>
 <li>应用在数千个内核上运行。</li>
 </ul>
-<h1 id="应用场景">应用场景</h1>
-<p>Flink 常常用于三种应用场景：</p>
+<h2 id="应用场景">应用场景</h2>
+<p>Flink 常常用于以下三种应用场景：</p>
 <ul>
 <li>事件驱动型应用（ Event-driven Applications ）</li>
-<li>数据分析型应用（ Data Analytics Applications ）</li>
-<li>数据管道型应用（ Data Pipeline Applications ）</li>
+<li>数据分析应用（ Data Analytics Applications ）</li>
+<li>数据管道应用（ Data Pipeline Applications ）</li>
 </ul>
 <h3 id="事件驱动型应用">事件驱动型应用</h3>
+<p>事件驱动型应用是从一个或多个事件流提取数据，并根据到来的事件触发计算、状态更新或其他外部动作。</p>
+<blockquote>
+<p>事件驱动型应用是在计算存储分离的传统应用基础上进化而来。在传统架构中，应用需要读写远程事务型数据库。</p>
+</blockquote>
+<p>事件驱动型应用是基于状态化流处理来完成。在该设计中，数据和计算不会分离，应用只需访问本地（内存或磁盘）即可获取数据。系统容错性的实现依赖于定期向远程持久化存储写入 checkpoint。值得注意的是，事件驱动型应用没有多个应用共享的数据库，只需考虑自身应用相关的数据，因此在更改数据表示或服务扩容时所需的协调工作将大大减少。</p>
 <figure>
     <img src="/images/flink/usecases-eventdrivenapps.png"/> 
 </figure>
 
-<h3 id="数据分析型应用">数据分析型应用</h3>
+<p>典型的事件驱动型应用实例：</p>
+<ul>
+<li>反欺诈 Fraud detection</li>
+<li>异常检测 Anomaly detection</li>
+<li>基于规则的报警 Rule-based alerting</li>
+<li>业务流程监控 Business process monitoring</li>
+<li>（社交网络）Web 应用 Web application (social network)</li>
+</ul>
+<blockquote>
+<p><strong>没有共享数据库，单纯基于事件流提取数据</strong>，这意味着事件驱动型应用有其特定的适用范围。 例如，事件驱动型应用并不适用于传统的复杂业务处理。</p>
+</blockquote>
+<h3 id="数据分析应用">数据分析应用</h3>
+<p>数据分析应用需要从原始数据中提取有价值的信息和指标，通常有两种方式：</p>
+<ul>
+<li>批处理</li>
+<li>实时流处理</li>
+</ul>
+<p>Flink 同时支持实时流式及批量分析应用。</p>
 <figure>
     <img src="/images/flink/usecases-analytics.png"/> 
 </figure>
 
+<p>典型的数据分析应用实例：</p>
+<ul>
+<li>电信网络质量监控 Quality monitoring of Telco networks</li>
+<li>移动应用中的产品更新及实验评估分析 Analysis of product updates &amp; experiment evaluation in mobile applications</li>
+<li>消费者技术中的实时数据即席分析 Ad-hoc analysis of live data in consumer technology</li>
+<li>大规模图分析 Large-scale graph analysis</li>
+</ul>
 <h3 id="数据管道型应用">数据管道型应用</h3>
+<p>提取-转换-加载（ ETL ）是一种在存储系统之间进行数据转换和迁移的常用方法。 ETL 作业通常会周期性地触发，将数据从事务型数据库拷贝到分析型数据库或数据仓库。</p>
+<p>数据管道和 ETL 作业的用途相似，都可以转换、丰富数据，并将其从某个存储系统移动到另一个。但数据管道是以持续流模式运行，而非周期性触发。因此它支持从一个不断生成数据的源头读取记录，并将它们以低延迟移动到终点。例如：数据管道可以用来监控文件系统目录中的新文件，并将其数据写入事件日志；另一个应用可能会将事件流物化到数据库或增量构建和优化查询索引。</p>
+<blockquote>
+<p>和周期性 ETL 作业相比，持续数据管道可以明显降低将数据移动到目的端的延迟。此外，由于它能够持续消费和发送数据，因此用途更广，支持用例更多。</p>
+</blockquote>
 <figure>
     <img src="/images/flink/usecases-datapipelines.png"/> 
 </figure>
 
-<h1 id="概念">概念</h1>
-<h1 id="运维">运维</h1>
+<p>典型的数据管道应用实例</p>
+<ul>
+<li>电子商务中的实时查询索引构建 Real-time search index building in e-commerce</li>
+<li>电子商务中的持续 ETL Continuous ETL in e-commerce</li>
+</ul>
+<h3 id="小结">小结</h3>
+<p>综合上述应用场景， Flink 总体架构如下：</p>
+<figure>
+    <img src="/images/flink/flink-home-graphic.png"/> 
+</figure>
+
+<h2 id="概念">概念</h2>
+<h2 id="运维">运维</h2>
 <ul class="pa0">
   
    <li class="list">
@@ -239,13 +284,17 @@
     <p class="f5 b mb3">这是什么 software</p>
       <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#应用场景">应用场景</a>
       <ul>
         <li><a href="#事件驱动型应用">事件驱动型应用</a></li>
-        <li><a href="#数据分析型应用">数据分析型应用</a></li>
+        <li><a href="#数据分析应用">数据分析应用</a></li>
         <li><a href="#数据管道型应用">数据管道型应用</a></li>
+        <li><a href="#小结">小结</a></li>
       </ul>
     </li>
+    <li><a href="#概念">概念</a></li>
+    <li><a href="#运维">运维</a></li>
   </ul>
 </nav>
   </div>

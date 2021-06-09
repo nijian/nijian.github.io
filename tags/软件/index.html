@@ -161,8 +161,8 @@ XXX
  Flink 具有较好的数据处理性能，所有分拆出来的计算任务都是通过访问本地（通常在内存中）状态来进行所有的计算，从而产生非常低的处理延迟。 Flink 通过定期和异步地对本地状态进行持久化存储来保证故障场景下的状态一致性。
    本地计算 Logic 可借助于像 可配置无状态原子计算引擎 这样的工具。
  下面是 Flink 在实践中已被验证的一些能力：
- 处理每天处理数万亿的事件, 应用维护几 TB 大小的状态, 和 应用在数千个内核上运行。  应用场景 Flink 常常用于三种应用场景：
- 事件驱动型应用（ Event-driven Applications ） 数据分析型应用（ Data Analytics Applications ） 数据管道型应用（ Data Pipeline Applications ）  事件驱动型应用   数据分析型应用   数据管道型应用   概念 运维 
+ 处理每天处理数万亿的事件, 应用维护几 TB 大小的状态, 和 应用在数千个内核上运行。  应用场景 Flink 常常用于以下三种应用场景：
+ 事件驱动型应用（ Event-driven Applications ） 数据分析应用（ Data Analytics Applications ） 数据管道应用（ Data Pipeline Applications ）  事件驱动型应用 事件驱动型应用是从一个或多个事件流提取数据，并根据到来的事件触发计算、状态更新或其他外部动作。
     </div>
   </div>
 </div>
