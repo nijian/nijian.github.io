@@ -135,10 +135,11 @@
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       简介 AWS Lambda 是 AWS 提供的一种计算服务，服务内容包括：
- 提供高可用性计算基础设施 提供计算资源的自动管理任务，包括服务器和操作系统维护、容量配置和自动伸缩、代码监控和日志记录等 仅在需要时运行 Lambda Function ，并根据计算时间计费   Lambda Function 是部署在 Lambda 服务上的程序包，仅在需要时运行，并根据计算时间计费，这项服务内容可以极大地降低应用在云平台上的使用成本，事实上，这也是 Lambda 服务的核心价值。
+ 提供高可用性计算基础设施 提供计算资源的自动管理任务，包括服务器和操作系统维护、容量配置和自动伸缩、代码监控和日志记录等 仅在需要时运行 Lambda Function ，并根据计算时间计费   Lambda Function 是部署在 Lambda 服务上的程序包，仅在需要时运行，并根据计算时间计费，这项服务可以极大地降低应用在云平台上的使用成本，事实上，这也是 Lambda 服务提供的核心价值之一。
  使用 Lambda 服务需要引入一些新的编程思想，例如， Lambda Function 应该尽可能做到原子化和无状态计算。
- 原子化意味着高度内聚。原子化的本质是尽量避免对外部服务的依赖。依赖通常是使应用系统趋于复杂的重要因素。例如，当同步依赖的外部服务需要长时间运行， Lambda Function 无法快速销毁，这可能破坏 Lambda 服务为应用带来的好处。无状态计算则是指在计算期间不涉及中间数据和计算任务的状态，这使 Lambda Function 的计算变得简单而纯粹。例如，可配置无状态原子计算引擎。
- 术语    术语 描述     layer 一个层是一个 .zip 文件（不适用于镜像），使用层技术，可以使部署包尽可能地小，因为部署包依赖的库可以通过一个新的层提供   runtime 在 Lambda 运行环境中工作的一个编程语言相关的环境，负责转发调用事件，上下文信息，以及最终的响应   handler 函数代码中由 Lambda 调用并开始执行的方法   code signing 代码签名   execution role 授权 Lambda 函数去访问 AWS 服务和资源的 IAM 角色（ AWS Identity and Access Management (IAM) role ）   unpublished version 未发布的版本，当函数更新时，会发生相应的变化   published versions 已发布的版本，是函数的一个快照，不会发生变化   aliases 函数别名，可以设置使之对应于一个版本   ARN Amazon Resource Name ， 例如，execution role ARN 的样式为 arn:aws:iam::your-account-id:role/execution_role    常用命令 AWS CLI 卸载 AWS CLI version 1
+ 原子化意味着高度内聚。原子化的本质是避免对外部服务的依赖。对外部服务过多的依赖通常是使应用系统趋于复杂的重要因素。例如，当同步依赖的外部服务需要长时间运行， Lambda Function 无法快速销毁，这可能破坏 Lambda 服务为应用带来的好处。无状态计算则是指在计算期间不涉及中间数据和计算任务状态的存储，这使 Lambda Function 简单而纯粹，并使其应用场景更加广泛。例如，可配置无状态原子计算引擎。
+ AWS Lambda 提供的主要功能 并发和伸缩控制 Concurrency and scaling controls
+术语    术语 描述     layer 一个层是一个 .zip 文件（不适用于镜像），使用层技术，可以使部署包尽可能地小，因为部署包依赖的库可以通过一个新的层提供   runtime 在 Lambda 运行环境中工作的一个编程语言相关的环境，负责转发调用事件，上下文信息，以及最终的响应   handler 函数代码中由 Lambda 调用并开始执行的方法   code signing 代码签名   execution role 授权 Lambda 函数去访问 AWS 服务和资源的 IAM 角色（ AWS Identity and Access Management (IAM) role ）   unpublished version 未发布的版本，当函数更新时，会发生相应的变化   published versions 已发布的版本，是函数的一个快照，不会发生变化   aliases 函数别名，可以设置使之对应于一个版本   ARN Amazon Resource Name ， 例如，execution role ARN 的样式为 arn:aws:iam::your-account-id:role/execution_role    常用命令 AWS CLI 卸载 AWS CLI version 1
     </div>
   </div>
 </div>
