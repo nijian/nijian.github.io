@@ -14,15 +14,14 @@
       
       <guid>http://nijian.life/software/network/terms/</guid>
       <description>bandwidth 带宽，
+Datagram Forwarding 数据报转发，是数据包分发的一种模型。在数据报分发网络中，数据包的头中包含了目标地址。路由器（ routers ）或交换机（ switches ）根据地址信息把数据包发送到目的地。
 Ethernet 以太网，是局域网最常见的组网方式。最简单的以太网就是多个主机通过一根电缆连接在一起。
   复杂一些的以太网则通过双绞线、无线、集线器等设备连接在一起。以太网中报文碰撞现象的发生比较频繁，繁忙时可能使带宽下降至 30% 。
 IP 互联网协议（ Internet Protocol ）的缩写。
-LAN 局域网（ Local Area Networks ）的缩写。 LAN 是网络的连接层（ Link Layer ），也是逻辑意义上的物理层。
-packet switching 数据包交换，是多个用户共享同一个网络连接的解决方案。 TCP/IP 是一种实现数据包交换的协议（栈）。
-Packets 数据包，
-TCP 传输控制协议（ Transmission Control Protocol ）的缩写。
-throughput 吞吐，
-WAF Web 应用防火墙（ Web Application Firewall ）。 WAF 部署在 Web Application 的前端，主要用于防御针对网络应用层的攻击，例如， SQL 注入，跨站脚本攻击，参数篡改、应用平台漏洞攻击、拒绝服务攻击等。</description>
+IP Accounting 网络流量统计。
+ Accounting by Address Accounting by Service Port Accounting of ICMP Packets Accounting by Protocol  IP Filtering IP 过滤是一种处理 IP 包的机制，可以决定哪些类型的 IP 包可以得到正常处理，而另一些被丢弃（ dropped ）或拒绝（ rejected ）。
+IP Firewall LAN 局域网（ Local Area Networks ）的缩写。 LAN 是网络的链接层（ Link Layer ），也是逻辑意义上的物理层。
+packet switching 数据包交换，是多个用户共享同一个网络连接的解决方案。 TCP/IP 是一种实现数据包交换的协议（栈）。</description>
     </item>
     
     <item>
@@ -82,7 +81,9 @@ WAF Web 应用防火墙（ Web Application Firewall ）。 WAF 部署在 Web App
       <pubDate>Fri, 05 Mar 2021 11:11:59 +0800</pubDate>
       
       <guid>http://nijian.life/software/my/k8slocaldebug/</guid>
-      <description>简介 场景 </description>
+      <description>简介 在系统开发过程中，常常需要对部署在 K8S 环境中的服务进行调试，调试过程中需要使用本地的服务来接管 K8S 中的服务。为了支持多人调试，这种接管只对开启了本地开发调试功能的客户机有效，而对其他使用 K8S 中服务的客户机来说是透明的。
+要支持这种调试，需要具备两方面的能力，一个是 K8S 中的服务可以路由本地，一个是本地服务可以切入 k8S 环境，即解决通过 K8S内部服务名访问 K8S 中的服务的问题。对于切入 K8S 环境的问题，业界已有成熟工具和方案，例如，telepresence, KT-CONNECT 等。本方案解决的是路由本地的问题。
+本方案支持无侵入下的路由本地功能，即在无须本地服务作出改变的情况下，实现本地开发调试功能。其基本原理是基于 kube-proxy 的 userspace 模式，在 kube-proxy 路由 K8S 服务前，截取 tcp 数据，从中获取 http 头信息，结合本地开发调试注册工具，针对和注册匹配的 K8S 服务，优先尝试客户机上的本地服务，从而解决无侵入下的路由本地功能。</description>
     </item>
     
     <item>
@@ -216,7 +217,7 @@ gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 impor
       <pubDate>Mon, 08 Feb 2021 10:23:22 +0800</pubDate>
       
       <guid>http://nijian.life/software/my/calc-engine/</guid>
-      <description>简介 在一些业务场景中，包含了下列特定的数据及计算特征：
+      <description>背景 在一些业务场景中，包含了下列特定的数据及计算特征：
  业务领域内较大规模的一组数据 数据之间关联性强，存在聚合和分组计算 计算过程较为复杂，包含大量的决策表（树）计算，四则运算，聚合计算，以及简单条件规则 计算公式及过程需要基于配置完成  例如，保险领域车险团单的保费计算场景。一张车险团单可能包含了成千上万辆车，每辆车都需要计算出公式保费，然后，根据每辆车的最低最高保费调整统一的费率，再根据新的费率进行分组计算，最后，基于每辆车的公式保费进行汇总或分摊。
 成千上万辆车在业务领域内属于较大规模的一组数据，但在大数据领域并不是。此外，在上述的计算场景中，计算公式及过程的可配置性与计算性能同等重要，因此，直接使用 Flink 这类分布式处理引擎并不合适。
 本文描述的可配置无状态原子计算引擎是针对上述业务计算场景的解决方案。
@@ -227,7 +228,9 @@ gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 impor
 所谓原子，就是非分布式的、无依赖的、不可分割的、高度内聚的一个单元。本文描述的计算引擎，就是这样的一个计算单元。这个计算单元的目标，是充分使用单机（或单虚拟机）的 CPU 和内存来处理适当规模的数据，并在适当的时间内产生计算结果。所谓适当，是基于业务场景的一个模糊的衡量，例如，10 s 内计算出一万辆车的保费可能是一个适当的场景。当然，适当与否最终取决于相关业务人员的共识。
 原子化的计算单元，与 Flink 这样的分布式处理引擎并不冲突，相反，它是 Flink 的一个补充。当业务场景需要处理海量团单时， Flink 就是一个很好的选择。一切取决于业务场景的需要。
 为什么需要无状态 无状态计算是一种理想的计算模式。这种模式使计算回归其简朴本质，输入数据-计算-输出计算结果。在这样的计算过程中，不需要考虑中间数据的持久化存储，计算任务的暂停和继续，以及分布式场景下计算资源的调度。在大数据领域，单纯依靠无状态计算很难完成一次完整的计算任务。但对于本文所描述的业务场景来说，使用无状态计算模式是一种合适的方案。
-应用场景 </description>
+简介 可配置无状态原子计算引擎对业务计算过程进行了抽象化处理，可支持基于 List（列表）和 Item（列表项）结构的任意数据作为输入参数，此外，通过 Yaml 和 DSL 技术，支持计算过程和计算公式的无代码全配置设定。其提供的计算基本类型包括：Expression（计算表达式），Funcx（扩展函数），Variable（变量），Filter（过滤器），Decision Tree（决策树） 等。
+可配置无状态原子计算引擎基于 Go 语言开发，通过 FBP（Flow-based Programming ） 技术在运行时动态编排计算过程，本地全内存计算，计算性能高，非常适合业务领域中常见的一些复杂计算。
+可配置无状态原子计算引擎提供无状态计算模式，配置与数据是入参不可分割的一部分。它原生支持 serverless function 部署，部署时仅需一个软件包，运行时可并行产生任意数量的副本。</description>
     </item>
     
     <item>
