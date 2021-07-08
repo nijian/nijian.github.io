@@ -14,12 +14,12 @@
       
       <guid>http://nijian.life/software/language/go/</guid>
       <description>简介 安装 如果不需要最新的版本，可简单安装
-sudo apt install golang go version   由于不同版本的 Go 在包管理机制及语言特性上的差异，编译特定的 Go 工程时可能无法成功。例如，编译 kubernetes v1.16.3 ，需要 go1.12.x 版本。
+sudo apt install golanggo version  由于不同版本的 Go 在包管理机制及语言特性上的差异，编译特定的 Go 工程时可能无法成功。例如，编译 kubernetes v1.16.3 ，需要 go1.12.x 版本。
  Go 多版本管理
 gvm
 安装
-bash &amp;lt; &amp;lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone https://github.com/moovweb/gvm.git cd [path of gvm-installer] ./gvm-installer  常用命令
-gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 import
+bash &amp;lt; &amp;lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)orgit clone https://github.com/moovweb/gvm.gitcd [path of gvm-installer]./gvm-installer 常用命令
+gvm listgvm listallgvm install go1.12.10gvm use go1.12.10 依赖管理 import
 导入包。
  Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：
 假设 Go 安装目录为 /usr/local/go ， GOPATH 设置为 /home/myproject:/home/mylibraries，当 import net/http 时，编译器查找的顺序如下：</description>

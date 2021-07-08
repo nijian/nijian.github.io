@@ -7,7 +7,7 @@
     <title>大数据 | 一缕书香一缕魂</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="记录、积累、归纳、思考...">
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.85.0" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -38,11 +38,10 @@
     <meta property="og:title" content="大数据" />
 <meta property="og:description" content="记录、积累、归纳、思考..." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://nijian.life/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" />
-<meta property="og:updated_time" content="2021-06-01T11:29:32+08:00" /><meta property="og:site_name" content="一缕书香一缕魂" />
+<meta property="og:url" content="http://nijian.life/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/" /><meta property="og:site_name" content="一缕书香一缕魂" />
+
 <meta itemprop="name" content="大数据">
-<meta itemprop="description" content="记录、积累、归纳、思考...">
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="记录、积累、归纳、思考..."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="大数据"/>
 <meta name="twitter:description" content="记录、积累、归纳、思考..."/>
 
@@ -141,7 +140,7 @@
  Flink 之所以能在各种集群环境中运行，是因为它集成了各种集群资源管理器，例如 Hadoop YARN、 Apache Mesos 和 Kubernetes，它同时也可以作为独立集群运行。基于 Flink 的寄生应用程序，可以通过配置（例如，并行数）标识出所需的资源，并通过 Flink 从集群资源管理器请求这些资源。在发生故障的情况下， Flink 还可以通过请求新资源来自动替换发生故障的容器。
  提交或控制 Flink 寄生应用程序的所有通信都是通过 REST 调用进行的。
  Flink 具有较好的数据处理性能，所有分拆出来的计算任务都是通过访问本地（通常在内存中）状态来进行所有的计算，从而产生非常低的处理延迟。 Flink 通过定期和异步地对本地状态进行持久化存储来保证故障场景下的状态一致性。
-   本地计算 Logic 可借助于像 可配置无状态原子计算引擎 这样的工具。
+  本地计算 Logic 可借助于像 可配置无状态原子计算引擎 这样的工具。
  下面是 Flink 在实践中已被验证的一些能力：
  处理每天处理数万亿的事件, 应用维护几 TB 大小的状态, 和 应用在数千个内核上运行。  应用场景 Flink 常常用于以下三种应用场景：
  事件驱动型应用（ Event-driven Applications ） 数据分析应用（ Data Analytics Applications ） 数据管道应用（ Data Pipeline Applications ）  事件驱动型应用 事件驱动型应用是从一个或多个事件流提取数据，并根据到来的事件触发计算、状态更新或其他外部动作。

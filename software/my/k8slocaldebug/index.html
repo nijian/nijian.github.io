@@ -9,7 +9,7 @@
     <meta name="description" content="简介 在系统开发过程中，常常需要对部署在 K8S 环境中的服务进行调试，调试过程中需要使用本地的服务来接管 K8S 中的服务。为了支持多人调试，这种接管只对开启了本地开发调试功能的客户机有效，而对其他使用 K8S 中服务的客户机来说是透明的。
 要支持这种调试，需要具备两方面的能力，一个是 K8S 中的服务可以路由本地，一个是本地服务可以切入 k8S 环境，即解决通过 K8S内部服务名访问 K8S 中的服务的问题。对于切入 K8S 环境的问题，业界已有成熟工具和方案，例如，telepresence, KT-CONNECT 等。本方案解决的是路由本地的问题。
 本方案支持无侵入下的路由本地功能，即在无须本地服务作出改变的情况下，实现本地开发调试功能。其基本原理是基于 kube-proxy 的 userspace 模式，在 kube-proxy 路由 K8S 服务前，截取 tcp 数据，从中获取 http 头信息，结合本地开发调试注册工具，针对和注册匹配的 K8S 服务，优先尝试客户机上的本地服务，从而解决无侵入下的路由本地功能。">
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.85.0" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -37,21 +37,17 @@
 要支持这种调试，需要具备两方面的能力，一个是 K8S 中的服务可以路由本地，一个是本地服务可以切入 k8S 环境，即解决通过 K8S内部服务名访问 K8S 中的服务的问题。对于切入 K8S 环境的问题，业界已有成熟工具和方案，例如，telepresence, KT-CONNECT 等。本方案解决的是路由本地的问题。
 本方案支持无侵入下的路由本地功能，即在无须本地服务作出改变的情况下，实现本地开发调试功能。其基本原理是基于 kube-proxy 的 userspace 模式，在 kube-proxy 路由 K8S 服务前，截取 tcp 数据，从中获取 http 头信息，结合本地开发调试注册工具，针对和注册匹配的 K8S 服务，优先尝试客户机上的本地服务，从而解决无侵入下的路由本地功能。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://nijian.life/software/my/k8slocaldebug/" />
+<meta property="og:url" content="http://nijian.life/software/my/k8slocaldebug/" /><meta property="article:section" content="software" />
 <meta property="article:published_time" content="2021-03-05T11:11:59+08:00" />
 <meta property="article:modified_time" content="2021-03-05T11:11:59+08:00" /><meta property="og:site_name" content="一缕书香一缕魂" />
+
 <meta itemprop="name" content="基于 kube-proxy userspace 代理模式下的本地调试">
 <meta itemprop="description" content="简介 在系统开发过程中，常常需要对部署在 K8S 环境中的服务进行调试，调试过程中需要使用本地的服务来接管 K8S 中的服务。为了支持多人调试，这种接管只对开启了本地开发调试功能的客户机有效，而对其他使用 K8S 中服务的客户机来说是透明的。
 要支持这种调试，需要具备两方面的能力，一个是 K8S 中的服务可以路由本地，一个是本地服务可以切入 k8S 环境，即解决通过 K8S内部服务名访问 K8S 中的服务的问题。对于切入 K8S 环境的问题，业界已有成熟工具和方案，例如，telepresence, KT-CONNECT 等。本方案解决的是路由本地的问题。
-本方案支持无侵入下的路由本地功能，即在无须本地服务作出改变的情况下，实现本地开发调试功能。其基本原理是基于 kube-proxy 的 userspace 模式，在 kube-proxy 路由 K8S 服务前，截取 tcp 数据，从中获取 http 头信息，结合本地开发调试注册工具，针对和注册匹配的 K8S 服务，优先尝试客户机上的本地服务，从而解决无侵入下的路由本地功能。">
-<meta itemprop="datePublished" content="2021-03-05T11:11:59+08:00" />
+本方案支持无侵入下的路由本地功能，即在无须本地服务作出改变的情况下，实现本地开发调试功能。其基本原理是基于 kube-proxy 的 userspace 模式，在 kube-proxy 路由 K8S 服务前，截取 tcp 数据，从中获取 http 头信息，结合本地开发调试注册工具，针对和注册匹配的 K8S 服务，优先尝试客户机上的本地服务，从而解决无侵入下的路由本地功能。"><meta itemprop="datePublished" content="2021-03-05T11:11:59+08:00" />
 <meta itemprop="dateModified" content="2021-03-05T11:11:59+08:00" />
 <meta itemprop="wordCount" content="35">
-
-
-
-<meta itemprop="keywords" content="软件," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="软件," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="基于 kube-proxy userspace 代理模式下的本地调试"/>
 <meta name="twitter:description" content="简介 在系统开发过程中，常常需要对部署在 K8S 环境中的服务进行调试，调试过程中需要使用本地的服务来接管 K8S 中的服务。为了支持多人调试，这种接管只对开启了本地开发调试功能的客户机有效，而对其他使用 K8S 中服务的客户机来说是透明的。
 要支持这种调试，需要具备两方面的能力，一个是 K8S 中的服务可以路由本地，一个是本地服务可以切入 k8S 环境，即解决通过 K8S内部服务名访问 K8S 中的服务的问题。对于切入 K8S 环境的问题，业界已有成熟工具和方案，例如，telepresence, KT-CONNECT 等。本方案解决的是路由本地的问题。
@@ -246,11 +242,11 @@
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/tool/hugo/">Hugo</a>
+          <a href="/software/tool/tool/">工具</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/tool/tool/">工具</a>
+          <a href="/software/tool/hugo/">Hugo</a>
         </li>
 	    
     </ul>

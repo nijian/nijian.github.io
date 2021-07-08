@@ -9,7 +9,7 @@
     <meta name="description" content="简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
  容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
  术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数。   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像。   registry 共享镜像库，通常是指 Public Repository 。    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。">
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.85.0" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -37,21 +37,17 @@
  容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
  术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数。   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像。   registry 共享镜像库，通常是指 Public Repository 。    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://nijian.life/software/tool/docker/" />
+<meta property="og:url" content="http://nijian.life/software/tool/docker/" /><meta property="article:section" content="software" />
 <meta property="article:published_time" content="2021-02-23T18:02:56+08:00" />
 <meta property="article:modified_time" content="2021-02-23T18:02:56+08:00" /><meta property="og:site_name" content="一缕书香一缕魂" />
+
 <meta itemprop="name" content="Docker">
 <meta itemprop="description" content="简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
  容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
- 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数。   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像。   registry 共享镜像库，通常是指 Public Repository 。    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。">
-<meta itemprop="datePublished" content="2021-02-23T18:02:56+08:00" />
+ 术语    术语 描述     image 镜像，包含了多层有序的文件系统，上一层包含了下一层的变化，以及在容器运行时相应于该变化的执行参数。   layer 层，包含了下一层文件系统的变化，对应于 Dockerfile 中的一条指令。层在镜像中是有序的，当镜像更新或重建时，只有发生变化的层才会进行更新，这使镜像构建变得高效。   repository 本地镜像库，包含了一组镜像。   registry 共享镜像库，通常是指 Public Repository 。    架构 Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。"><meta itemprop="datePublished" content="2021-02-23T18:02:56+08:00" />
 <meta itemprop="dateModified" content="2021-02-23T18:02:56+08:00" />
 <meta itemprop="wordCount" content="408">
-
-
-
-<meta itemprop="keywords" content="软件,Docker,容器,镜像," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="软件,Docker,容器,镜像," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker"/>
 <meta name="twitter:description" content="简介 Docker 是一个用 Go 语言编写的开发、递交、运行应用程序的开放平台。使用 Docker 平台以及 Docker 提供的工具 ，可以像管理应用程序一样管理运行这个应用程序的基础设施（基于容器技术），从而使应用程序的递交，测试，发布更加便捷，最终把应用程序快速地部署至生产环境。
  容器（ container ）是一个运行时概念，即镜像（ image ）实例。容器提供了一个轻量的、安全的、松散隔离的环境，它包含了运行应用程序所需的一切资源。这使所有得到镜像的人，无论是在本地还是在云环境下，都能以同样的方式启动容器，运行应用程序，而无需考虑基础设施的差异。关于容器技术的深入介绍不在本文中展开。
@@ -201,8 +197,7 @@
 </table>
 <h2 id="架构">架构</h2>
 <p>Docker 平台采用客户端/服务器（ C/S ） 架构。客户端（ docker CLI or docker-compose ）通过 REST API ， UNIX sockets ， 或其他的网络接口与 Docker daemon （ dockerd ） 进行通讯。 Docker daemon 根据客户端的指令，管理 Docker 对象，例如， images ， containers ， networks ， volumes ， plugins 等 。 此外，还有 Docker registry ，用于存储 Docker 镜像。 Docker Hub 是一个公共的 registry ， 全球还有很多其他公共的 registry 。 私有的 registry 也是允许的。</p>
-<figure>
-    <img src="/images/docker-architecture.svg"/> 
+<figure><img src="/images/docker-architecture.svg"/>
 </figure>
 
 <h2 id="docker-对象">Docker 对象</h2>
@@ -407,11 +402,11 @@ FROM <span style="color:#f92672">[</span>--platform<span style="color:#f92672">=
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/tool/tool/">工具</a>
+          <a href="/software/tool/hugo/">Hugo</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/software/tool/hugo/">Hugo</a>
+          <a href="/software/tool/tool/">工具</a>
         </li>
 	    
     </ul>

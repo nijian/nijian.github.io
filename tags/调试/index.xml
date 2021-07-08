@@ -13,7 +13,7 @@
       <pubDate>Sat, 20 Feb 2021 15:33:05 +0800</pubDate>
       
       <guid>http://nijian.life/software/tool/telepresence/</guid>
-      <description>简介 安装 curl -s https://packagecloud.io/install/repositories/datawireio/telepresence/script.deb.sh | sudo bash sudo apt install --no-install-recommends telepresence </description>
+      <description>简介 安装 curl -s https://packagecloud.io/install/repositories/datawireio/telepresence/script.deb.sh | sudo bashsudo apt install --no-install-recommends telepresence </description>
     </item>
     
   </channel>

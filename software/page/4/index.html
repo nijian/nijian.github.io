@@ -7,7 +7,7 @@
     <title>技术文章 | 一缕书香一缕魂</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="记录、积累、归纳、思考...">
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.85.0" />
     
     
       <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
@@ -38,11 +38,10 @@
     <meta property="og:title" content="技术文章" />
 <meta property="og:description" content="记录、积累、归纳、思考..." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://nijian.life/software/" />
-<meta property="og:updated_time" content="2021-01-30T12:00:00-05:00" /><meta property="og:site_name" content="一缕书香一缕魂" />
+<meta property="og:url" content="http://nijian.life/software/" /><meta property="og:site_name" content="一缕书香一缕魂" />
+
 <meta itemprop="name" content="技术文章">
-<meta itemprop="description" content="记录、积累、归纳、思考...">
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="记录、积累、归纳、思考..."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="技术文章"/>
 <meta name="twitter:description" content="记录、积累、归纳、思考..."/>
 
@@ -133,7 +132,7 @@
       简介 git 是一个分布式版本控制系统。
  版本控制是一个系统
  常用命令 获取一个 Git 仓库（ Git repository ）
-git clone [--template=&lt;template_directory&gt;] [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror] [-o &lt;name&gt;] [-b &lt;name&gt;] [-u &lt;upload-pack&gt;] [--reference &lt;repository&gt;] [--dissociate] [--separate-git-dir &lt;git dir&gt;] [--depth &lt;depth&gt;] [--[no-]single-branch] [--no-tags] [--recurse-submodules[=&lt;pathspec&gt;]] [--[no-]shallow-submodules] [--[no-]remote-submodules] [--jobs &lt;n&gt;] [--sparse] [--filter=&lt;filter&gt;] [--] &lt;repository&gt; [&lt;directory&gt;] 
+git clone [--template=&lt;template_directory&gt;][-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror][-o &lt;name&gt;] [-b &lt;name&gt;] [-u &lt;upload-pack&gt;] [--reference &lt;repository&gt;][--dissociate] [--separate-git-dir &lt;git dir&gt;][--depth &lt;depth&gt;] [--[no-]single-branch] [--no-tags][--recurse-submodules[=&lt;pathspec&gt;]] [--[no-]shallow-submodules][--[no-]remote-submodules] [--jobs &lt;n&gt;] [--sparse][--filter=&lt;filter&gt;] [--] &lt;repository&gt;[&lt;directory&gt;] 
     </div>
   </div>
 </div>
@@ -149,11 +148,11 @@ git clone [--template=&lt;template_directory&gt;] [-l] [-s] [--no-hardlinks] [-q
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       find 查找文件
-find / -name xx  grep 查找文件中符合条件的字符串。
--v 或 --invert-match : 显示不包含匹配文本的所有行  mkdir 创建目录
--p 创建目录时指定父目录  cp 拷贝文件。
-cp src.file /tmp/dst.file  tar 解压文件
-tar -xzf myfile.tar.gz -C /opt  
+find / -name xx grep 查找文件中符合条件的字符串。
+-v 或 --invert-match : 显示不包含匹配文本的所有行 mkdir 创建目录
+-p 创建目录时指定父目录 cp 拷贝文件。
+cp src.file /tmp/dst.file tar 解压文件
+tar -xzf myfile.tar.gz -C /opt 
     </div>
   </div>
 </div>
@@ -169,12 +168,12 @@ tar -xzf myfile.tar.gz -C /opt
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       简介 安装 如果不需要最新的版本，可简单安装
-sudo apt install golang go version   由于不同版本的 Go 在包管理机制及语言特性上的差异，编译特定的 Go 工程时可能无法成功。例如，编译 kubernetes v1.16.3 ，需要 go1.12.x 版本。
+sudo apt install golanggo version  由于不同版本的 Go 在包管理机制及语言特性上的差异，编译特定的 Go 工程时可能无法成功。例如，编译 kubernetes v1.16.3 ，需要 go1.12.x 版本。
  Go 多版本管理
 gvm
 安装
-bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) or git clone https://github.com/moovweb/gvm.git cd [path of gvm-installer] ./gvm-installer  常用命令
-gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 import
+bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)orgit clone https://github.com/moovweb/gvm.gitcd [path of gvm-installer]./gvm-installer 常用命令
+gvm listgvm listallgvm install go1.12.10gvm use go1.12.10 依赖管理 import
 导入包。
  Go 1.11 版本之前，没有有效的包管理机制，也无法进行版本控制，其 import 的简单场景如下：
 假设 Go 安装目录为 /usr/local/go ， GOPATH 设置为 /home/myproject:/home/mylibraries，当 import net/http 时，编译器查找的顺序如下：
@@ -184,43 +183,35 @@ gvm list gvm listall gvm install go1.12.10 gvm use go1.12.10  依赖管理 impor
 </div>
       
     </section>
-<ul class="pagination">
-  <li class="page-item">
-    <a href="/software/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a href="/software/page/3/" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/software/">1</a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/software/page/2/">2</a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/software/page/3/">3</a>
-  </li>
-  <li class="page-item active">
-    <a class="page-link" href="/software/page/4/">4</a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/software/page/5/">5</a>
-  </li>
-  <li class="page-item disabled">
-    <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/software/page/9/">9</a>
-  </li>
-  <li class="page-item">
-    <a href="/software/page/5/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a href="/software/page/9/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-  </li>
-</ul>
-
-</article>
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="/software/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/software/page/3/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/software/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item">
+        <a href="/software/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
+      </li>
+      <li class="page-item active">
+        <a href="#" aria-current="page" aria-label="Page 4" class="page-link" role="button">4</a>
+      </li>
+      <li class="page-item">
+        <a href="/software/page/5/" aria-label="Page 5" class="page-link" role="button">5</a>
+      </li>
+      <li class="page-item">
+        <a href="/software/page/6/" aria-label="Page 6" class="page-link" role="button">6</a>
+      </li>
+      <li class="page-item">
+        <a href="/software/page/5/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="/software/page/9/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul></article>
 
     </main>
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
